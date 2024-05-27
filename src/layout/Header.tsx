@@ -8,26 +8,26 @@ export default function Header() {
       </div>
       <div>
         <ul className='flex gap-8'>
-          <li className='group hover:bg-blue-500 rounded-md p-[1.5%]'>
-            <a className='group-hover:text-white text-black text-[16px] font-medium' href={'http://google.com'}>Home</a>
+          <li className='group hover:bg-blue-500 rounded-md px-4 py-2'>
+            <a className='group-hover:text-white text-black text-[17px] font-medium' href={'http://google.com'}>Home</a>
           </li>
-           <li className='group hover:bg-blue-400 rounded-md p-[1.5%]'>
-            <a className='group-hover:text-white text-black text-[16px] font-medium' href={'http://google.com'}>About</a>
+           <li className='group hover:bg-blue-400 rounded-md px-4 py-2'>
+            <a className='group-hover:text-white text-black text-[17px] font-medium' href={'http://google.com'}>About</a>
           </li>
-          <li className='group hover:bg-blue-400 rounded-md p-[1.5%]'>
-            <a className='group-hover:text-white text-black text-[16px] font-medium' href={'http://google.com'}>Experiences</a>
+          <li className='group hover:bg-blue-400 rounded-md px-4 py-2'>
+            <a className='group-hover:text-white text-black text-[17px] font-medium' href={'http://google.com'}>Experiences</a>
           </li>
-           <li className='group hover:bg-blue-400 rounded-md p-[1.5%]'>
-            <a className='group-hover:text-white text-black text-[16px] font-medium' href={'http://google.com'}>Skills</a>
+           <li className='group hover:bg-blue-400 rounded-md px-4 py-2'>
+            <a className='group-hover:text-white text-black text-[17px] font-medium' href={'http://google.com'}>Skills</a>
           </li>
-           <li className='group hover:bg-blue-400 rounded-md p-[1.5%]'>
-            <a className='group-hover:text-white text-black text-[16px] font-medium' href={'http://google.com'}>Projects</a>
+           <li className='group hover:bg-blue-400 rounded-md px-4 py-2'>
+            <a className='group-hover:text-white text-black text-[17px] font-medium' href={'http://google.com'}>Projects</a>
           </li>
-          <li className='group hover:bg-blue-400 rounded-md p-[1.5%]'>
-            <a className='group-hover:text-white text-black text-[16px] font-medium' href={'http://google.com'}>Contact</a>
+          <li className='group hover:bg-blue-400 rounded-md px-4 py-2'>
+            <a className='group-hover:text-white text-black text-[17px] font-medium' href={'http://google.com'}>Contact</a>
           </li>
-          <li className='group hover:bg-blue-400 rounded-md p-[1.5%]'>
-            <a className='group-hover:text-white text-black text-[16px] font-medium' href={'http://google.com'}>D</a>
+          <li className='group hover:bg-blue-400 rounded-md px-4 py-2'>
+            <a className='group-hover:text-white text-black text-[17px] font-medium' href={'http://google.com'}>D</a>
           </li>
         </ul>
       </div>

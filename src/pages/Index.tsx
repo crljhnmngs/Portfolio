@@ -3,7 +3,7 @@ import Home from '../components/Home'
 
 export default function Index() {
   return (
-    <div>
+    <div className='w-screen font-poppins'>
         <Home></Home>
     </div>
   )
