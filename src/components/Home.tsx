@@ -1,10 +1,7 @@
 import React from 'react'
-import Header from '../layout/Header'
 
 export default function Home() {
   return (
-    <div className='bg-black h-screen max-w-full'>
-        <Header></Header>
-    </div>
+    <section className="h-[90%] bg-black w-screen" id="home"></section>
   )
 }
