@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './assets/global.css';
 import reportWebVitals from './reportWebVitals';
-import Index from './pages/Index';
+import App from './pages/App';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <Index />
+    <App />
   </React.StrictMode>
 );
 

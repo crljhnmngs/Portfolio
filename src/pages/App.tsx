@@ -1,8 +1,10 @@
 import React from 'react';
-import Header from '../layout/Header';
 import Home from '../components/Home';
 import About from '../components/About';
-
+import Header from '../layout/Header';
+import Experiences from '../components/Experiences';
+import Skills from '../components/Skills';
+import Contact from '../components/Contact';
 
 export default function Index() {
     return (
@@ -10,6 +12,9 @@ export default function Index() {
             <Header></Header>
             <Home></Home>
             <About></About>
+            <Experiences></Experiences>
+            <Skills></Skills>
+            <Contact></Contact>
         </div>
     );
 }
