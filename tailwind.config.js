@@ -4,6 +4,7 @@ module.exports = {
         extend: {
             screens: {
                 nav: '840px',
+                home: '1128px',
             },
             animation: {
                 bounceRight: 'bounceRight 1s ease-in-out',
