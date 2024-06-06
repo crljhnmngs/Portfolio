@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import SunIcon from '../assets/images/icons/sun.png';
 import Hamburger from 'hamburger-react';
 
@@ -13,15 +13,15 @@ export default function Header() {
         setOpen(false);
     };
 
-    const sections = [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'experiences', label: 'Experiences' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'contact', label: 'Contact' }
-  ];
-  
-  useEffect(() => {
+    const sections = useMemo(() => [
+        { id: 'home', label: 'Home' },
+        { id: 'about', label: 'About' },
+        { id: 'experiences', label: 'Experiences' },
+        { id: 'skills', label: 'Skills' },
+        { id: 'contact', label: 'Contact' }
+    ], []);
+
+    useEffect(() => {
         const handleScroll = (entries: IntersectionObserverEntry[]) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -36,16 +36,18 @@ export default function Header() {
             threshold: 0.6
         });
 
+        const currentSectionRefs = { ...sectionRefs.current };
+
         sections.forEach(section => {
             const element = document.getElementById(section.id);
             if (element) {
-                sectionRefs.current[section.id] = element;
+                currentSectionRefs[section.id] = element;
                 observer.observe(element);
             }
         });
 
         return () => {
-            Object.values(sectionRefs.current).forEach(element => {
+            Object.values(currentSectionRefs).forEach(element => {
                 if (element) {
                     observer.unobserve(element);
                 }
@@ -54,7 +56,7 @@ export default function Header() {
     }, [sections]);
 
     return (
-        <nav className="bg-white w-screen h-[10%] flex flex-row justify-between items-center nav:px-16 px-3 sticky top-0">
+        <nav className="bg-white w-screen h-[70px] flex flex-row justify-between items-center nav:px-16 px-3 sticky top-0">
             <div>
                 <h3>Logo</h3>
             </div>
