@@ -8,6 +8,7 @@ module.exports = {
             },
             animation: {
                 bounceRight: 'bounceRight 1s ease-in-out',
+                floating: 'floating 3s ease-in-out infinite',
             },
             keyframes: {
                 bounceRight: {
@@ -48,6 +49,14 @@ module.exports = {
                         transform: 'translateX(1px)',
                     },
                 },
+                floating: {
+                    '0%': { transform: 'translateY(0px)' },
+                    '50%': { transform: 'translateY(15px)' },
+                    '100%': { transform: 'translateY(-0px)' },
+                },
+            },
+            backgroundImage: {
+                'bg-light': "url('images/bg-light.png')",
             },
         },
     },
