@@ -10,7 +10,7 @@ import Test from '../assets/images/test.png';
 export default function Home() {
     return (
         <section
-            className="h-full bg-bg-light bg-cover bg-green-200 w-screen flex items-center justify-center sm:flex-row flex-col-reverse -scroll-mt-[-70px]"
+            className="sm:h-full h-auto bg-bg-light bg-cover bg-green-200 w-screen flex items-center justify-center sm:flex-row flex-col-reverse -scroll-mt-[-70px] gap-2 sm:gap-0"
             id="home"
         >
             <div className="h-[60%] home:max-w-[40%] w-full home:px-0 px-5 flex flex-col justify-center sm:items-start items-center">
@@ -105,11 +105,11 @@ export default function Home() {
                     </button>
                 </div>
             </div>
-            <div className="h-[60%]  home:w-[40%] w-full flex">
+            <div className="h-[60%]  home:w-[40%] w-full flex justify-center items-start">
                 <img
                     src={Test}
                     alt="placeholder"
-                    className="w-full h-full animate-floating"
+                    className="w-full h-[80%] max-h-[350px] sm:h-full sm:max-h-full"
                 />
             </div>
         </section>
