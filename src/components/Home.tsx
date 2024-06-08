@@ -28,6 +28,7 @@ export default function Home() {
                         ]}
                         typeSpeed={50}
                         backSpeed={60}
+                        startDelay={4500}
                         loop
                         className="font-bold home:text-5xl sm:text-5xl text-3xl text-[#3B82F6] text-center home:text-start"
                     />

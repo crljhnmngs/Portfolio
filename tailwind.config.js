@@ -9,6 +9,7 @@ module.exports = {
             animation: {
                 bounceRight: 'bounceRight 1s ease-in-out',
                 floating: 'floating 3s ease-in-out infinite',
+                delay: 'delay 0.8s infinite ease-in-out',
             },
             keyframes: {
                 bounceRight: {
@@ -53,6 +54,10 @@ module.exports = {
                     '0%': { transform: 'translateY(0px)' },
                     '50%': { transform: 'translateY(15px)' },
                     '100%': { transform: 'translateY(-0px)' },
+                },
+                delay: {
+                    '0%, 40%, 100%': { transform: 'scaleY(0.05)' },
+                    '20%': { transform: 'scaleY(1.0)' },
                 },
             },
             backgroundImage: {
