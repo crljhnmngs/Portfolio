@@ -4,14 +4,17 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  scroll-behavior: smooth;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
 }
 
-.font-poppins{
-  font-family: "Poppins", sans-serif;
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
 }
 
+.fill-mode {
+    animation-fill-mode: forwards;
+}

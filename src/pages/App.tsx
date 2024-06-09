@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Home from '../components/Home';
 import About from '../components/About';
 import Header from '../layout/Header';
@@ -9,14 +9,16 @@ import { Preloader } from '../components/Preloader';
 
 export default function App() {
     return (
-        <div className="w-screen h-screen font-poppins overflow-x-hidden">
-            <Preloader></Preloader>
-            <Header></Header>
-            <Home></Home>
-            <About></About>
-            <Experiences></Experiences>
-            <Skills></Skills>
-            <Contact></Contact>
-        </div>
+        <Suspense fallback={<Preloader />}>
+            <div className="w-screen h-screen font-poppins overflow-x-hidden">
+                <Preloader></Preloader>
+                <Header></Header>
+                <Home></Home>
+                <About></About>
+                <Experiences></Experiences>
+                <Skills></Skills>
+                <Contact></Contact>
+            </div>
+        </Suspense>
     );
 }

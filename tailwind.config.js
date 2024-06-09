@@ -10,6 +10,8 @@ module.exports = {
                 bounceRight: 'bounceRight 1s ease-in-out',
                 floating: 'floating 3s ease-in-out infinite',
                 delay: 'delay 0.8s infinite ease-in-out',
+                midToTop: 'midToTop 0.8s ease-in-out',
+                midToBottom: 'midToBottom 0.8s ease-in-out',
             },
             keyframes: {
                 bounceRight: {
@@ -58,6 +60,14 @@ module.exports = {
                 delay: {
                     '0%, 40%, 100%': { transform: 'scaleY(0.05)' },
                     '20%': { transform: 'scaleY(1.0)' },
+                },
+                midToTop: {
+                    '0%': { bottom: '50%' },
+                    '100%': { bottom: '100%' },
+                },
+                midToBottom: {
+                    '0%': { top: '50%' },
+                    '100%': { top: '100%' },
                 },
             },
             backgroundImage: {

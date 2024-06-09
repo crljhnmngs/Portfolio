@@ -1,18 +1,36 @@
-import React, { useEffect } from 'react';
-import { preLoaderAnim } from '../animation';
+import React, { useEffect, useState } from 'react';
 
 export const Preloader = () => {
+    const [isShowLoader, setShowLoader] = useState<boolean>(true);
+    const [isHidden, setHidden] = useState<boolean>(false);
     useEffect(() => {
         const timer = setTimeout(() => {
-            preLoaderAnim();
+            setShowLoader(false);
+            const timer = setTimeout(() => {
+                setHidden(true);
+            }, 800);
+            return () => clearTimeout(timer);
         }, 3000);
 
         return () => clearTimeout(timer);
     }, []);
 
     return (
-        <div className="flex justify-center items-center bg-black h-full w-full loader preloader fixed bottom-0 left-0 right-0 z-[55]">
-            <div className="m-auto sm:w-[120px] w-auto  sm:h-[80px] h-[50px] text-center font-[10px]">
+        <div
+            className={`h-full w-full absolute overflow-hidden z-50 ${
+                isHidden && 'hidden'
+            }`}
+        >
+            <div
+                className={`h-[50%] w-full absolute bottom-[50%] ${
+                    !isShowLoader && 'animate-midToTop'
+                } bg-black fill-mode`}
+            ></div>
+            <div
+                className={`absolute top-[44.5%] left-[45%] sm:h-[80px] h-[50px] z-50 ${
+                    !isShowLoader && 'hidden'
+                }`}
+            >
                 <div className="h-full w-[10px] sm:w-[15px] inline-block float-left ml-[2px] bg-[#754fa0] animate-delay"></div>
                 <div
                     className="h-full w-[10px] sm:w-[15px] inline-block float-left ml-[2px] bg-[#09b7bf] animate-delay"
@@ -35,6 +53,11 @@ export const Preloader = () => {
                     style={{ animationDelay: '-0.3s' }}
                 ></div>
             </div>
+            <div
+                className={`h-[50%] w-full absolute top-[50%] ${
+                    !isShowLoader && 'animate-midToBottom'
+                }  bg-black fill-mode`}
+            ></div>
         </div>
     );
 };
