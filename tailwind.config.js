@@ -1,5 +1,6 @@
 module.exports = {
     content: ['./src/**/*.{js,jsx,ts,tsx}'],
+    darkMode: 'class',
     theme: {
         extend: {
             screens: {
@@ -72,6 +73,7 @@ module.exports = {
             },
             backgroundImage: {
                 'bg-light': "url('images/bg-light.png')",
+                'bg-dark': "url('images/bg-dark.png')",
             },
         },
     },

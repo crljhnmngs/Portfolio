@@ -1,11 +1,13 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import SunIcon from '../assets/images/icons/sun.png';
 import Hamburger from 'hamburger-react';
+import { useThemeSwitcher } from '../hook/useThemeSwitcher';
 
 export default function Header() {
     const [isOpen, setOpen] = useState<boolean>(false);
     const [activeSection, setActiveSection] = useState<string>('home');
     const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({});
+    const [theme, setTheme] = useThemeSwitcher();
 
     const scrollToSection =
         (id: string) => (event: React.MouseEvent<HTMLLIElement>) => {
@@ -59,14 +61,26 @@ export default function Header() {
         };
     }, [sections]);
 
+    const toggleDarkMode = () => {
+        try {
+            if (theme === 'light') {
+                setTheme('dark');
+            } else {
+                setTheme('light');
+            }
+        } catch (error) {
+            console.log('Error switching theme');
+        }
+    };
+
     return (
-        <nav className="bg-white w-screen h-[70px] flex flex-row justify-between items-center nav:px-16 px-3 sticky top-0">
+        <nav className="bg-white dark:bg-gray-700 w-screen h-[70px] flex flex-row justify-between items-center nav:px-16 px-3 sticky top-0">
             <div>
-                <h3>Logo</h3>
+                <h3 className="dark:text-white">Logo</h3>
             </div>
-            <div className="flex gap-4">
+            <div className="flex gap-4 ">
                 <div
-                    className={`width-auto nav:static absolute top-[115%] bg-white nav:p-0 p-3 rounded transition-all duration-500 ${
+                    className={`width-auto nav:static absolute  bg-white dark:bg-gray-700 nav:bg-transparent nav:dark:bg-inherit top-[115%] nav:p-0 p-3 rounded transition-all duration-500 ${
                         isOpen
                             ? 'right-6 animate-bounceRight'
                             : '-right-[10rem]'
@@ -84,7 +98,7 @@ export default function Header() {
                                 onClick={scrollToSection(`#${section.id}`)}
                             >
                                 <a
-                                    className={`group-hover:text-white text-black text-[15px] h-full font-semibold ${
+                                    className={`group-hover:text-white text-black dark:text-white text-[15px] h-full font-semibold ${
                                         activeSection === section.id
                                             ? 'text-white'
                                             : ''
@@ -98,14 +112,14 @@ export default function Header() {
                     </ul>
                 </div>
                 <div className="flex items-center gap-3">
-                    <div>
+                    <div onClick={toggleDarkMode}>
                         <img
                             src={SunIcon}
                             alt="placeholder"
                             className="cursor-pointer h-7 w-7"
                         />
                     </div>
-                    <div className="flex nav:hidden">
+                    <div className="flex nav:hidden dark:text-white">
                         <Hamburger
                             toggled={isOpen}
                             toggle={setOpen}

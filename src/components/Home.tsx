@@ -10,12 +10,12 @@ import Test from '../assets/images/test.png';
 export default function Home() {
     return (
         <section
-            className="sm:h-full h-auto bg-bg-light bg-cover bg-green-200 w-screen flex items-center justify-center sm:flex-row flex-col-reverse -scroll-mt-[-70px] gap-2 sm:gap-0"
+            className="sm:h-full h-auto bg-bg-light dark:bg-bg-dark bg-cover bg-green-200 w-screen flex items-center justify-center sm:flex-row flex-col-reverse -scroll-mt-[-70px] gap-2 sm:gap-0"
             id="home"
         >
             <div className="h-[60%] home:max-w-[40%] w-full home:px-0 px-5 flex flex-col justify-center sm:items-start items-center">
                 <div>
-                    <p className="font-bold home:text-5xl sm:text-4xl text-3xl">
+                    <p className="font-bold home:text-5xl sm:text-4xl text-3xl text-black dark:text-white sm:dark:text-white">
                         Hi, I am Carl
                     </p>
                 </div>
@@ -33,7 +33,7 @@ export default function Home() {
                     />
                 </div>
                 <div className="mt-6">
-                    <p className="font-light home:text-lg sm:text:base text-sm text-center sm:text-start">
+                    <p className="font-light home:text-lg sm:text:base text-sm text-center sm:text-start dark:text-white">
                         I am a Front-End / Full-Stack Developer. I am currently
                         working at Alliance Software Incorporated as a Software
                         Engineer.
