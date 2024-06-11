@@ -73,13 +73,13 @@ export default function Header() {
     };
 
     return (
-        <nav className="bg-white dark:bg-gray-700 w-screen h-[70px] flex flex-row justify-between items-center nav:px-16 px-3 sticky top-0">
+        <nav className="bg-white dark:bg-gray-700 w-screen h-[70px] flex flex-row justify-between items-center nav:px-16 px-3 sticky top-0 drop-shadow-lg">
             <div>
                 <h3 className="dark:text-white">Logo</h3>
             </div>
             <div className="flex gap-4 ">
                 <div
-                    className={`width-auto nav:static absolute  bg-white dark:bg-gray-700 nav:bg-transparent nav:dark:bg-inherit top-[115%] nav:p-0 p-3 rounded transition-all duration-500 ${
+                    className={`width-auto nav:static absolute drop-shadow-md  bg-white dark:bg-gray-700 nav:bg-transparent nav:dark:bg-inherit top-[115%] nav:p-0 p-3 rounded transition-all duration-500 ${
                         isOpen
                             ? 'right-6 animate-bounceRight'
                             : '-right-[10rem]'
