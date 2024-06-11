@@ -1,12 +1,12 @@
-import React, { useState, useEffect, useRef, useMemo } from 'react';
+import React, { useState } from 'react';
 import Hamburger from 'hamburger-react';
 import { useThemeSwitcher } from '../hook/useThemeSwitcher';
+import { useActiveSetion } from '../hook/useActiveSetion';
 
 export default function Header() {
     const [isOpen, setOpen] = useState<boolean>(false);
-    const [activeSection, setActiveSection] = useState<string>('home');
-    const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({});
     const [theme, setTheme] = useThemeSwitcher();
+    const [sections, activeSection] = useActiveSetion();
 
     const scrollToSection =
         (id: string) => (event: React.MouseEvent<HTMLLIElement>) => {
@@ -14,51 +14,6 @@ export default function Header() {
             window.location.hash = id;
             setOpen(false);
         };
-
-    const sections = useMemo(
-        () => [
-            { id: 'home', label: 'Home' },
-            { id: 'about', label: 'About' },
-            { id: 'experiences', label: 'Experiences' },
-            { id: 'skills', label: 'Skills' },
-            { id: 'contact', label: 'Contact' },
-        ],
-        []
-    );
-
-    useEffect(() => {
-        const handleScroll = (entries: IntersectionObserverEntry[]) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    setActiveSection(entry.target.id);
-                }
-            });
-        };
-
-        const observer = new IntersectionObserver(handleScroll, {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.6,
-        });
-
-        const currentSectionRefs = { ...sectionRefs.current };
-
-        sections.forEach((section) => {
-            const element = document.getElementById(section.id);
-            if (element) {
-                currentSectionRefs[section.id] = element;
-                observer.observe(element);
-            }
-        });
-
-        return () => {
-            Object.values(currentSectionRefs).forEach((element) => {
-                if (element) {
-                    observer.unobserve(element);
-                }
-            });
-        };
-    }, [sections]);
 
     const toggleDarkMode = () => {
         try {
@@ -102,7 +57,7 @@ export default function Header() {
                                             ? 'text-white'
                                             : ''
                                     }`}
-                                    href={`#${section.id}`}
+                                    href={`${section.id}`}
                                 >
                                     {section.label}
                                 </a>
@@ -111,9 +66,17 @@ export default function Header() {
                     </ul>
                 </div>
                 <div className="flex items-center nav:gap-2 gap-1">
-                    <div className={`dark text-[12%] nav:text-[13%] dark:border dark:border-white border border-black relative h-[16em] w-[30em] rounded-[16em] cursor-pointer bg-[#423966] ${theme === 'light' ? 'day' : ''}`} onClick={toggleDarkMode}>
-                        <div className={`moon absolute block rounded-[50%] top-[3em] left-[3em] w-[10em] h-[10em] bg-[#423966] ${theme === 'light' ? 'sun' : ''}`}>
-                        </div>
+                    <div
+                        className={`dark text-[12%] nav:text-[13%] dark:border dark:border-white border border-black relative h-[16em] w-[30em] rounded-[16em] cursor-pointer bg-[#423966] ${
+                            theme === 'light' ? 'day' : ''
+                        }`}
+                        onClick={toggleDarkMode}
+                    >
+                        <div
+                            className={`moon absolute block rounded-[50%] top-[3em] left-[3em] w-[10em] h-[10em] bg-[#423966] ${
+                                theme === 'light' ? 'sun' : ''
+                            }`}
+                        ></div>
                     </div>
                     <div className="flex nav:hidden dark:text-white">
                         <Hamburger
