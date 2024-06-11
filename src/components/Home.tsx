@@ -1,11 +1,8 @@
 import React from 'react';
 import { ReactTyped } from 'react-typed';
-import Facebook from '../assets/images/icons/facebook.png';
-import Github from '../assets/images/icons/github.png';
-import Linkedin from '../assets/images/icons/linkedin.png';
-import Instagram from '../assets/images/icons/instagram.png';
-import Twitter from '../assets/images/icons/twitter.png';
 import Test from '../assets/images/test.png';
+import { FaGithub, FaLinkedin, FaFacebook, FaInstagram } from 'react-icons/fa';
+import { FaSquareXTwitter } from 'react-icons/fa6';
 
 export default function Home() {
     return (
@@ -39,61 +36,46 @@ export default function Home() {
                         Engineer.
                     </p>
                 </div>
-                <div className="mt-8 flex gap-5 item-start">
+                <div className="mt-8 flex gap-5 h-11 item-start">
                     <a
                         href="https://github.com/crljhnmngs"
                         target="_blank"
                         rel="noreferrer"
+                        className="h-11"
                     >
-                        <img
-                            src={Github}
-                            alt="Github"
-                            className="w-full h-full max-w-[45px] max-h-[45px] hover:scale-[1.18] "
-                        />
+                        <FaGithub className="w-full h-11 hover:scale-[1.18]" />
                     </a>
                     <a
                         href="https://www.linkedin.com/in/crljhnmngs/"
                         target="_blank"
                         rel="noreferrer"
+                        className="h-11"
                     >
-                        <img
-                            src={Linkedin}
-                            alt="Linkedin"
-                            className="w-full h-full max-w-[45px] max-h-[45px] hover:scale-[1.18] "
-                        />
+                        <FaLinkedin className="w-full h-11 hover:scale-[1.18]" />
                     </a>
                     <a
                         href="https://www.facebook.com/crljhnmngs"
                         target="_blank"
                         rel="noreferrer"
+                        className="h-11"
                     >
-                        <img
-                            src={Facebook}
-                            alt="Facebook"
-                            className="w-full h-full max-w-[45px] max-h-[45px] hover:scale-[1.18] "
-                        />
+                        <FaFacebook className="w-full h-11 hover:scale-[1.18]" />
                     </a>
                     <a
                         href="https://instagram.com/crljhnmngs"
                         target="_blank"
                         rel="noreferrer"
+                        className="h-11"
                     >
-                        <img
-                            src={Instagram}
-                            alt="Instagram"
-                            className="w-full h-full max-w-[45px] max-h-[45px] hover:scale-[1.18] "
-                        />
+                        <FaInstagram className="w-full h-11 hover:scale-[1.18]" />
                     </a>
                     <a
                         href="https://twitter.com/crljhnmngs"
                         target="_blank"
                         rel="noreferrer"
+                        className="h-11"
                     >
-                        <img
-                            src={Twitter}
-                            alt="Twitter"
-                            className="w-full h-full max-w-[45px] max-h-[45px] hover:scale-[1.18] "
-                        />
+                        <FaSquareXTwitter className="w-full h-11 hover:scale-[1.18]" />
                     </a>
                 </div>
                 <div className="mt-8 w-1/2">

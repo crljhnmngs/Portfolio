@@ -57,7 +57,7 @@ export default function Header() {
                                             ? 'text-white'
                                             : ''
                                     }`}
-                                    href={`${section.id}`}
+                                    href={`#${section.id}`}
                                 >
                                     {section.label}
                                 </a>
@@ -67,7 +67,7 @@ export default function Header() {
                 </div>
                 <div className="flex items-center nav:gap-2 gap-1">
                     <div
-                        className={`dark text-[12%] nav:text-[13%] dark:border dark:border-white border border-black relative h-[16em] w-[30em] rounded-[16em] cursor-pointer bg-[#423966] ${
+                        className={`dark text-[11%] nav:text-[12%] dark:border dark:border-white border border-black relative h-[16em] w-[30em] rounded-[16em] cursor-pointer bg-[#423966] ${
                             theme === 'light' ? 'day' : ''
                         }`}
                         onClick={toggleDarkMode}
