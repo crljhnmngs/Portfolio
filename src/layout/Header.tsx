@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
-import SunIcon from '../assets/images/icons/sun.png';
 import Hamburger from 'hamburger-react';
 import { useThemeSwitcher } from '../hook/useThemeSwitcher';
 
@@ -111,13 +110,10 @@ export default function Header() {
                         ))}
                     </ul>
                 </div>
-                <div className="flex items-center gap-3">
-                    <div onClick={toggleDarkMode}>
-                        <img
-                            src={SunIcon}
-                            alt="placeholder"
-                            className="cursor-pointer h-7 w-7"
-                        />
+                <div className="flex items-center nav:gap-2 gap-1">
+                    <div className={`dark text-[12%] nav:text-[13%] dark:border dark:border-white border border-black relative h-[16em] w-[30em] rounded-[16em] cursor-pointer bg-[#423966] ${theme === 'light' ? 'day' : ''}`} onClick={toggleDarkMode}>
+                        <div className={`moon absolute block rounded-[50%] top-[3em] left-[3em] w-[10em] h-[10em] bg-[#423966] ${theme === 'light' ? 'sun' : ''}`}>
+                        </div>
                     </div>
                     <div className="flex nav:hidden dark:text-white">
                         <Hamburger

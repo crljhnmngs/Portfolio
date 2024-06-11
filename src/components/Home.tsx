@@ -33,7 +33,7 @@ export default function Home() {
                     />
                 </div>
                 <div className="mt-6">
-                    <p className="font-light home:text-lg sm:text:base text-sm text-center sm:text-start dark:text-white">
+                    <p className="font-light home:text-lg sm:text:base text-sm text-center sm:text-start dark:sm:text-white dark:text-black">
                         I am a Front-End / Full-Stack Developer. I am currently
                         working at Alliance Software Incorporated as a Software
                         Engineer.
