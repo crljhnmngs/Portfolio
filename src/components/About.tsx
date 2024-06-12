@@ -3,7 +3,7 @@ import React from 'react';
 export default function About() {
     return (
         <section
-            className="h-auto sm:h-full bg-white dark:bg-gray-900 w-screen -scroll-mt-[-70px]"
+            className="h-auto sm:h-screen bg-white dark:bg-gray-900"
             id="about"
         >
             <div className="sm:h-[15%] h-auto flex justify-center items-end">

@@ -3,24 +3,23 @@ import React, { useEffect, useState } from 'react';
 export const Preloader = () => {
     const [isShowLoader, setShowLoader] = useState<boolean>(true);
     const [isHidden, setHidden] = useState<boolean>(false);
+    const { body } = document;
+
     useEffect(() => {
+        body.style.overflow = 'hidden';
         const timer = setTimeout(() => {
             setShowLoader(false);
             const timer = setTimeout(() => {
                 setHidden(true);
+                body.style.overflow = 'auto';
             }, 800);
             return () => clearTimeout(timer);
         }, 3000);
-
         return () => clearTimeout(timer);
     }, []);
 
     return (
-        <div
-            className={`h-full w-full absolute overflow-hidden z-50 ${
-                isHidden && 'hidden'
-            }`}
-        >
+        <div className={`h-screen w-full fixed z-50 ${isHidden && 'hidden'}`}>
             <div
                 className={`h-[50%] w-full absolute bottom-[50%] ${
                     !isShowLoader && 'animate-midToTop'

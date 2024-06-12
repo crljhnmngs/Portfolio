@@ -7,8 +7,8 @@ import { FaSquareXTwitter } from 'react-icons/fa6';
 export default function Home() {
     return (
         <section
-            className="sm:h-full h-auto bg-bg-light dark:bg-bg-dark bg-cover bg-green-200 w-full flex items-center justify-center sm:flex-row flex-col-reverse -scroll-mt-[-70px] gap-2 sm:gap-0"
-            id="home"
+            className="sm:h-screen h-auto bg-bg-light dark:bg-bg-dark bg-cover bg-green-200 flex items-center justify-center sm:flex-row flex-col-reverse gap-2 sm:gap-0"
+            id="/"
         >
             <div className="h-auto home:max-w-[40%] w-full home:px-0 px-5 flex flex-col justify-center sm:items-start items-center">
                 <div>

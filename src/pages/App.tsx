@@ -6,17 +6,19 @@ import Experiences from '../components/Experiences';
 import Skills from '../components/Skills';
 import Contact from '../components/Contact';
 import { Preloader } from '../components/Preloader';
+import Projects from '../components/Projects';
 
 export default function App() {
     return (
         <Suspense fallback={<Preloader />}>
-            <div className="w-screen h-screen font-poppins overflow-x-hidden">
+            <div className="font-poppins">
                 <Preloader></Preloader>
                 <Header></Header>
                 <Home></Home>
                 <About></About>
-                <Experiences></Experiences>
                 <Skills></Skills>
+                <Experiences></Experiences>
+                <Projects></Projects>
                 <Contact></Contact>
             </div>
         </Suspense>
