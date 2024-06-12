@@ -7,10 +7,10 @@ import { FaSquareXTwitter } from 'react-icons/fa6';
 export default function Home() {
     return (
         <section
-            className="sm:h-full h-auto bg-bg-light dark:bg-bg-dark bg-cover bg-green-200 w-screen flex items-center justify-center sm:flex-row flex-col-reverse -scroll-mt-[-70px] gap-2 sm:gap-0"
+            className="sm:h-full h-auto bg-bg-light dark:bg-bg-dark bg-cover bg-green-200 w-full flex items-center justify-center sm:flex-row flex-col-reverse -scroll-mt-[-70px] gap-2 sm:gap-0"
             id="home"
         >
-            <div className="h-[60%] home:max-w-[40%] w-full home:px-0 px-5 flex flex-col justify-center sm:items-start items-center">
+            <div className="h-auto home:max-w-[40%] w-full home:px-0 px-5 flex flex-col justify-center sm:items-start items-center">
                 <div>
                     <p className="font-bold home:text-5xl sm:text-4xl text-3xl text-black dark:text-white sm:dark:text-white">
                         Hi, I am Carl
@@ -36,47 +36,52 @@ export default function Home() {
                         Engineer.
                     </p>
                 </div>
-                <div className="mt-8 flex gap-5 h-11 item-start">
-                    <a
-                        href="https://github.com/crljhnmngs"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="h-11"
-                    >
-                        <FaGithub className="w-full h-11 hover:scale-[1.18]" />
-                    </a>
-                    <a
-                        href="https://www.linkedin.com/in/crljhnmngs/"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="h-11"
-                    >
-                        <FaLinkedin className="w-full h-11 hover:scale-[1.18]" />
-                    </a>
-                    <a
-                        href="https://www.facebook.com/crljhnmngs"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="h-11"
-                    >
-                        <FaFacebook className="w-full h-11 hover:scale-[1.18]" />
-                    </a>
-                    <a
-                        href="https://instagram.com/crljhnmngs"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="h-11"
-                    >
-                        <FaInstagram className="w-full h-11 hover:scale-[1.18]" />
-                    </a>
-                    <a
-                        href="https://twitter.com/crljhnmngs"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="h-11"
-                    >
-                        <FaSquareXTwitter className="w-full h-11 hover:scale-[1.18]" />
-                    </a>
+                <div className="mt-8 flex gap-4 h-11 sm:h-[3.2rem] justify-center sm:justify-start  w-[100%] ">
+                    <div className="w-full h-full max-w-14">
+                        <a
+                            href="https://github.com/crljhnmngs"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <FaGithub className="hover:scale-[1.18] size-full" />
+                        </a>
+                    </div>
+                    <div className="w-full h-full max-w-14">
+                        <a
+                            href="https://www.linkedin.com/in/crljhnmngs/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <FaLinkedin className="size-full hover:scale-[1.18]" />
+                        </a>
+                    </div>
+                    <div className="w-full h-full max-w-14">
+                        <a
+                            href="https://www.facebook.com/crljhnmngs"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <FaFacebook className="size-full hover:scale-[1.18]" />
+                        </a>
+                    </div>
+                    <div className="w-full h-full max-w-14">
+                        <a
+                            href="https://instagram.com/crljhnmngs"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <FaInstagram className="size-full hover:scale-[1.18]" />
+                        </a>
+                    </div>
+                    <div className="w-full h-full max-w-14">
+                        <a
+                            href="https://twitter.com/crljhnmngs"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <FaSquareXTwitter className="size-full hover:scale-[1.18]" />
+                        </a>
+                    </div>
                 </div>
                 <div className="mt-8 w-1/2">
                     <button
