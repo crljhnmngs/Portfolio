@@ -1,10 +1,44 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { ReactTyped } from 'react-typed';
 import Test from '../assets/images/test.png';
 import { FaGithub, FaLinkedin, FaFacebook, FaInstagram } from 'react-icons/fa';
 import { FaSquareXTwitter } from 'react-icons/fa6';
 
 export default function Home() {
+
+    const iconStyleClass: string = 'hover:scale-[1.18] size-full';
+
+    const socials =  useMemo(
+        () => [
+            {
+                name: 'github',
+                link: 'https://github.com/crljhnmngs',
+                icon: <FaGithub className={iconStyleClass} />
+            },
+            {
+                name: 'linkedin',
+                link: 'https://www.linkedin.com/in/crljhnmngs/',
+                icon: <FaLinkedin className={iconStyleClass} />
+            },
+            {
+                name: 'facebook',
+                link: 'https://www.facebook.com/crljhnmngs',
+                icon: <FaFacebook className={iconStyleClass} />
+            },
+            {
+                name: 'instagram',
+                link: 'https://instagram.com/crljhnmngs',
+                icon: <FaInstagram className={iconStyleClass} />
+            },
+            {
+                name: 'twitter',
+                link: 'https://twitter.com/crljhnmngs',
+                icon: <FaSquareXTwitter className={iconStyleClass} />
+            },
+        ],
+        []
+    );
+
     return (
         <section
             className="sm:h-screen h-auto bg-bg-light dark:bg-bg-dark bg-cover bg-green-200 flex items-center justify-center sm:flex-row flex-col-reverse gap-2 sm:gap-0"
@@ -37,51 +71,17 @@ export default function Home() {
                     </p>
                 </div>
                 <div className="mt-8 flex gap-4 h-11 sm:h-[3.2rem] justify-center sm:justify-start  w-[100%] ">
-                    <div className="w-full h-full max-w-14">
-                        <a
-                            href="https://github.com/crljhnmngs"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <FaGithub className="hover:scale-[1.18] size-full" />
-                        </a>
-                    </div>
-                    <div className="w-full h-full max-w-14">
-                        <a
-                            href="https://www.linkedin.com/in/crljhnmngs/"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <FaLinkedin className="size-full hover:scale-[1.18]" />
-                        </a>
-                    </div>
-                    <div className="w-full h-full max-w-14">
-                        <a
-                            href="https://www.facebook.com/crljhnmngs"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <FaFacebook className="size-full hover:scale-[1.18]" />
-                        </a>
-                    </div>
-                    <div className="w-full h-full max-w-14">
-                        <a
-                            href="https://instagram.com/crljhnmngs"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <FaInstagram className="size-full hover:scale-[1.18]" />
-                        </a>
-                    </div>
-                    <div className="w-full h-full max-w-14">
-                        <a
-                            href="https://twitter.com/crljhnmngs"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <FaSquareXTwitter className="size-full hover:scale-[1.18]" />
-                        </a>
-                    </div>
+                    {socials.map((social) => (
+                        <div className="w-full h-full max-w-14" key={social.name}>
+                            <a
+                                href={social.link}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                {social.icon}
+                            </a>
+                        </div>
+                    ))}
                 </div>
                 <div className="mt-8 w-1/2">
                     <button

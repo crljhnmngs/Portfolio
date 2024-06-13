@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import Hamburger from 'hamburger-react';
 import { useThemeSwitcher } from '../hook/useThemeSwitcher';
 import { Link } from 'react-scroll';
@@ -8,32 +8,35 @@ export default function Header() {
     const [isOpen, setOpen] = useState<boolean>(false);
     const [theme, setTheme] = useThemeSwitcher();
 
-    const sections = [
-        {
-            name: 'Home',
-            id: '/',
-        },
-        {
-            name: 'About',
-            id: 'about',
-        },
-        {
-            name: 'Skills',
-            id: 'skills',
-        },
-        {
-            name: 'Experiences',
-            id: 'experiences',
-        },
-        {
-            name: 'Projects',
-            id: 'projects',
-        },
-        {
-            name: 'Contact',
-            id: 'contact',
-        },
-    ];
+    const sections = useMemo(
+        () => [
+            {
+                name: 'Home',
+                id: '/',
+            },
+            {
+                name: 'About',
+                id: 'about',
+            },
+            {
+                name: 'Skills',
+                id: 'skills',
+            },
+            {
+                name: 'Experiences',
+                id: 'experiences',
+            },
+            {
+                name: 'Projects',
+                id: 'projects',
+            },
+            {
+                name: 'Contact',
+                id: 'contact',
+            },
+        ],
+        []
+    );
 
     const toggleDarkMode = () => {
         try {
@@ -108,7 +111,7 @@ export default function Header() {
                         animate={{ x: 0, transition: { type: 'spring' } }}
                         exit={{ x: 200, transition: { type: 'spring' } }}
                         className={
-                            'bg-white nav:hidden dark:bg-black p-2 z-50 fixed top-[70px] mt-2 rounded-lg shadow-lg right-2 block w-40 h-auto'
+                            'bg-white nav:hidden dark:bg-gray-700 p-2 z-50 fixed top-[70px] mt-2 rounded-lg shadow-lg right-2 block w-40 h-auto'
                         }
                     >
                         <ul className="flex flex-col gap-2 text-md font-medium">
@@ -117,7 +120,7 @@ export default function Header() {
                                     to={section.id}
                                     activeClass={'text-white bg-blue-500'}
                                     className={
-                                        'hover:bg-blue-500 text-black dark:text-white block px-3 py-2 rounded-md text-base font-medium mt-1 hover:text-white cursor-pointer'
+                                        'text-black dark:text-white block px-3 py-2 rounded-md text-base font-medium mt-1 hover:bg-blue-500 hover:text-white cursor-pointer'
                                     }
                                     spy={true}
                                     smooth={true}
