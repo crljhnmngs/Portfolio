@@ -92,7 +92,7 @@ export default function Home() {
                     </button>
                 </div>
             </div>
-            <div className="sm:h-[400px] home:h-[60%] home:w-[40%] w-full flex justify-center items-start hidden sm:flex">
+            <div className="sm:h-[433px] home:h-[60%] home:w-[40%] w-full flex justify-center items-start hidden sm:flex">
                 <img
                     src={Person}
                     alt="placeholder"
