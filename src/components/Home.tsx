@@ -46,7 +46,7 @@ export default function Home() {
         >
             <div className="h-auto sm:h-[433px] home:h-auto home:max-w-[40%] w-full home:px-0 px-5 flex flex-col justify-center sm:items-center items-start home:items-start">
                 <div>
-                    <p className="font-bold home:text-5xl sm:text-5xl text-3xl text-black dark:text-white sm:dark:text-white">
+                    <p className="font-bold home:text-5xl sm:text-4xl text-3xl text-black dark:text-white sm:dark:text-white">
                         Hi, I am Carl
                     </p>
                 </div>
@@ -60,7 +60,7 @@ export default function Home() {
                         typeSpeed={50}
                         backSpeed={60}
                         loop
-                        className="font-bold home:text-5xl sm:text-5xl text-3xl text-[#3B82F6] text-start sm:text-center home:text-start"
+                        className="font-bold home:text-5xl sm:text-4xl text-3xl text-[#3B82F6] text-start sm:text-center home:text-start"
                     />
                 </div>
                 <div className="mt-6 w-full sm:w-1/2  home:w-[80%]">
