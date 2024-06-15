@@ -98,7 +98,7 @@ export default function Home() {
                 <img
                     src={Person}
                     alt="placeholder"
-                    className="w-full h-[80%] max-h-[350px] sm:h-full sm:max-h-full"
+                    className="w-full h-[80%] max-h-[350px] sm:h-full sm:max-h-full animate-float"
                 />
             </div>
         </section>

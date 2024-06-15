@@ -11,6 +11,7 @@ module.exports = {
                 delay: 'delay 0.8s infinite ease-in-out',
                 midToTop: 'midToTop 0.8s ease-in-out',
                 midToBottom: 'midToBottom 0.8s ease-in-out',
+                float: 'float 6s ease-in-out infinite',
             },
             keyframes: {
                 delay: {
@@ -25,10 +26,22 @@ module.exports = {
                     '0%': { top: '50%' },
                     '100%': { top: '100%' },
                 },
+                float: {
+                    '0%': {
+                        transform: 'translateY(0px)',
+                    },
+                    '50%': {
+                        transform: 'translateY(-20px)',
+                    },
+                    '100%': {
+                        transform: 'translateY(0px)',
+                    },
+                },
             },
             backgroundImage: {
                 'bg-light': "url('images/bg-light.png')",
                 'bg-dark': "url('images/bg-dark.png')",
+                'bg-image': "url('images/blob.svg')",
             },
         },
     },

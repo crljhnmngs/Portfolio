@@ -52,7 +52,7 @@ export default function Header() {
 
     return (
         <React.Fragment>
-            <nav className="bg-white dark:bg-gray-700 sticky w-full h-[70px] flex flex-row justify-between items-center nav:px-16 px-3 top-0 shadow-lg">
+            <nav className="bg-white dark:bg-gray-700 sticky z-50 w-full h-[70px] flex flex-row justify-between items-center nav:px-16 px-3 top-0 shadow-lg">
                 <div>
                     <h3 className="dark:text-white">Logo</h3>
                 </div>
