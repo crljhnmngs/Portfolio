@@ -6,6 +6,7 @@ module.exports = {
             screens: {
                 nav: '880px',
                 home: '1200px',
+                about: '1015px',
             },
             animation: {
                 delay: 'delay 0.8s infinite ease-in-out',

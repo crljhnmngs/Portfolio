@@ -19,7 +19,9 @@ export const Preloader = () => {
     }, []);
 
     return (
-        <div className={`h-screen w-full fixed z-50 ${isHidden && 'hidden'}`}>
+        <div
+            className={`h-screen w-full fixed z-[100] ${isHidden && 'hidden'}`}
+        >
             <div
                 className={`h-[50%] w-full absolute bottom-[50%] ${
                     !isShowLoader && 'animate-midToTop'
