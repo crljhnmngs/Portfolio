@@ -16,7 +16,7 @@ export const Preloader = () => {
             return () => clearTimeout(timer);
         }, 3000);
         return () => clearTimeout(timer);
-    }, []);
+    }, [body.style]);
 
     return (
         <div

@@ -1,8 +1,10 @@
 import React, { useMemo } from 'react';
 import { ReactTyped } from 'react-typed';
-import Person from '../assets/images/person.svg';
 import { FaGithub, FaLinkedin, FaFacebook, FaInstagram } from 'react-icons/fa';
 import { FaSquareXTwitter } from 'react-icons/fa6';
+import ReactLottie from 'lottie-react';
+import codingAnimation from '../json/coding.json';
+import { SlideLeft, SlideRight } from '../animation/Slide';
 
 export default function Home() {
     const iconStyleClass: string = 'hover:scale-[1.18] size-full';
@@ -43,7 +45,10 @@ export default function Home() {
             className="h-screen sm:h-auto home:h-screen bg-bg-light dark:bg-bg-dark bg-cover bg-green-200 flex sm:items-center items-center justify-center sm:gap-0 home:gap-2 sm:flex-col home:flex-row"
             id="/"
         >
-            <div className="h-auto sm:h-[433px] home:h-auto home:max-w-[40%] w-full home:px-0 px-5 flex flex-col justify-center sm:items-center items-start home:items-start">
+            <SlideLeft
+                className="h-auto sm:h-[433px] home:h-auto home:max-w-[40%] w-full home:px-0 px-5 flex flex-col justify-center sm:items-center items-start home:items-start"
+                delay={0.5}
+            >
                 <div>
                     <p className="font-bold home:text-5xl sm:text-4xl text-3xl text-black dark:text-white sm:dark:text-white">
                         Hi, I am Carl
@@ -93,14 +98,17 @@ export default function Home() {
                         Resume
                     </button>
                 </div>
-            </div>
-            <div className="sm:h-[433px] home:h-[60%] home:w-[40%] w-full justify-center items-start hidden sm:flex">
-                <img
-                    src={Person}
-                    alt="placeholder"
-                    className="w-full h-[80%] max-h-[350px] sm:h-full sm:max-h-full animate-float"
+            </SlideLeft>
+            <SlideRight
+                className="sm:h-[433px] home:h-[60%] home:w-[40%] w-full justify-center items-start hidden sm:flex"
+                delay={0.5}
+            >
+                <ReactLottie
+                    animationData={codingAnimation}
+                    className="w-full h-[120%] animate-float -mt-14"
+                    loop={true}
                 />
-            </div>
+            </SlideRight>
         </section>
     );
 }
