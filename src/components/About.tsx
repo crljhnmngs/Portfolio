@@ -45,7 +45,7 @@ export default function About() {
                     className="w-full sm:w-[80%] home:w-1/2 h-auto about:h-full pt-0 flex items-center"
                     delay={0.5}
                 >
-                    <p className="text-black text-base dark:text-white text-center about:text-start pb-6 leading-relaxed">
+                    <p className="text-black text-base dark:text-white text-justify pb-6 leading-relaxed">
                         Hello there! I'm Carl, a {age}-year-old Front-End /
                         Full-Stack Developer based in Cebu, Philippines,
                         {experience}. <br></br> My journey with computers
