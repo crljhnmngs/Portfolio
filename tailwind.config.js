@@ -8,6 +8,7 @@ module.exports = {
                 home: '1200px',
                 about: '1015px',
                 skill: '944px',
+                "skill-sm": '448px',
             },
             animation: {
                 delay: 'delay 0.8s infinite ease-in-out',

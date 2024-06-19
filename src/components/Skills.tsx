@@ -100,7 +100,7 @@ export default function Skills() {
 
     return (
         <section
-            className="h-auto  sm:h-screen bg-gray-100 dark:bg-black sm:px-6 lg:px-8 px-4 mx-auto flex items-center flex-col"
+            className="h-auto skill:h-screen bg-gray-100 dark:bg-black sm:px-6 lg:px-8 px-4 mx-auto flex items-center flex-col"
             id="skills"
         >
             <div className="sm:h-[13%] h-auto flex justify-center items-end pt-10 home:pt-0">
@@ -127,9 +127,9 @@ export default function Skills() {
                             },
                             hidden: { opacity: 1, y: 80 },
                         }}
-                        className="py-2 px-4 bg-white md:m-4 mx-2 mt-6 rounded-lg flex items-center cursor-pointer md:w-48 w-40 min-w-[192px]"
+                        className="py-2 px-2 bg-white md:m-4 mx-1 skill-sm:mx-2 mt-6 rounded-lg flex items-center cursor-pointer md:w-48 w-40 min-w-[100px] skill-sm:min-w-[192px] border"
                     >
-                        <img alt="" src={skill.link} className="w-12" />
+                        <img alt="" src={skill.link} className="w-10 skill-sm:w-11 skill:w-12" />
                         <h4 className="text-md ml-4">{skill.name}</h4>
                     </motion.div>
                 ))}
