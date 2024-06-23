@@ -23,7 +23,7 @@ export default function Header() {
                 id: 'skills',
             },
             {
-                name: 'Experiences',
+                name: 'Timeline',
                 id: 'experiences',
             },
             {
