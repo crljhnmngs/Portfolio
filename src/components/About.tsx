@@ -24,7 +24,7 @@ export default function About() {
         >
             <div className="sm:h-[13%] h-auto flex justify-center items-end pt-5 home:pt-0">
                 <Popup
-                    delay={0.8}
+                    delay={0.6}
                     className="text-black font-semibold text-3xl sm:text-4xl dark:text-white"
                 >
                     About Me

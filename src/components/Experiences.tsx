@@ -38,6 +38,7 @@ export const Experiences = () => {
                                     'HTML',
                                     'JavaScript',
                                     'C#',
+                                    'SVN',
                                     'Waterfall',
                                 ],
                             },
@@ -71,7 +72,7 @@ export const Experiences = () => {
                             },
                             {
                                 description: `I was assigned to provide bank support for our Japanese client's ATMs here in the Philippines. My tasks include fixing bugs in their legacy base code and developing new functionalities based on specific bank requests. Banks: BDO, MBTC, and EWB`,
-                                tech: ['C++', 'VBScript', 'Waterfall'],
+                                tech: ['C++', 'VBScript', 'SVN', 'Waterfall'],
                             },
                         ],
                         date: 'October 2022 - January 2024',

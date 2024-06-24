@@ -44,10 +44,10 @@ export default function Skills() {
             name: 'React',
             link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg',
         },
-        {
-            name: 'Redux',
-            link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg',
-        },
+        // {
+        //     name: 'Redux',
+        //     link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg',
+        // },
         {
             name: 'MobX',
             link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mobx/mobx-original.svg',
@@ -129,7 +129,11 @@ export default function Skills() {
                         }}
                         className="py-2 px-2 bg-white md:m-4 mx-1 skill-sm:mx-2 mt-6 rounded-lg flex items-center cursor-pointer md:w-48 w-40 min-w-[100px] skill-sm:min-w-[192px] border"
                     >
-                        <img alt="" src={skill.link} className="w-10 skill-sm:w-11 skill:w-12" />
+                        <img
+                            alt=""
+                            src={skill.link}
+                            className="w-10 skill-sm:w-11 skill:w-12"
+                        />
                         <h4 className="text-md ml-4">{skill.name}</h4>
                     </motion.div>
                 ))}
