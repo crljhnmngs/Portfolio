@@ -24,7 +24,7 @@ export default function Header() {
             },
             {
                 name: 'Timeline',
-                id: 'experiences',
+                id: 'timeline',
             },
             {
                 name: 'Projects',
