@@ -8,7 +8,8 @@ module.exports = {
                 home: '1200px',
                 about: '1015px',
                 skill: '944px',
-                "skill-sm": '448px',
+                'skill-sm': '448px',
+                minHeight: { raw: '(max-height: 743px)' },
             },
             animation: {
                 delay: 'delay 0.8s infinite ease-in-out',
@@ -45,6 +46,9 @@ module.exports = {
                 'bg-light': "url('images/bg-light.png')",
                 'bg-dark': "url('images/bg-dark.png')",
                 'bg-image': "url('images/blob.svg')",
+            },
+            maxWidth: {
+                maxScreen: '95rem',
             },
         },
     },

@@ -14,12 +14,14 @@ export default function App() {
             <div className="font-poppins">
                 <Preloader></Preloader>
                 <Header></Header>
-                <Home></Home>
-                <About></About>
-                <Skills></Skills>
-                <Timeline></Timeline>
-                <Projects></Projects>
-                <Contact></Contact>
+                <div className="overflow-hidden">
+                    <Home></Home>
+                    <About></About>
+                    <Skills></Skills>
+                    <Timeline></Timeline>
+                    <Projects></Projects>
+                    <Contact></Contact>
+                </div>
             </div>
         </Suspense>
     );

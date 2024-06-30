@@ -100,7 +100,7 @@ export default function Skills() {
 
     return (
         <section
-            className="h-auto skill:h-screen bg-gray-100 dark:bg-black sm:px-6 lg:px-8 px-4 mx-auto flex items-center flex-col"
+            className="h-auto skill:h-screen  bg-gray-100 dark:bg-black sm:px-6 lg:px-8 px-4 mx-auto flex items-center flex-col"
             id="skills"
         >
             <div className="sm:h-[13%] h-auto flex justify-center items-end pt-10 home:pt-0">
