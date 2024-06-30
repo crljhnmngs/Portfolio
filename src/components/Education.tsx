@@ -14,6 +14,7 @@ export const Education = () => {
                 'Java',
                 'C#',
                 'Spring Boot',
+                'J2EE',
                 'NodeJS',
                 'Python',
                 'MySQL',

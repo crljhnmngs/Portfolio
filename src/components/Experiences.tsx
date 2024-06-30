@@ -160,8 +160,8 @@ export const Experiences = () => {
                                             {subItem.setup}
                                         </time>
 
-                                        {subItem.projects?.map((project) => (
-                                            <div className="mt-2">
+                                        {subItem.projects?.map((project, i) => (
+                                            <div className="mt-2" key={i}>
                                                 <p className="mb-4 text-base font-normal text-gray-700 dark:text-gray-400">
                                                     {project.description}
                                                 </p>
