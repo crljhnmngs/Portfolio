@@ -7,6 +7,8 @@ import Skills from '../components/Skills';
 import Contact from '../components/Contact';
 import { Preloader } from '../components/Preloader';
 import Projects from '../components/Projects';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function App() {
     return (
@@ -22,6 +24,7 @@ export default function App() {
                     <Projects></Projects>
                     <Contact></Contact>
                 </div>
+                <ToastContainer />
             </div>
         </Suspense>
     );
