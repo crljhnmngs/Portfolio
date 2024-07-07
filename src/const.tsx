@@ -3,6 +3,12 @@ import { FaSquareXTwitter } from 'react-icons/fa6';
 import LogoAlliance from './assets/images/Alliance.webp';
 import LogoMVP from './assets/images/mvp.webp';
 import UC from './assets/images/UC.png';
+import portfolio from './assets/images/portfolio.png';
+import dota2 from './assets/images/dota2.png';
+import advanceCalulator from './assets/images/advance-calculator.png';
+import calulator from './assets/images/calculator.png';
+import facebook from './assets/images/facebook.png';
+import fakeStore from './assets/images/fake-store.png';
 
 const iconStyleClass: string = 'hover:scale-[1.18] size-full';
 
@@ -268,5 +274,112 @@ export const educations = [
         course: 'TECH-VOC ICT - Computer Programming & Hardware Servicing ',
         tech: ['Java', 'C#'],
         date: 'June 2016 - April 2018',
+    },
+];
+export const projects = [
+    {
+        name: 'Personal Portfolio',
+        image: portfolio,
+        about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima odio quisquam repellendus voluptatibus animi ducimus, corrupti et autem quis, harum quia quas, deserunt quae omnis inventore vero! Ducimus, odio sint.',
+        tech: [
+            'React',
+            'TypeScript',
+            'Tailwind',
+            'Framer Motion',
+            'Responsive',
+        ],
+        date: '2024',
+        links: {
+            github: 'https://github.com/crljhnmngs/Portfolio',
+            live: '',
+        },
+    },
+    {
+        name: 'Fake Store',
+        image: fakeStore,
+        about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima odio quisquam repellendus voluptatibus animi ducimus, corrupti et autem quis, harum quia quas, deserunt quae omnis inventore vero! Ducimus, odio sint.',
+        tech: ['HTML', 'SCSS', 'JavaScript', 'Responsive'],
+        date: '2022',
+        links: {
+            github: 'https://github.com/crljhnmngs/Fake-Store',
+            live: 'https://crljhnmngs.github.io/Fake-Store/',
+        },
+    },
+    {
+        name: 'DOTA2 Heroes',
+        image: dota2,
+        about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima odio quisquam repellendus voluptatibus animi ducimus, corrupti et autem quis, harum quia quas, deserunt quae omnis inventore vero! Ducimus, odio sint.',
+        tech: ['HTML', 'Tailwind', 'JavaScript', 'Responsive'],
+        date: '2022',
+        links: {
+            github: 'https://github.com/crljhnmngs/DOTA2-Heroes',
+            live: 'https://crljhnmngs.github.io/DOTA2-Heroes/',
+        },
+    },
+    {
+        name: 'Welift',
+        image: portfolio,
+        about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima odio quisquam repellendus voluptatibus animi ducimus, corrupti et autem quis, harum quia quas, deserunt quae omnis inventore vero! Ducimus, odio sint.',
+        tech: ['PHP', 'MySQL', 'jQuery', 'JavaScript'],
+        date: '2022',
+        links: {
+            github: 'https://github.com/crljhnmngs/CAPSTONE-PROJECT',
+            live: '',
+        },
+    },
+    {
+        name: 'Overflow',
+        image: portfolio,
+        about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima odio quisquam repellendus voluptatibus animi ducimus, corrupti et autem quis, harum quia quas, deserunt quae omnis inventore vero! Ducimus, odio sint.',
+        tech: ['PHP', 'MySQL', 'jQuery', 'JavaScript'],
+        date: '2022',
+        links: {
+            github: 'https://github.com/LMNTRIXXXX/Capstone',
+            live: '',
+        },
+    },
+    {
+        name: 'Advance Calculator',
+        image: advanceCalulator,
+        about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima odio quisquam repellendus voluptatibus animi ducimus, corrupti et autem quis, harum quia quas, deserunt quae omnis inventore vero! Ducimus, odio sint.',
+        tech: ['HTML', 'CSS', 'JavaScript'],
+        date: '2022',
+        links: {
+            github: 'https://github.com/crljhnmngs/Advance-Calculator',
+            live: 'https://crljhnmngs.github.io/Advance-Calculator/',
+        },
+    },
+    {
+        name: 'Basic Calculator',
+        image: calulator,
+        about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima odio quisquam repellendus voluptatibus animi ducimus, corrupti et autem quis, harum quia quas, deserunt quae omnis inventore vero! Ducimus, odio sint.',
+        tech: ['HTML', 'CSS', 'JavaScript'],
+        date: '2022',
+        links: {
+            github: 'https://github.com/crljhnmngs/Calculator',
+            live: 'https://crljhnmngs.github.io/Calculator/',
+        },
+    },
+    {
+        name: 'Facebook Clone(Design)',
+        image: facebook,
+        about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima odio quisquam repellendus voluptatibus animi ducimus, corrupti et autem quis, harum quia quas, deserunt quae omnis inventore vero! Ducimus, odio sint.',
+        tech: ['HTML', 'CSS'],
+        date: '2022',
+        links: {
+            github: 'https://github.com/crljhnmngs/Facebook-Clone',
+            live: 'https://crljhnmngs.github.io/Facebook-Clone/',
+        },
+    },
+    {
+        name: ' Amusement Park Management System',
+        image: portfolio,
+        about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima odio quisquam repellendus voluptatibus animi ducimus, corrupti et autem quis, harum quia quas, deserunt quae omnis inventore vero! Ducimus, odio sint.',
+        tech: ['C#', 'Windows Forms'],
+        date: '2019',
+        links: {
+            github: 'https://github.com/crljhnmngs/Amusement-Park-Management-System',
+            live: '',
+        },
     },
 ];
