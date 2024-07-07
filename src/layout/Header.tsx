@@ -3,40 +3,15 @@ import Hamburger from 'hamburger-react';
 import { useThemeSwitcher } from '../hook/useThemeSwitcher';
 import { Link } from 'react-scroll';
 import { motion, AnimatePresence } from 'framer-motion';
+import { sections } from '../const';
 
 export default function Header() {
     const [isOpen, setOpen] = useState<boolean>(false);
     const [theme, setTheme] = useThemeSwitcher();
 
-    const sections = useMemo(
-        () => [
-            {
-                name: 'Home',
-                id: '/',
-            },
-            {
-                name: 'About',
-                id: 'about',
-            },
-            {
-                name: 'Skills',
-                id: 'skills',
-            },
-            {
-                name: 'Timeline',
-                id: 'timeline',
-            },
-            {
-                name: 'Projects',
-                id: 'projects',
-            },
-            {
-                name: 'Contact',
-                id: 'contact',
-            },
-        ],
-        []
-    );
+    const memoizedData = useMemo(() => {
+        return sections;
+    }, []);
 
     const toggleDarkMode = () => {
         try {
@@ -59,7 +34,7 @@ export default function Header() {
                 <div className="nav:flex gap-4 mt-1 ">
                     <div className={`width-auto hidden nav:block w-full`}>
                         <ul className="flex nav:flex-row flex-col nav:gap-3 gap-1">
-                            {sections.map((section) => (
+                            {memoizedData.map((section) => (
                                 <li
                                     key={section.name}
                                     className=" cursor-pointer "

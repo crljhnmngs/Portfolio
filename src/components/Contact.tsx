@@ -1,15 +1,18 @@
 import React, { useMemo, useState } from 'react';
 import { Popup } from '../animation/Popup';
 import { SlideLeft } from '../animation/Slide';
-import { FaGithub, FaLinkedin, FaFacebook, FaInstagram } from 'react-icons/fa';
-import { FaSquareXTwitter } from 'react-icons/fa6';
 import emailjs from '@emailjs/browser';
 import { ReactComponent as Loader } from '../assets/loading.svg';
 import { toast } from 'react-toastify';
+import { socials } from '../const';
+import { Footer } from '../layout/Footer';
 
 export default function Contact() {
     const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
-    const iconStyleClass: string = 'hover:scale-[1.18] size-full';
+
+    const memoizedData = useMemo(() => {
+        return socials;
+    }, []);
 
     const sendEmail = (e: any) => {
         e.persist();
@@ -43,40 +46,9 @@ export default function Contact() {
         e.target.reset();
     };
 
-    const socials = useMemo(
-        () => [
-            {
-                name: 'github',
-                link: 'https://github.com/crljhnmngs',
-                icon: <FaGithub className={iconStyleClass} />,
-            },
-            {
-                name: 'linkedin',
-                link: 'https://www.linkedin.com/in/crljhnmngs/',
-                icon: <FaLinkedin className={iconStyleClass} />,
-            },
-            {
-                name: 'facebook',
-                link: 'https://www.facebook.com/crljhnmngs',
-                icon: <FaFacebook className={iconStyleClass} />,
-            },
-            {
-                name: 'instagram',
-                link: 'https://instagram.com/crljhnmngs',
-                icon: <FaInstagram className={iconStyleClass} />,
-            },
-            {
-                name: 'twitter',
-                link: 'https://twitter.com/crljhnmngs',
-                icon: <FaSquareXTwitter className={iconStyleClass} />,
-            },
-        ],
-        []
-    );
-
     return (
         <section
-            className="h-auto minHeight:h-auto lg:h-[92.8vh] bg-white dark:bg-gray-900 relative pb-10"
+            className="h-auto contactMinHeight:h-auto lg:h-[92.8vh] bg-white dark:bg-gray-900 relative pb-10"
             id="contact"
         >
             <div className="h-20 flex justify-center items-end ">
@@ -102,7 +74,7 @@ export default function Contact() {
                         </p>
                     </SlideLeft>
                 </div>
-                <div className=" mt-10 flex flex-col lg:flex-row gap-8 lg:gap-0">
+                <div className=" mt-10 flex flex-col lg:flex-row gap-8 lg:gap-0 contactMinHeight:mb-10 mb-10 lg:mb-0 ">
                     <div className="lg:w-1/2 2xl:pr-20 md:w-[90%] w-full">
                         <form onSubmit={sendEmail}>
                             <div className="flex flex-col gap-2">
@@ -163,7 +135,7 @@ export default function Contact() {
                             </div>
                         </form>
                     </div>
-                    <div className="w-1/2 flex flex-col mt-5 text-start lg:text-end">
+                    <div className="w-full lg:w-1/2 flex flex-col mt-5 text-start lg:text-end">
                         <div className="flex flex-col">
                             <p className="text-xl sm:text-3xl font-bold text-gray-600 dark:text-gray-300">
                                 Email
@@ -185,9 +157,9 @@ export default function Contact() {
                                 Socials
                             </p>
                             <div className="flex justify-start lg:justify-end gap-3 mt-3">
-                                {socials.map((social) => (
+                                {memoizedData.map((social) => (
                                     <div
-                                        className="w-full h-full max-w-11 max-h-11"
+                                        className="w-full h-full max-w-10 max-h-10"
                                         key={social.name}
                                     >
                                         <a
@@ -205,6 +177,7 @@ export default function Contact() {
                     </div>
                 </div>
             </div>
+            <Footer></Footer>
         </section>
     );
 }

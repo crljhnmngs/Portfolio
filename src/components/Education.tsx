@@ -1,42 +1,15 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { IoCalendarNumberOutline } from 'react-icons/io5';
-import UC from '../assets/images/UC.png';
+import { educations } from '../const';
 
 export const Education = () => {
-    const educations = [
-        {
-            logo: UC,
-            school: 'University Of Cebu - Lapu-Lapu and Mandaue',
-            track: 'College',
-            course: 'Bachelor of Science in Information Technology',
-            tech: [
-                'C++',
-                'Java',
-                'C#',
-                'Spring Boot',
-                'J2EE',
-                'NodeJS',
-                'Python',
-                'MySQL',
-                'PHP',
-                'Agile',
-            ],
-            date: 'June 2018 - July 2022',
-        },
-        {
-            logo: UC,
-            school: 'University Of Cebu - Lapu-Lapu and Mandaue',
-            track: 'Senior High School',
-            course: 'TECH-VOC ICT - Computer Programming & Hardware Servicing ',
-            tech: ['Java', 'C#'],
-            date: 'June 2016 - April 2018',
-        },
-    ];
-
+    const memoizedData = useMemo(() => {
+        return educations;
+    }, []);
     return (
         <div className="-mt-3">
             <ol className="relative border-l border-gray-300 dark:border-gray-600">
-                {educations.map((e, i) => (
+                {memoizedData.map((e, i) => (
                     <li key={i} className="p-1 mb-10 ml-6">
                         <span className="flex absolute -left-3.5 justify-center items-center w-7 h-7 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
                             <img

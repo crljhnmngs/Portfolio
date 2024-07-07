@@ -9,7 +9,7 @@ module.exports = {
                 about: '1015px',
                 skill: '944px',
                 'skill-sm': '448px',
-                minHeight: { raw: '(max-height: 743px)' },
+                contactMinHeight: { raw: '(max-height: 844px)' },
             },
             animation: {
                 delay: 'delay 0.8s infinite ease-in-out',

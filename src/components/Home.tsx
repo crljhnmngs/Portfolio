@@ -1,44 +1,14 @@
 import React, { useMemo } from 'react';
 import { ReactTyped } from 'react-typed';
-import { FaGithub, FaLinkedin, FaFacebook, FaInstagram } from 'react-icons/fa';
-import { FaSquareXTwitter } from 'react-icons/fa6';
 import ReactLottie from 'lottie-react';
 import codingAnimation from '../json/coding.json';
 import { SlideLeft, SlideRight } from '../animation/Slide';
+import { socials } from '../const';
 
 export default function Home() {
-    const iconStyleClass: string = 'hover:scale-[1.18] size-full';
-
-    const socials = useMemo(
-        () => [
-            {
-                name: 'github',
-                link: 'https://github.com/crljhnmngs',
-                icon: <FaGithub className={iconStyleClass} />,
-            },
-            {
-                name: 'linkedin',
-                link: 'https://www.linkedin.com/in/crljhnmngs/',
-                icon: <FaLinkedin className={iconStyleClass} />,
-            },
-            {
-                name: 'facebook',
-                link: 'https://www.facebook.com/crljhnmngs',
-                icon: <FaFacebook className={iconStyleClass} />,
-            },
-            {
-                name: 'instagram',
-                link: 'https://instagram.com/crljhnmngs',
-                icon: <FaInstagram className={iconStyleClass} />,
-            },
-            {
-                name: 'twitter',
-                link: 'https://twitter.com/crljhnmngs',
-                icon: <FaSquareXTwitter className={iconStyleClass} />,
-            },
-        ],
-        []
-    );
+    const memoizedData = useMemo(() => {
+        return socials;
+    }, []);
 
     return (
         <section
@@ -75,7 +45,7 @@ export default function Home() {
                     </p>
                 </div>
                 <div className="mt-8 flex gap-4 h-11 sm:h-[3.2rem] justify-start sm:justify-center home:justify-start w-[100%] sm:dark:text-white home:dark:text-black">
-                    {socials.map((social) => (
+                    {memoizedData.map((social) => (
                         <div
                             className="w-full h-full max-w-14"
                             key={social.name}
