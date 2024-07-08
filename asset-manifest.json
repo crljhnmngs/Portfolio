@@ -1,23 +1,29 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.413269f9.css",
-    "main.js": "/Portfolio/static/js/main.c1902381.js",
+    "main.css": "/Portfolio/static/css/main.581615ee.css",
+    "main.js": "/Portfolio/static/js/main.a238e596.js",
     "static/js/453.acca0757.chunk.js": "/Portfolio/static/js/453.acca0757.chunk.js",
+    "static/media/dota2.png": "/Portfolio/static/media/dota2.2b9e548eac59d925fcce.png",
+    "static/media/calculator.png": "/Portfolio/static/media/calculator.10c50b1ac5cbc97541db.png",
+    "static/media/advance-calculator.png": "/Portfolio/static/media/advance-calculator.2dc953d547a5b1a1a9bc.png",
+    "static/media/fake-store.png": "/Portfolio/static/media/fake-store.6364042653d3acbf9d7f.png",
+    "static/media/portfolio.png": "/Portfolio/static/media/portfolio.2ba68a75c4e68a72bd89.png",
     "static/media/me.png": "/Portfolio/static/media/me.d41a48d7a91a4285d2a9.png",
     "static/media/UC.png": "/Portfolio/static/media/UC.8b55e0c5c0d1ac13bc3d.png",
     "static/media/bg-light.png": "/Portfolio/static/media/bg-light.f28b5c6961fd82be839c.png",
     "static/media/bg-dark.png": "/Portfolio/static/media/bg-dark.51edaa54cabe7b964ae9.png",
+    "static/media/facebook.png": "/Portfolio/static/media/facebook.5e275e66b1a0c2d30373.png",
     "static/media/blob.svg": "/Portfolio/static/media/blob.13018a583bad1bc186d1.svg",
     "static/media/mvp.webp": "/Portfolio/static/media/mvp.3bd07a8420d5196beb5a.webp",
     "index.html": "/Portfolio/index.html",
     "static/media/loading.svg": "/Portfolio/static/media/loading.791d2cdaba2a109c57ec829f85b137a7.svg",
     "static/media/Alliance.webp": "/Portfolio/static/media/Alliance.b85e645d6f197369c7de.webp",
-    "main.413269f9.css.map": "/Portfolio/static/css/main.413269f9.css.map",
-    "main.c1902381.js.map": "/Portfolio/static/js/main.c1902381.js.map",
+    "main.581615ee.css.map": "/Portfolio/static/css/main.581615ee.css.map",
+    "main.a238e596.js.map": "/Portfolio/static/js/main.a238e596.js.map",
     "453.acca0757.chunk.js.map": "/Portfolio/static/js/453.acca0757.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.413269f9.css",
-    "static/js/main.c1902381.js"
+    "static/css/main.581615ee.css",
+    "static/js/main.a238e596.js"
   ]
 }
