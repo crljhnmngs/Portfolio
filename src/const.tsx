@@ -286,7 +286,7 @@ export const projects = [
             'TypeScript',
             'Tailwind',
             'Framer Motion',
-            'Responsive',
+            'Responsive ',
         ],
         date: '2024',
         links: {

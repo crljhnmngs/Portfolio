@@ -92,6 +92,7 @@ export default function Header() {
                         <ul className="flex flex-col gap-2 text-md font-medium">
                             {sections.map((section) => (
                                 <Link
+                                    key={section.name}
                                     to={section.id}
                                     activeClass={'text-white bg-blue-500'}
                                     className={
