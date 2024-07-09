@@ -72,7 +72,7 @@ export default function Projects() {
                                             </h1>
                                         </div>
                                         <div className="mt-3 max-w-[90%] min-h-[4.5rem]">
-                                            <p className="text-justify text-base line-clamp-3 project-xl:line-clamp-4">
+                                            <p className="text-justify sm:text-base line-clamp-3 project-xl:line-clamp-4">
                                                 {project.about}
                                             </p>
                                         </div>
@@ -80,19 +80,19 @@ export default function Projects() {
                                             {project.tech.map((tech) => (
                                                 <div
                                                     key={tech}
-                                                    className="mb-2 py-2 px-2 xl:px-3 text-xs rounded-md mr-2 bg-gray-800  text-white dark:text-gray-300"
+                                                    className="mb-2 py-2 px-2 xl:px-3 text-xs  rounded-md mr-2 bg-gray-800  text-white dark:text-gray-300"
                                                 >
                                                     {tech}
                                                 </div>
                                             ))}
                                         </div>
                                         <div className="absolute bottom-[18px] lg:bottom-5 w-full">
-                                            <div className="flex justify-between ">
+                                            <div className="flex justify-between">
                                                 <div className="text-base font-semibold pl-2 pt-1">
                                                     {' '}
                                                     <p>{project.date}</p>
                                                 </div>
-                                                <div className="flex gap-4 pr-5">
+                                                <div className="flex gap-4 pr-1 sm:pr-5 -mt-[1rem]">
                                                     {project.links?.github && (
                                                         <div className="relative group">
                                                             <a
@@ -103,12 +103,13 @@ export default function Projects() {
                                                                 }
                                                                 target="_blank"
                                                                 rel="noreferrer"
+                                                                className="opt-10 group-hover:opacity-100"
                                                             >
                                                                 <FaGithub className="size-7 opacity-60 cursor-pointer group-hover:opacity-100" />
                                                             </a>
-                                                            <div className="absolute bottom-0 right-2 left-0 pl-2 flex-col items-center hidden mb-10 group-hover:flex ">
+                                                            <div className="absolute bottom-0 right-2 left-0 pl-2 flex-col items-center hidden mb-[3.2rem] group-hover:flex">
                                                                 <div className="w-3 h-3 -mb-10 rotate-45 bg-black dark:bg-white"></div>
-                                                                <span className=" p-3 text-xs text-center leading-none text-white dark:text-black whitespace-no-wrap bg-black dark:bg-white shadow-lg w-32 rounded-md">
+                                                                <span className="p-3 text-xs text-center leading-none text-white dark:text-black whitespace-no-wrap bg-black dark:bg-white shadow-lg w-32 rounded-md">
                                                                     View
                                                                     Repository
                                                                 </span>
@@ -128,7 +129,7 @@ export default function Projects() {
                                                             >
                                                                 <FaLink className="size-7 opacity-60 cursor-pointer group-hover:opacity-100" />
                                                             </a>
-                                                            <div className="absolute bottom-0 right-2 left-0 pl-2 flex-col items-center hidden mb-10 group-hover:flex ">
+                                                            <div className="absolute bottom-0 right-2 left-0 pl-2 flex-col items-center hidden mb-[3rem] group-hover:flex ">
                                                                 <div className="w-3 h-3 -mb-10 rotate-45 bg-black dark:bg-white"></div>
                                                                 <span className=" p-3 text-xs text-center leading-none text-white dark:text-black whitespace-no-wrap bg-black dark:bg-white shadow-lg w-24 rounded-md">
                                                                     View Site
@@ -146,7 +147,9 @@ export default function Projects() {
                     </Swiper>
                 </div>
                 <div className="w-full flex items-center justify-center pb-5 sm:hidden">
-                    <p className="text-sm text-white">Swipe Left or Right</p>
+                    <p className="text-sm text-black dark:text-white">
+                        Swipe Left or Right
+                    </p>
                 </div>
             </div>
         </section>

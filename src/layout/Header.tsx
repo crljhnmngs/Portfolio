@@ -29,7 +29,15 @@ export default function Header() {
         <React.Fragment>
             <nav className="bg-white dark:bg-gray-700 sticky z-50 w-full h-[70px] flex flex-row justify-between items-center nav:px-16 px-3 top-0 shadow-lg">
                 <div>
-                    <h3 className="dark:text-white">Logo</h3>
+                    <Link
+                        to="/"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        className={'dark:text-white cursor-pointer'}
+                    >
+                        CrlJhnMngs
+                    </Link>
                 </div>
                 <div className="nav:flex gap-4 mt-1 ">
                     <div className={`width-auto hidden nav:block w-full`}>
