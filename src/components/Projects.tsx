@@ -19,7 +19,7 @@ export default function Projects() {
 
     return (
         <section
-            className="h-auto sm:h-screen projectMaxHeight:h-auto bg-gray-100 dark:bg-black"
+            className="h-auto sm:h-screen projectMaxHeight:h-auto projectsCustomBP:h-auto bg-gray-100 dark:bg-black"
             id="projects"
         >
             <div className="max-w-maxScreen mx-auto sm:px-6 lg:px-8 px-4 h-full">

@@ -9,6 +9,9 @@ import advanceCalulator from './assets/images/advance-calculator.png';
 import calulator from './assets/images/calculator.png';
 import facebook from './assets/images/facebook.png';
 import fakeStore from './assets/images/fake-store.png';
+import WeLift from './assets/images/WeLift.png';
+import OverFlow from './assets/images/Overflow.png';
+import  Amusement from './assets/images/amusement.gif';
 
 const iconStyleClass: string = 'hover:scale-[1.18] size-full';
 
@@ -302,7 +305,7 @@ export const projects = [
         date: '2022',
         links: {
             github: 'https://github.com/crljhnmngs/Fake-Store',
-            live: 'https://crljhnmngs.github.io/Fake-Store/',
+            live: 'https://fake-store-blond.vercel.app/',
         },
     },
     {
@@ -318,7 +321,7 @@ export const projects = [
     },
     {
         name: 'Welift',
-        image: portfolio,
+        image: WeLift,
         about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima odio quisquam repellendus voluptatibus animi ducimus, corrupti et autem quis, harum quia quas, deserunt quae omnis inventore vero! Ducimus, odio sint.',
         tech: ['PHP', 'MySQL', 'jQuery', 'JavaScript'],
         date: '2022',
@@ -329,7 +332,7 @@ export const projects = [
     },
     {
         name: 'Overflow',
-        image: portfolio,
+        image: OverFlow,
         about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima odio quisquam repellendus voluptatibus animi ducimus, corrupti et autem quis, harum quia quas, deserunt quae omnis inventore vero! Ducimus, odio sint.',
         tech: ['PHP', 'MySQL', 'jQuery', 'JavaScript'],
         date: '2022',
@@ -346,7 +349,7 @@ export const projects = [
         date: '2022',
         links: {
             github: 'https://github.com/crljhnmngs/Advance-Calculator',
-            live: 'https://crljhnmngs.github.io/Advance-Calculator/',
+            live: 'https://advance-calculator-three.vercel.app/',
         },
     },
     {
@@ -357,7 +360,7 @@ export const projects = [
         date: '2022',
         links: {
             github: 'https://github.com/crljhnmngs/Calculator',
-            live: 'https://crljhnmngs.github.io/Calculator/',
+            live: 'https://calculator-kohl-xi-82.vercel.app/',
         },
     },
     {
@@ -368,12 +371,12 @@ export const projects = [
         date: '2022',
         links: {
             github: 'https://github.com/crljhnmngs/Facebook-Clone',
-            live: 'https://crljhnmngs.github.io/Facebook-Clone/',
+            live: 'https://facebook-clone-chi-orcin.vercel.app/',
         },
     },
     {
         name: ' Amusement Park Management System',
-        image: portfolio,
+        image: Amusement,
         about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima odio quisquam repellendus voluptatibus animi ducimus, corrupti et autem quis, harum quia quas, deserunt quae omnis inventore vero! Ducimus, odio sint.',
         tech: ['C#', 'Windows Forms'],
         date: '2019',

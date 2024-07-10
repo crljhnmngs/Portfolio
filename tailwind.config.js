@@ -11,7 +11,10 @@ module.exports = {
                 'skill-sm': '448px',
                 'project-xl': '1400px',
                 contactMinHeight: { raw: '(max-height: 844px)' },
-                projectMaxHeight: { raw: '(max-height: 600px)' },
+                projectMaxHeight: { raw: '(max-height: 700px)' },
+                projectsCustomBP: {
+                    raw: '(max-height: 701px),(min-width:1400px)',
+                },
             },
             animation: {
                 delay: 'delay 0.8s infinite ease-in-out',
