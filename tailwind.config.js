@@ -1,53 +1,59 @@
 module.exports = {
     content: ['./src/**/*.{js,jsx,ts,tsx}'],
+    darkMode: 'class',
     theme: {
         extend: {
             screens: {
-                nav: '840px',
-                home: '1128px',
+                nav: '880px',
+                home: '1200px',
+                about: '1015px',
+                skill: '944px',
+                'skill-sm': '448px',
+                'project-xl': '1400px',
+                contactMinHeight: { raw: '(max-height: 844px)' },
+                projectMaxHeight: { raw: '(max-height: 700px)' },
+                projectsCustomBP: {
+                    raw: '(max-height: 701px),(min-width:1400px)',
+                },
             },
             animation: {
-                bounceRight: 'bounceRight 1s ease-in-out',
+                delay: 'delay 0.8s infinite ease-in-out',
+                midToTop: 'midToTop 0.8s ease-in-out',
+                midToBottom: 'midToBottom 0.8s ease-in-out',
+                float: 'float 6s ease-in-out infinite',
             },
             keyframes: {
-                bounceRight: {
-                    '0%, 100%': {
-                        transform: 'translateX(0)',
+                delay: {
+                    '0%, 40%, 100%': { transform: 'scaleY(0.05)' },
+                    '20%': { transform: 'scaleY(1.0)' },
+                },
+                midToTop: {
+                    '0%': { bottom: '50%' },
+                    '100%': { bottom: '100%' },
+                },
+                midToBottom: {
+                    '0%': { top: '50%' },
+                    '100%': { top: '100%' },
+                },
+                float: {
+                    '0%': {
+                        transform: 'translateY(0px)',
                     },
                     '50%': {
-                        transform: 'translateX(-25px)',
+                        transform: 'translateY(-20px)',
                     },
-                    '90%': {
-                        transform: 'translateX(10px)',
-                    },
-                    '91%': {
-                        transform: 'translateX(9px)',
-                    },
-                    '92%': {
-                        transform: 'translateX(8px)',
-                    },
-                    '93%': {
-                        transform: 'translateX(7px)',
-                    },
-                    '94%': {
-                        transform: 'translateX(6px)',
-                    },
-                    '95%': {
-                        transform: 'translateX(5px)',
-                    },
-                    '96%': {
-                        transform: 'translateX(4px)',
-                    },
-                    '97%': {
-                        transform: 'translateX(3px)',
-                    },
-                    '98%': {
-                        transform: 'translateX(2px)',
-                    },
-                    '99%': {
-                        transform: 'translateX(1px)',
+                    '100%': {
+                        transform: 'translateY(0px)',
                     },
                 },
+            },
+            backgroundImage: {
+                'bg-light': "url('images/bg-light.png')",
+                'bg-dark': "url('images/bg-dark.png')",
+                'bg-image': "url('images/blob.svg')",
+            },
+            maxWidth: {
+                maxScreen: '95rem',
             },
         },
     },
