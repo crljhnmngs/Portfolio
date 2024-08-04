@@ -11,7 +11,7 @@ import facebook from './assets/images/facebook.png';
 import fakeStore from './assets/images/fake-store.png';
 import WeLift from './assets/images/WeLift.png';
 import OverFlow from './assets/images/Overflow.png';
-import  Amusement from './assets/images/amusement.gif';
+import Amusement from './assets/images/amusement.gif';
 
 const iconStyleClass: string = 'hover:scale-[1.18] size-full';
 
@@ -180,29 +180,54 @@ export const experiences = [
             'C++',
             'VBScript',
             'JavaScript',
+            'Git',
             'Waterfall',
         ],
 
         date: 'October 2022 - Present',
         subItems: [
             {
-                position: 'Technical Specialist II',
+                position: 'Associate Technical Specialist I',
                 setup: 'On-site',
                 projects: [
                     {
-                        description: `Developing a web UI cardless transaction for our Japanese client's ATMs here in the Philippines. Bank: BDO`,
+                        description:
+                            "Developing a web UI cardless cash withdrawal and cash deposit transactions for our Japanese client's ATMs here in the Philippines. The user can use a QR code, fingerprint, or face recognition to do cash withdrawals and deposits. Bank: BDO",
                         tech: [
                             'C++',
                             'VBScript',
-                            'HTML',
                             'JavaScript',
+                            'HTML',
+                            'CSS',
                             'C#',
+                            'Git',
                             'SVN',
                             'Waterfall',
                         ],
                     },
                 ],
-                date: 'January 2024 - Present',
+                date: 'July 2024 - Present',
+            },
+            {
+                position: 'Technical Specialist II',
+                setup: 'On-site',
+                projects: [
+                    {
+                        description: `Developed a web UI cardless cheque deposit transaction for our Japanese client's ATMs here in the Philippines. Bank: BDO`,
+                        tech: [
+                            'C++',
+                            'VBScript',
+                            'JavaScript',
+                            'HTML',
+                            'CSS',
+                            'C#',
+                            'Git',
+                            'SVN',
+                            'Waterfall',
+                        ],
+                    },
+                ],
+                date: 'January 2024 - July 2024',
             },
             {
                 position: 'Technical Specialist I',
@@ -217,6 +242,7 @@ export const experiences = [
                             'MobX',
                             'Material UI',
                             'ASP.net Core',
+                            'Git',
                         ],
                     },
                     {
@@ -226,7 +252,7 @@ export const experiences = [
                     },
                     {
                         description: `I was assigned to provide bank support for our Japanese client's ATMs here in the Philippines. My tasks include fixing bugs in their legacy base code and developing new functionalities based on specific bank requests. Banks: BDO, MBTC, and EWB`,
-                        tech: ['C++', 'VBScript', 'SVN', 'Waterfall'],
+                        tech: ['C++', 'VBScript', 'Git', 'SVN', 'Waterfall'],
                     },
                 ],
                 date: 'October 2022 - January 2024',
@@ -283,7 +309,7 @@ export const projects = [
     {
         name: 'Personal Portfolio',
         image: portfolio,
-        about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima odio quisquam repellendus voluptatibus animi ducimus, corrupti et autem quis, harum quia quas, deserunt quae omnis inventore vero! Ducimus, odio sint.',
+        about: 'My Portfolio Website is a modern, responsive web application designed to showcase my professional work and personal projects in an engaging and interactive manner. Built using a combination of cutting-edge web technologies, this project highlights my skills in web development and design.',
         tech: [
             'React',
             'TypeScript',
@@ -300,7 +326,7 @@ export const projects = [
     {
         name: 'Fake Store',
         image: fakeStore,
-        about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima odio quisquam repellendus voluptatibus animi ducimus, corrupti et autem quis, harum quia quas, deserunt quae omnis inventore vero! Ducimus, odio sint.',
+        about: 'The Fake Store project is a hands-on application developed to practice and showcase skills in integrating and working with APIs. This project simulates an e-commerce platform, leveraging a mock API to deliver a realistic shopping experience while focusing on effective API usage and data handling.',
         tech: ['HTML', 'SCSS', 'JavaScript', 'Responsive'],
         date: '2022',
         links: {
@@ -311,7 +337,7 @@ export const projects = [
     {
         name: 'DOTA2 Heroes',
         image: dota2,
-        about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima odio quisquam repellendus voluptatibus animi ducimus, corrupti et autem quis, harum quia quas, deserunt quae omnis inventore vero! Ducimus, odio sint.',
+        about: 'The Dota 2 Heroes Project is a web application developed to explore and showcase data from the popular game Dota 2. Created out of my passion for the game and a desire to practice API integration, this project provides a detailed and interactive interface for browsing and learning about Dota 2 heroes.',
         tech: ['HTML', 'Tailwind', 'JavaScript', 'Responsive'],
         date: '2022',
         links: {
@@ -322,7 +348,7 @@ export const projects = [
     {
         name: 'Welift',
         image: WeLift,
-        about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima odio quisquam repellendus voluptatibus animi ducimus, corrupti et autem quis, harum quia quas, deserunt quae omnis inventore vero! Ducimus, odio sint.',
+        about: 'WeLift is a comprehensive web application developed as our capstone project during my final year of college. The platform is designed to simplify the process of booking moving services, specifically tailored for individuals and families needing assistance with relocations, also known as "lipat bahay." WeLift connects users with reliable moving service providers, streamlining the logistics of moving household items.',
         tech: ['PHP', 'MySQL', 'jQuery', 'JavaScript'],
         date: '2022',
         links: {
@@ -333,7 +359,7 @@ export const projects = [
     {
         name: 'Overflow',
         image: OverFlow,
-        about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima odio quisquam repellendus voluptatibus animi ducimus, corrupti et autem quis, harum quia quas, deserunt quae omnis inventore vero! Ducimus, odio sint.',
+        about: 'Overflow is a feature-rich note-taking application developed as a capstone project by my friend, with significant contributions from me. Designed to provide an efficient and user-friendly platform for managing personal notes, Overflow enhances productivity through its intuitive interface and robust functionality.',
         tech: ['PHP', 'MySQL', 'jQuery', 'JavaScript'],
         date: '2022',
         links: {
@@ -344,7 +370,7 @@ export const projects = [
     {
         name: 'Advance Calculator',
         image: advanceCalulator,
-        about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima odio quisquam repellendus voluptatibus animi ducimus, corrupti et autem quis, harum quia quas, deserunt quae omnis inventore vero! Ducimus, odio sint.',
+        about: 'The Advanced Calculator is a web-based application developed to practice and refine my JavaScript skills. This tool offers a variety of advanced mathematical functions, showcasing my ability to implement complex calculations and create an interactive user interface using JavaScript.',
         tech: ['HTML', 'CSS', 'JavaScript'],
         date: '2022',
         links: {
@@ -355,7 +381,7 @@ export const projects = [
     {
         name: 'Basic Calculator',
         image: calulator,
-        about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima odio quisquam repellendus voluptatibus animi ducimus, corrupti et autem quis, harum quia quas, deserunt quae omnis inventore vero! Ducimus, odio sint.',
+        about: 'The Basic Calculator is a simple web application developed as an initial project while I was learning JavaScript. This project serves as a foundational exercise in applying JavaScript to create a functional calculator with essential arithmetic operations.',
         tech: ['HTML', 'CSS', 'JavaScript'],
         date: '2022',
         links: {
@@ -366,7 +392,7 @@ export const projects = [
     {
         name: 'Facebook Clone(Design)',
         image: facebook,
-        about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima odio quisquam repellendus voluptatibus animi ducimus, corrupti et autem quis, harum quia quas, deserunt quae omnis inventore vero! Ducimus, odio sint.',
+        about: `The Facebook Clone is a web application developed to replicate the design and user interface of Facebook. This project focuses on creating a visually accurate and interactive clone of Facebook's design, providing an opportunity to practice front-end development skills and understand complex UI/UX elements.`,
         tech: ['HTML', 'CSS'],
         date: '2022',
         links: {
@@ -377,7 +403,7 @@ export const projects = [
     {
         name: ' Amusement Park Management System',
         image: Amusement,
-        about: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima odio quisquam repellendus voluptatibus animi ducimus, corrupti et autem quis, harum quia quas, deserunt quae omnis inventore vero! Ducimus, odio sint.',
+        about: 'The Amusement Park Management System is a Windows Forms application developed as a final project during my second year of college. This system is designed to streamline and manage various operations within an amusement park, including ticket sales, ride management, and customer services. It was selected as one of the best projects, showcasing its effectiveness and impact.',
         tech: ['C#', 'Windows Forms'],
         date: '2019',
         links: {

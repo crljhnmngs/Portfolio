@@ -71,12 +71,12 @@ export default function Projects() {
                                                 {project.name}
                                             </h1>
                                         </div>
-                                        <div className="mt-3 max-w-[90%] min-h-[4.5rem]">
-                                            <p className="text-justify sm:text-base line-clamp-3 project-xl:line-clamp-4">
+                                        <div className="mt-3 max-w-[100%] min-h-[4.5rem]">
+                                            <p className="text-justify sm:text-base line-clamp-4 project-xl:line-clamp-5">
                                                 {project.about}
                                             </p>
                                         </div>
-                                        <div className=" mt-3 xl:mt-5 flex flex-wrap">
+                                        <div className=" mt-1 xl:mt-3 flex flex-wrap">
                                             {project.tech.map((tech) => (
                                                 <div
                                                     key={tech}
