@@ -205,6 +205,10 @@ export const experiences = [
                             'Waterfall',
                         ],
                     },
+                    {
+                        description:"Assigned as the tech lead for the team.",
+                        tech: [],
+                    },
                 ],
                 date: 'July 2024 - Present',
             },

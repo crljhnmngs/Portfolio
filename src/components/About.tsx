@@ -3,12 +3,13 @@ import Me from '../assets/images/me.png';
 import moment from 'moment';
 import { SlideLeft, SlideRight } from '../animation/Slide';
 import { Popup } from '../animation/Popup';
+import ImageWithFallback from '../utils/ImageWithFallback';
 
 export default function About() {
     const age = moment().diff('2000-01-03', 'years');
     const yearsOfExperience = moment().diff('2022-10-10', 'years', true);
     let experience = '';
-    if (yearsOfExperience % 1 >= 0.6) {
+    if (yearsOfExperience % 1 >= 0.8) {
         experience = ` with nearly ${
             Math.floor(yearsOfExperience) + 1
         } years of professional experience`;
@@ -37,7 +38,12 @@ export default function About() {
                 >
                     <div className="size-[280px] sm:size-[26rem] about:size-[31rem] flex items-start pt-3 justify-center bg-bg-image">
                         <div className="size-[14.5rem] sm:size-[22rem] about:size-[25.5rem] rounded-[50%] overflow-hidden mr-3 sm:mr-4 about:mr-6 mt-1 about:mt-5">
-                            <img src={Me} alt="Me" className="size-full mt-2" />
+                            <ImageWithFallback
+                                src={Me}
+                                alt='Me'
+                                loaderColor='white'
+                                className="size-full mt-2"
+                            />
                         </div>
                     </div>
                 </SlideLeft>

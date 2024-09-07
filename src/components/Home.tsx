@@ -4,11 +4,32 @@ import ReactLottie from 'lottie-react';
 import codingAnimation from '../json/coding.json';
 import { SlideLeft, SlideRight } from '../animation/Slide';
 import { socials } from '../const';
+import { saveAs } from 'file-saver';
+import { toast } from 'react-toastify';
 
 export default function Home() {
     const memoizedData = useMemo(() => {
         return socials;
     }, []);
+    const resumeUrl = 'resume.pdf';
+
+    const handleDownload = async () => {
+        try {
+            const response = await fetch(resumeUrl);
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const blob = await response.blob();
+            saveAs(blob, 'Manigos, Carl John Resume.pdf');
+        } catch (error) {
+            toast.error(
+                'Something went wrong, please try again later',
+                {
+                    position: 'top-right',
+                }   
+            );
+        }
+    };
 
     return (
         <section
@@ -64,6 +85,7 @@ export default function Home() {
                     <button
                         type="button"
                         className=" home:w-[80%] w-[50%] max-w-56 h-[60px] text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-8 py-3 me-2 focus:outline-none"
+                        onClick={handleDownload}
                     >
                         Resume
                     </button>

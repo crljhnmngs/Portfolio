@@ -11,6 +11,7 @@ import 'swiper/css/pagination';
 
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 import { projects } from '../const';
+import ImageWithFallback from '../utils/ImageWithFallback';
 
 export default function Projects() {
     const memoizedData = useMemo(() => {
@@ -59,9 +60,10 @@ export default function Projects() {
                             <SwiperSlide key={project.name}>
                                 <div className="w-[28rem] h-[32rem] lg:w-[29rem] lg:h-[33rem] xl:w-[32rem] xl:h-[35.5rem] project-xl:w-[35rem] project-xl:h-[39rem] mt-2 dark:bg-gray-200 bg-white rounded-lg p-3 lg:p-4">
                                     <div className="h-[50%] xl:h-[55%] w-full">
-                                        <img
+                                        <ImageWithFallback
                                             src={project.image}
-                                            alt="alt"
+                                            alt={project.name}
+                                            loaderColor='black'
                                             className="object-fill size-full rounded-lg"
                                         />
                                     </div>
