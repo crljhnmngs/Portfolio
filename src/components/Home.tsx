@@ -11,7 +11,7 @@ export default function Home() {
     const memoizedData = useMemo(() => {
         return socials;
     }, []);
-    const resumeUrl = 'resume.pdf';
+    const resumeUrl = 'Resume.pdf';
 
     const handleDownload = async () => {
         try {
