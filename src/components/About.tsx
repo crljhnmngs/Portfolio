@@ -1,5 +1,5 @@
 import React from 'react';
-import Me from '../assets/images/me.png';
+import Me from '../assets/images/me.webp';
 import moment from 'moment';
 import { SlideLeft, SlideRight } from '../animation/Slide';
 import { Popup } from '../animation/Popup';

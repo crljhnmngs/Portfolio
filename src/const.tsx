@@ -3,15 +3,16 @@ import { FaSquareXTwitter } from 'react-icons/fa6';
 import LogoAlliance from './assets/images/Alliance.webp';
 import LogoMVP from './assets/images/mvp.webp';
 import UC from './assets/images/UC.png';
-import portfolio from './assets/images/portfolio.png';
-import dota2 from './assets/images/dota2.png';
-import advanceCalulator from './assets/images/advance-calculator.png';
-import calulator from './assets/images/calculator.png';
-import facebook from './assets/images/facebook.png';
-import fakeStore from './assets/images/fake-store.png';
-import WeLift from './assets/images/WeLift.png';
-import OverFlow from './assets/images/Overflow.png';
+import portfolio from './assets/images/portfolio.webp';
+import dota2 from './assets/images/dota2.webp';
+import advanceCalulator from './assets/images/advance-calculator.webp';
+import calulator from './assets/images/calculator.webp';
+import facebook from './assets/images/facebook.webp';
+import fakeStore from './assets/images/fake-store.webp';
+import WeLift from './assets/images/WeLift.webp';
+import OverFlow from './assets/images/Overflow.webp';
 import Amusement from './assets/images/amusement.gif';
+import fun88 from './assets/images/fun88.webp';
 
 const iconStyleClass: string = 'hover:scale-[1.18] size-full';
 
@@ -83,10 +84,10 @@ export const skills = [
         name: 'React',
         link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg',
     },
-    // {
-    //     name: 'Redux',
-    //     link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg',
-    // },
+    {
+        name: 'Redux',
+        link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg',
+    },
     {
         name: 'MobX',
         link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mobx/mobx-original.svg',
@@ -325,6 +326,22 @@ export const projects = [
         links: {
             github: 'https://github.com/crljhnmngs/Portfolio',
             live: '',
+        },
+    },
+    {
+        name: 'FUN88',
+        image: fun88,
+        about: 'The app is a simple clone of the FUN88 app, focusing on features like game selection, filtering, and a favorites list. This app was created during a front-end coding test.',
+        tech: [
+            'React',
+            'TypeScript',
+            'Tailwind',
+            'Redux',
+        ],
+        date: '2024',
+        links: {
+            github: 'https://github.com/crljhnmngs/FUN88',
+            live: 'https://fun-88.vercel.app/',
         },
     },
     {

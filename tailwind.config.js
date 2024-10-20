@@ -48,8 +48,8 @@ module.exports = {
                 },
             },
             backgroundImage: {
-                'bg-light': "url('images/bg-light.png')",
-                'bg-dark': "url('images/bg-dark.png')",
+                'bg-light': "url('images/bg-light.webp')",
+                'bg-dark': "url('images/bg-dark.webp')",
                 'bg-image': "url('images/blob.svg')",
             },
             maxWidth: {
