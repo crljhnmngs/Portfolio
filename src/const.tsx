@@ -45,11 +45,15 @@ export const sections = [
 
 export const skills = [
     {
+        name: 'React',
+        link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg',
+    },
+    {
         name: 'TypeScript',
         link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg',
     },
     {
-        name: 'JavaScript',
+        name: ' JavaScript (ES6+)',
         link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg',
     },
     {
@@ -57,11 +61,11 @@ export const skills = [
         link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/visualbasic/visualbasic-original.svg',
     },
     {
-        name: 'HTML',
+        name: 'HTML5',
         link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg',
     },
     {
-        name: 'CSS',
+        name: 'CSS3',
         link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg',
     },
     {
@@ -81,16 +85,28 @@ export const skills = [
         link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/materialui/materialui-original.svg',
     },
     {
-        name: 'React',
-        link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg',
-    },
-    {
         name: 'Redux',
         link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg',
     },
     {
         name: 'MobX',
         link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mobx/mobx-original.svg',
+    },
+    {
+        name: 'RESTful API',
+        link: '',
+    },
+    {
+        name: 'WebSocket',
+        link: '',
+    },
+    {
+        name: 'Jest',
+        link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/jest/jest-plain.svg',
+    },
+    {
+        name: 'React Testing Library',
+        link: 'https://testing-library.com/img/logo-large.png',
     },
     {
         name: 'NodeJS',
@@ -129,12 +145,28 @@ export const skills = [
         link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg',
     },
     {
+        name: 'Firebase',
+        link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase-original.svg',
+    },
+    {
+        name: 'MongoDB',
+        link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg',
+    },
+    {
         name: 'Git',
         link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg',
     },
     {
         name: 'SVN',
         link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/subversion/subversion-original.svg',
+    },
+    {
+        name: 'Postman',
+        link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/postman/postman-original.svg',
+    },
+    {
+        name: 'Figma',
+        link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg',
     },
 ];
 
@@ -207,7 +239,7 @@ export const experiences = [
                         ],
                     },
                     {
-                        description:"Assigned as the tech lead for the team.",
+                        description: 'Assigned as the tech lead for the team.',
                         tech: [],
                     },
                 ],
@@ -312,6 +344,17 @@ export const educations = [
 ];
 export const projects = [
     {
+        name: 'FUN88',
+        image: fun88,
+        about: 'The app is a simple clone of the FUN88 app, focusing on features like game selection, filtering, and a favorites list. This app was created during a front-end coding test.',
+        tech: ['React', 'TypeScript', 'Tailwind', 'Redux'],
+        date: '2024',
+        links: {
+            github: 'https://github.com/crljhnmngs/FUN88',
+            live: 'https://fun-88.vercel.app/',
+        },
+    },
+    {
         name: 'Personal Portfolio',
         image: portfolio,
         about: 'My Portfolio Website is a modern, responsive web application designed to showcase my professional work and personal projects in an engaging and interactive manner. Built using a combination of cutting-edge web technologies, this project highlights my skills in web development and design.',
@@ -326,22 +369,6 @@ export const projects = [
         links: {
             github: 'https://github.com/crljhnmngs/Portfolio',
             live: '',
-        },
-    },
-    {
-        name: 'FUN88',
-        image: fun88,
-        about: 'The app is a simple clone of the FUN88 app, focusing on features like game selection, filtering, and a favorites list. This app was created during a front-end coding test.',
-        tech: [
-            'React',
-            'TypeScript',
-            'Tailwind',
-            'Redux',
-        ],
-        date: '2024',
-        links: {
-            github: 'https://github.com/crljhnmngs/FUN88',
-            live: 'https://fun-88.vercel.app/',
         },
     },
     {

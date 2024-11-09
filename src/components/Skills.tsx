@@ -38,14 +38,20 @@ export default function Skills() {
                             hidden: { opacity: 1, y: 80 },
                         }}
                         key={skill.name}
-                        className="py-2 px-2 bg-white md:m-4 mx-1 skill-sm:mx-2 mt-6 rounded-lg flex items-center cursor-pointer md:w-48 w-40 min-w-[100px] skill-sm:min-w-[192px] border"
+                        className={`py-2 px-2 bg-white md:m-4 mx-1 skill-sm:mx-2 mt-6 rounded-lg flex items-center ${
+                            !skill.link && 'justify-center'
+                        } cursor-pointer md:w-48 w-40 min-w-[100px] skill-sm:min-w-[192px] border`}
                     >
-                        <img
-                            alt=""
-                            src={skill.link}
-                            className="w-10 skill-sm:w-11 skill:w-12"
-                        />
-                        <h4 className="text-md ml-4">{skill.name}</h4>
+                        {skill.link && (
+                            <img
+                                alt=""
+                                src={skill.link}
+                                className="w-10 skill-sm:w-11 skill:w-12"
+                            />
+                        )}
+                        <h4 className={`text-md ${skill.link && 'ml-4'}`}>
+                            {skill.name}
+                        </h4>
                     </motion.div>
                 ))}
             </div>
