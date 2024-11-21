@@ -63,13 +63,18 @@ export default function Projects() {
                                         <ImageWithFallback
                                             src={project.image}
                                             alt={project.name}
-                                            loaderColor='black'
+                                            loaderColor="black"
                                             className="object-fill size-full rounded-lg"
                                         />
                                     </div>
-                                    <div className="h-[50%] xl:h-[45%]  relative">
-                                        <div className="mt-5 text-xl w-full project-xl:text-2xl font-semibold">
-                                            <h1 className=" overflow-hidden">
+                                    <div className="h-[50%] xl:h-[45%] relative">
+                                        <div className="mt-5 text-xl w-full project-xl:text-2xl font-semibold flex flex-col -gap-1">
+                                            {project.new && (
+                                                <span className="text-[12px] leading-3 text-white bg-red-500 dark:bg-red-600 px-1 py-1 rounded-md w-9">
+                                                    New
+                                                </span>
+                                            )}
+                                            <h1 className="overflow-hidden">
                                                 {project.name}
                                             </h1>
                                         </div>
