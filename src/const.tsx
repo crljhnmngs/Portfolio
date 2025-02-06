@@ -220,6 +220,29 @@ export const experiences = [
         date: 'October 2022 - Present',
         subItems: [
             {
+                position: 'Associate Technical Specialist II',
+                setup: 'On-site',
+                projects: [
+                    {
+                        description:
+                            'Have been assigned as the Project Leader for a newly created team.',
+                        tech: [
+                            'C++',
+                            'VBScript',
+                            'JavaScript',
+                            'HTML',
+                            'CSS',
+                            'C#',
+                            'REST API',
+                            'Git',
+                            'SVN',
+                            'Waterfall',
+                        ],
+                    },
+                ],
+                date: 'February 2025 - Present',
+            },
+            {
                 position: 'Associate Technical Specialist I',
                 setup: 'On-site',
                 projects: [
@@ -233,17 +256,19 @@ export const experiences = [
                             'HTML',
                             'CSS',
                             'C#',
+                            'REST API',
                             'Git',
                             'SVN',
                             'Waterfall',
                         ],
                     },
                     {
-                        description: 'Assigned as the tech lead for the team.',
+                        description:
+                            'Assigned as the Technical Leader for the team.',
                         tech: [],
                     },
                 ],
-                date: 'July 2024 - Present',
+                date: 'July 2024 - February 2025',
             },
             {
                 position: 'Technical Specialist II',
@@ -258,6 +283,7 @@ export const experiences = [
                             'HTML',
                             'CSS',
                             'C#',
+                            'REST API',
                             'Git',
                             'SVN',
                             'Waterfall',
