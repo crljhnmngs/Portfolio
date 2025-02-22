@@ -1,5 +1,5 @@
 module.exports = {
-    content: ['./src/**/*.{js,jsx,ts,tsx}'],
+    content: ['./src/**/*.{js,jsx,ts,tsx,html}'],
     darkMode: 'class',
     theme: {
         extend: {
@@ -48,9 +48,9 @@ module.exports = {
                 },
             },
             backgroundImage: {
-                'bg-light': "url('images/bg-light.webp')",
-                'bg-dark': "url('images/bg-dark.webp')",
-                'bg-image': "url('images/blob.svg')",
+                'bg-light': "url('/src/assets/images/bg-light.webp')",
+                'bg-dark': "url('/src/assets/images/bg-dark.webp')",
+                'bg-image': "url('/src/assets/images/blob.svg')",
             },
             maxWidth: {
                 maxScreen: '95rem',
