@@ -13,6 +13,8 @@ import WeLift from './assets/images/WeLift.webp';
 import OverFlow from './assets/images/Overflow.webp';
 import Amusement from './assets/images/amusement.gif';
 import fun88 from './assets/images/fun88.webp';
+import boilerplate from './assets/images/personal_boilerplate.webp';
+import todo from './assets/images/todo.webp';
 
 const iconStyleClass: string = 'hover:scale-[1.18] size-full';
 
@@ -370,11 +372,36 @@ export const educations = [
 ];
 export const projects = [
     {
+        name: 'Todo App',
+        image: todo,
+        about: 'This is a simple todo app, built using React, TypeScript, Firebase, and other modern web technologies. The app allows users to manage their todos, both locally and in the cloud, with a focus on authentication and real-time updates.',
+        tech: ['React', 'TypeScript', 'Tailwind', 'Firebase', 'Redux', 'Jest'],
+        date: '2024',
+        new: true,
+        links: {
+            github: 'https://github.com/crljhnmngs/todo-app',
+            live: 'https://todo-app-tau-one-76.vercel.app/',
+        },
+    },
+    {
+        name: 'Personal Frontend Boilerplate',
+        image: boilerplate,
+        about: 'Ideal for creating React apps from scratch.',
+        tech: ['React', 'TypeScript', 'Tailwind', 'Redux', 'Jest'],
+        date: '2024',
+        new: true,
+        links: {
+            github: 'https://github.com/crljhnmngs/react-redux-boilerplate',
+            live: 'https://react-redux-boilerplate-phi.vercel.app/',
+        },
+    },
+    {
         name: 'FUN88',
         image: fun88,
         about: 'The app is a simple clone of the FUN88 app, focusing on features like game selection, filtering, and a favorites list. This app was created during a front-end coding test.',
         tech: ['React', 'TypeScript', 'Tailwind', 'Redux'],
         date: '2024',
+        new: true,
         links: {
             github: 'https://github.com/crljhnmngs/FUN88',
             live: 'https://fun-88.vercel.app/',
