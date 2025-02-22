@@ -387,7 +387,7 @@ export const projects = [
         name: 'Personal Frontend Boilerplate',
         image: boilerplate,
         about: 'Ideal for creating React apps from scratch.',
-        tech: ['React', 'TypeScript', 'Tailwind', 'Redux', 'Jest'],
+        tech: ['React', 'Vite', 'TypeScript', 'Tailwind', 'Redux', 'Jest'],
         date: '2024',
         new: true,
         links: {
@@ -413,6 +413,7 @@ export const projects = [
         about: 'My Portfolio Website is a modern, responsive web application designed to showcase my professional work and personal projects in an engaging and interactive manner. Built using a combination of cutting-edge web technologies, this project highlights my skills in web development and design.',
         tech: [
             'React',
+            'Vite',
             'TypeScript',
             'Tailwind',
             'Framer Motion',
