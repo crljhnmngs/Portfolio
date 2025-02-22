@@ -15,35 +15,43 @@ export default function Contact() {
     }, []);
 
     const sendEmail = (e: any) => {
-        e.persist();
-        e.preventDefault();
-        setIsSubmitting(true);
-        emailjs
-            .sendForm(
-                process.env.REACT_APP_SERVICE_ID || '',
-                process.env.REACT_APP_TEMPLATE_ID || '',
-                e.target,
-                process.env.REACT_APP_EMAILJS_PUBLIC_KEY || ''
-            )
-            .then(
-                (result) => {
-                    setIsSubmitting(false);
-                    toast.success('Message sent!', {
-                        position: 'top-right',
-                    });
-                },
-                (error) => {
-                    toast.error(
-                        'Something went wrong, please try again later',
-                        {
+        try {
+            e.persist();
+            e.preventDefault();
+            setIsSubmitting(true);
+            emailjs
+                .sendForm(
+                    import.meta.env.VITE_SERVICE_ID || '',
+                    import.meta.env.VITE_TEMPLATE_ID || '',
+                    e.target,
+                    import.meta.env.VITE_EMAILJS_PUBLIC_KEY || ''
+                )
+                .then(
+                    (result) => {
+                        setIsSubmitting(false);
+                        toast.success('Message sent!', {
                             position: 'top-right',
-                        }
-                    );
-                    setIsSubmitting(false);
-                }
-            );
+                        });
+                    },
+                    (error) => {
+                        toast.error(
+                            'Something went wrong, please try again later',
+                            {
+                                position: 'top-right',
+                            }
+                        );
+                        setIsSubmitting(false);
+                    }
+                );
 
-        e.target.reset();
+            e.target.reset();
+        } catch (error) {
+            console.log(error);
+            toast.error('Something went wrong, please try again later', {
+                position: 'top-right',
+            });
+            setIsSubmitting(false);
+        }
     };
 
     return (
