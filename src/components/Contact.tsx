@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { Popup } from '../animation/Popup';
 import { SlideLeft } from '../animation/Slide';
 import emailjs from '@emailjs/browser';
-//import { ReactComponent as Loader } from '@/assets/loading.svg?react';
+import Loader from '@/assets/loading.svg?react';
 import { toast } from 'react-toastify';
 import { socials } from '../const';
 import { Footer } from '../layout/Footer';
@@ -128,7 +128,7 @@ export default function Contact() {
                                         'Submit'
                                     ) : (
                                         <div className="flex justify-center h-full">
-                                            {/* <Loader className="spinner h-full" /> */}
+                                            <Loader className="spinner h-full" />
                                         </div>
                                     )}
                                 </button>
