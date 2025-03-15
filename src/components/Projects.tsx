@@ -1,6 +1,6 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import { Popup } from '../animation/Popup';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaEye } from 'react-icons/fa';
 import { FaLink } from 'react-icons/fa6';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -9,14 +9,26 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
 import { projects } from '../const';
 import ImageWithFallback from '../utils/ImageWithFallback';
+import { TechList } from './TechList';
+import { ProjectModal } from './ProjectModal';
+import { Project } from '~/types/global';
 
 export default function Projects() {
+    const [selectedProject, setSelectedProject] = useState<Project | null>(
+        null
+    );
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const memoizedData = useMemo(() => {
         return projects;
     }, []);
+
+    const openModal = (project: Project) => {
+        setSelectedProject(project);
+        setIsModalOpen(true);
+    };
 
     return (
         <section
@@ -38,6 +50,10 @@ export default function Projects() {
                         grabCursor={true}
                         centeredSlides={true}
                         loop={true}
+                        autoplay={{
+                            delay: 2000,
+                            pauseOnMouseEnter: true,
+                        }}
                         coverflowEffect={{
                             rotate: 0,
                             stretch: 25,
@@ -45,8 +61,7 @@ export default function Projects() {
                             modifier: 3,
                             slideShadows: true,
                         }}
-                        pagination={true}
-                        modules={[EffectCoverflow, Pagination]}
+                        modules={[EffectCoverflow, Pagination, Autoplay]}
                         breakpoints={{
                             640: {
                                 slidesPerView: 1,
@@ -58,7 +73,7 @@ export default function Projects() {
                     >
                         {memoizedData.map((project) => (
                             <SwiperSlide key={project.name}>
-                                <div className="w-[28rem] h-[32rem] lg:w-[29rem] lg:h-[33rem] xl:w-[32rem] xl:h-[35.5rem] project-xl:w-[35rem] project-xl:h-[39rem] mt-2 dark:bg-gray-200 bg-white rounded-lg p-3 lg:p-4">
+                                <div className="w-[24rem] h-[32rem] lg:w-[29rem] lg:h-[33rem] xl:w-[32rem] xl:h-[35.5rem] project-xl:w-[35rem] project-xl:h-[39rem] mt-2 dark:bg-gray-200 bg-white rounded-lg p-3 lg:p-4">
                                     <div className="h-[50%] xl:h-[55%] w-full">
                                         <ImageWithFallback
                                             src={project.image}
@@ -69,11 +84,18 @@ export default function Projects() {
                                     </div>
                                     <div className="h-[50%] xl:h-[45%] relative">
                                         <div className="mt-5 text-xl w-full project-xl:text-2xl font-semibold flex flex-col -gap-1">
-                                            {project.new && (
-                                                <span className="text-[12px] leading-3 text-white bg-red-500 dark:bg-red-600 px-1 py-1 rounded-md w-9">
-                                                    New
-                                                </span>
-                                            )}
+                                            <div className="flex gap-1">
+                                                {project.new && (
+                                                    <span className="text-[12px] leading-3 text-white text-center bg-red-500 dark:bg-red-600 px-1 py-1 rounded-md w-9">
+                                                        New
+                                                    </span>
+                                                )}
+                                                {project.dev && (
+                                                    <span className="text-[12px] leading-3 text-white text-center bg-green-500 dark:bg-green-600 px-1 py-1 rounded-md w-24">
+                                                        Development
+                                                    </span>
+                                                )}
+                                            </div>
                                             <h1 className="overflow-hidden">
                                                 {project.name}
                                             </h1>
@@ -83,23 +105,34 @@ export default function Projects() {
                                                 {project.about}
                                             </p>
                                         </div>
-                                        <div className=" mt-1 xl:mt-3 flex flex-wrap">
-                                            {project.tech.map((tech) => (
-                                                <div
-                                                    key={tech}
-                                                    className="mb-2 py-2 px-2 xl:px-3 text-xs  rounded-md mr-2 bg-gray-800  text-white dark:text-gray-300"
-                                                >
-                                                    {tech}
-                                                </div>
-                                            ))}
-                                        </div>
-                                        <div className="absolute bottom-[18px] lg:bottom-5 w-full">
+
+                                        <div className="absolute bottom-[15px] lg:bottom-5 w-full">
+                                            <TechList techs={project.tech} />
                                             <div className="flex justify-between">
                                                 <div className="text-base font-semibold pl-2 pt-1">
-                                                    {' '}
                                                     <p>{project.date}</p>
                                                 </div>
-                                                <div className="flex gap-4 pr-1 sm:pr-5 -mt-[1rem]">
+                                                <div className="flex gap-3 pr-1 sm:pr-5">
+                                                    <div className="relative group">
+                                                        <a
+                                                            onClick={() =>
+                                                                openModal(
+                                                                    project
+                                                                )
+                                                            }
+                                                            target="_blank"
+                                                            rel="noreferrer"
+                                                            className="opt-10 group-hover:opacity-100"
+                                                        >
+                                                            <FaEye className="size-7 opacity-60 cursor-pointer group-hover:opacity-100" />
+                                                        </a>
+                                                        <div className="absolute -bottom-4 right-2 left-0 pl-2 flex-col items-center hidden mb-[3.2rem] group-hover:flex">
+                                                            <div className="w-3 h-3 -mb-10 rotate-45 bg-black dark:bg-white"></div>
+                                                            <span className="p-3 text-xs text-center leading-none text-white dark:text-black whitespace-no-wrap bg-black dark:bg-white shadow-lg w-32 rounded-md">
+                                                                View More Info
+                                                            </span>
+                                                        </div>
+                                                    </div>
                                                     {project.links?.github && (
                                                         <div className="relative group">
                                                             <a
@@ -114,7 +147,7 @@ export default function Projects() {
                                                             >
                                                                 <FaGithub className="size-7 opacity-60 cursor-pointer group-hover:opacity-100" />
                                                             </a>
-                                                            <div className="absolute bottom-0 right-2 left-0 pl-2 flex-col items-center hidden mb-[3.2rem] group-hover:flex">
+                                                            <div className="absolute -bottom-4 right-2 left-0 pl-2 flex-col items-center hidden mb-[3.2rem] group-hover:flex">
                                                                 <div className="w-3 h-3 -mb-10 rotate-45 bg-black dark:bg-white"></div>
                                                                 <span className="p-3 text-xs text-center leading-none text-white dark:text-black whitespace-no-wrap bg-black dark:bg-white shadow-lg w-32 rounded-md">
                                                                     View
@@ -136,7 +169,7 @@ export default function Projects() {
                                                             >
                                                                 <FaLink className="size-7 opacity-60 cursor-pointer group-hover:opacity-100" />
                                                             </a>
-                                                            <div className="absolute bottom-0 right-2 left-0 pl-2 flex-col items-center hidden mb-[3rem] group-hover:flex ">
+                                                            <div className="absolute -bottom-4 right-2 left-0 pl-2 flex-col items-center hidden mb-[3rem] group-hover:flex ">
                                                                 <div className="w-3 h-3 -mb-10 rotate-45 bg-black dark:bg-white"></div>
                                                                 <span className=" p-3 text-xs text-center leading-none text-white dark:text-black whitespace-no-wrap bg-black dark:bg-white shadow-lg w-24 rounded-md">
                                                                     View Site
@@ -159,6 +192,11 @@ export default function Projects() {
                     </p>
                 </div>
             </div>
+            <ProjectModal
+                project={selectedProject!}
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+            />
         </section>
     );
 }

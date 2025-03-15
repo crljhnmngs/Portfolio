@@ -15,6 +15,8 @@ import Amusement from './assets/images/amusement.gif';
 import fun88 from './assets/images/fun88.webp';
 import boilerplate from './assets/images/personal_boilerplate.webp';
 import todo from './assets/images/todo.webp';
+import mern from './assets/images/mern.webp';
+import { Project } from './types/global';
 
 const iconStyleClass: string = 'hover:scale-[1.18] size-full';
 
@@ -370,14 +372,36 @@ export const educations = [
         date: 'June 2016 - April 2018',
     },
 ];
-export const projects = [
+export const projects: Project[] = [
+    {
+        name: 'Personal FullStack Boilerplate',
+        image: mern,
+        about: 'A ready-to-use template for building scalable and secure full-stack applications. Pre-configured for efficient development, seamless API integration, and easy deployment.',
+        tech: [
+            'React',
+            'Vite',
+            'TypeScript',
+            'Tailwind',
+            'Shadcn',
+            'Zustand',
+            'TanStack Query',
+            'Node.js',
+            'Express.js',
+            'MongoDB',
+        ],
+        date: '2025',
+        new: true,
+        dev: true,
+        links: {
+            github: 'https://github.com/crljhnmngs/fullstack-boilerplate',
+        },
+    },
     {
         name: 'Todo App',
         image: todo,
         about: 'This is a simple todo app, built using React, TypeScript, Firebase, and other modern web technologies. The app allows users to manage their todos, both locally and in the cloud, with a focus on authentication and real-time updates.',
         tech: ['React', 'TypeScript', 'Tailwind', 'Firebase', 'Redux', 'Jest'],
         date: '2024',
-        new: true,
         links: {
             github: 'https://github.com/crljhnmngs/todo-app',
             live: 'https://todo-app-tau-one-76.vercel.app/',
@@ -389,7 +413,6 @@ export const projects = [
         about: 'Ideal for creating React apps from scratch.',
         tech: ['React', 'Vite', 'TypeScript', 'Tailwind', 'Redux', 'Jest'],
         date: '2024',
-        new: true,
         links: {
             github: 'https://github.com/crljhnmngs/react-redux-boilerplate',
             live: 'https://react-redux-boilerplate-phi.vercel.app/',
@@ -401,7 +424,6 @@ export const projects = [
         about: 'The app is a simple clone of the FUN88 app, focusing on features like game selection, filtering, and a favorites list. This app was created during a front-end coding test.',
         tech: ['React', 'TypeScript', 'Tailwind', 'Redux'],
         date: '2024',
-        new: true,
         links: {
             github: 'https://github.com/crljhnmngs/FUN88',
             live: 'https://fun-88.vercel.app/',
@@ -422,7 +444,6 @@ export const projects = [
         date: '2024',
         links: {
             github: 'https://github.com/crljhnmngs/Portfolio',
-            live: '',
         },
     },
     {
@@ -455,7 +476,6 @@ export const projects = [
         date: '2022',
         links: {
             github: 'https://github.com/crljhnmngs/CAPSTONE-PROJECT',
-            live: '',
         },
     },
     {
@@ -466,7 +486,6 @@ export const projects = [
         date: '2022',
         links: {
             github: 'https://github.com/LMNTRIXXXX/Capstone',
-            live: '',
         },
     },
     {
@@ -510,7 +529,6 @@ export const projects = [
         date: '2019',
         links: {
             github: 'https://github.com/crljhnmngs/Amusement-Park-Management-System',
-            live: '',
         },
     },
 ];
