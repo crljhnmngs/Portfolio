@@ -1,55 +1,93 @@
-# Getting Started with Create React App
+# Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is my personal web portfolio, showcasing my projects and skills.
 
-## Available Scripts
+## 🚀 Live Demo
 
-In the project directory, you can run:
+Check out the live version: [crljhnmngs](https://crljhnmngs.vercel.app)
 
-### `npm start`
+## 🛠 Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Framework**: [React](https://reactjs.org/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Type Checking**: [TypeScript](https://www.typescriptlang.org/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 📦 Getting Started
 
-### `npm test`
+To run this project locally:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clone the repository:**
 
-### `npm run build`
+   ```bash
+   git clone https://github.com/crljhnmngs/Portfolio.git
+   cd Portfolio
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Install dependencies:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Start the development server:**
 
-### `npm run deploy`
+   ```bash
+   npm run dev
+   ```
 
-That will cause the predeploy and deploy scripts defined in package.json to run.
-Then, the deploy script will push the contents of that folder to a new commit on the gh-pages branch of the GitHub repository, creating that branch if it doesn't already exist.
+   Open [http://localhost:5173](http://localhost:5173) to view it in your browser.
 
-> ```shell
-> $ npm run deploy -- -m "Deploy React app to GitHub Pages"
-> ```
+## 🔨 Building for Production
 
-### `npm run eject`
+To create a production build:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+npm run build
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The optimized files will be in the `dist` folder.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 🚀 Deployment
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This project is hosted on [Vercel](https://vercel.com/). To deploy:
 
-## Learn More
+1. **Install Vercel CLI:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   npm install -g vercel
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. **Deploy the project:**
+
+   ```bash
+   vercel
+   ```
+
+Follow the prompts to complete the deployment.
+
+## 🔄 Migration from Create React App (CRA) to Vite
+
+This project was originally bootstrapped with Create React App and has been migrated to Vite for faster builds and improved performance.
+
+### Key Changes:
+
+- Replaced `react-scripts` with Vite.
+- Updated `package.json` scripts:
+
+  ```json
+  {
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build",
+      "serve": "vite preview"
+    }
+  }
+  ```
+
+- Added `vite.config.ts` for Vite-specific configuration.
+- Updated import paths for assets based on Vite’s requirements.
+
+For more details, check out the [Vite Migration Guide](https://vitejs.dev/guide/migration-from-cra.html).
+
