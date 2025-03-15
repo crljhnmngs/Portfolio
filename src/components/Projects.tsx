@@ -1,8 +1,9 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState, useRef, useEffect } from 'react';
 import { Popup } from '../animation/Popup';
 import { FaGithub, FaEye } from 'react-icons/fa';
 import { FaLink } from 'react-icons/fa6';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper as SwiperCore } from 'swiper';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -30,6 +31,16 @@ export default function Projects() {
         setIsModalOpen(true);
     };
 
+    const swiperRef = useRef<SwiperCore | null>(null);
+
+    useEffect(() => {
+        if (isModalOpen && swiperRef.current) {
+            swiperRef.current.autoplay.stop();
+        } else if (!isModalOpen && swiperRef.current) {
+            swiperRef.current.autoplay.start();
+        }
+    }, [isModalOpen]);
+
     return (
         <section
             className="h-auto sm:h-screen projectMaxHeight:h-auto projectsCustomBP:h-auto bg-gray-100 dark:bg-black"
@@ -46,12 +57,13 @@ export default function Projects() {
                 </div>
                 <div className="sm:py-10 py-5 w-full h-full">
                     <Swiper
+                        onSwiper={(swiper) => (swiperRef.current = swiper)}
                         effect={'coverflow'}
                         grabCursor={true}
                         centeredSlides={true}
                         loop={true}
                         autoplay={{
-                            delay: 2000,
+                            delay: 3000,
                             pauseOnMouseEnter: true,
                         }}
                         coverflowEffect={{
