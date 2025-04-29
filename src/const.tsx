@@ -57,12 +57,24 @@ export const skills = [
         link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg',
     },
     {
-        name: ' JavaScript (ES6+)',
+        name: 'JavaScript (ES6+)',
         link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg',
     },
     {
-        name: 'VBScript',
-        link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/visualbasic/visualbasic-original.svg',
+        name: 'Vite',
+        link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/vitejs/vitejs-original.svg',
+    },
+    {
+        name: 'Redux',
+        link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg',
+    },
+    {
+        name: 'MobX',
+        link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mobx/mobx-original.svg',
+    },
+    {
+        name: 'Zustand',
+        link: 'https://user-images.githubusercontent.com/958486/218346783-72be5ae3-b953-4dd7-b239-788a882fdad6.svg',
     },
     {
         name: 'HTML5',
@@ -85,16 +97,16 @@ export const skills = [
         link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg',
     },
     {
+        name: 'Shadcn/UI',
+        link: 'https://avatars.githubusercontent.com/u/139895814?s=280&v=4',
+    },
+    {
         name: 'Material UI',
         link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/materialui/materialui-original.svg',
     },
     {
-        name: 'Redux',
-        link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg',
-    },
-    {
-        name: 'MobX',
-        link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mobx/mobx-original.svg',
+        name: 'VBScript',
+        link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/visualbasic/visualbasic-original.svg',
     },
     {
         name: 'RESTful API',
@@ -115,6 +127,10 @@ export const skills = [
     {
         name: 'NodeJS',
         link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg',
+    },
+    {
+        name: 'Express.js',
+        link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg',
     },
     {
         name: 'C++',
@@ -155,6 +171,10 @@ export const skills = [
     {
         name: 'MongoDB',
         link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg',
+    },
+    {
+        name: 'Docker',
+        link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg',
     },
     {
         name: 'Git',
