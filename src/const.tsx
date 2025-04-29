@@ -396,11 +396,7 @@ export const projects: Project[] = [
     {
         name: 'Personal FullStack Boilerplate',
         image: mern,
-<<<<<<< HEAD
-        about: 'A ready-to-use template for building scalable and secure full-stack applications. Pre-configured for efficient development, seamless API integration, and easy deployment.',
-=======
         about: 'A ready-to-use MERN template for building scalable and secure full-stack applications. Pre-configured for efficient development, seamless API integration, and easy deployment.',
->>>>>>> master
         tech: [
             'React',
             'Vite',
