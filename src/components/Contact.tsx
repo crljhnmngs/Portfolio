@@ -153,6 +153,16 @@ export default function Contact() {
                             </p>
                         </div>
                         <div className="flex flex-col mt-10">
+                            <p className="mt-2 font-semibold text-blue-700 dark:text-blue-500 uppercase underline">
+                                <a
+                                    href={import.meta.env.VITE_CALENDLYURL}
+                                    target="_blank"
+                                >
+                                    Schedule an interview or discussion with me.
+                                </a>
+                            </p>
+                        </div>
+                        <div className="flex flex-col mt-10">
                             <p className="text-xl sm:text-3xl font-bold text-gray-600 dark:text-gray-300">
                                 Address
                             </p>

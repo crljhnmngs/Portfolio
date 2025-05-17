@@ -16,7 +16,7 @@ export default function App() {
             <div className="font-poppins">
                 <Preloader></Preloader>
                 <Header></Header>
-                <div className="overflow-hidden">
+                <div className="overflow-hidden ">
                     <Home></Home>
                     <About></About>
                     <Skills></Skills>
