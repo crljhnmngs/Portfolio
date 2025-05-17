@@ -7,14 +7,21 @@ module.exports = {
                 nav: '880px',
                 home: '1200px',
                 about: '1015px',
-                skill: '944px',
+                skill: '1105px',
                 'skill-sm': '448px',
                 'project-xl': '1400px',
+                'max-screen': '1920px',
                 contactMinHeight: { raw: '(max-height: 844px)' },
                 projectMaxHeight: { raw: '(max-height: 700px)' },
                 projectsCustomBP: {
-                    raw: '(max-height: 701px),(min-width:1400px)',
+                    raw: '(max-height: 701px) and (min-width:1400px)',
                 },
+                commonMaxHeight: { raw: '(max-height: 500px)' },
+                skillsMaxHeight: { raw: '(max-height: 700px)' },
+                skillsCustomBP: {
+                    raw: '(min-height: 1081px) and (min-width: 1106px)',
+                },
+                desktopMaxHeight: { raw: '(min-height: 1080px)' },
             },
             animation: {
                 delay: 'delay 0.8s infinite ease-in-out',
@@ -54,6 +61,10 @@ module.exports = {
             },
             maxWidth: {
                 maxScreen: '95rem',
+                maxDesktop: '120rem',
+            },
+            height: {
+                maxDesktop: '67.5rem',
             },
         },
     },

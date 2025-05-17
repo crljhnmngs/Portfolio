@@ -27,62 +27,66 @@ export default function Header() {
 
     return (
         <React.Fragment>
-            <nav className="bg-white dark:bg-gray-700 sticky z-50 w-full h-[70px] flex flex-row justify-between items-center nav:px-16 px-3 top-0 shadow-lg">
-                <div>
-                    <Link
-                        to="/"
-                        spy={true}
-                        smooth={true}
-                        offset={-70}
-                        className={'dark:text-white cursor-pointer'}
-                    >
-                        CrlJhnMngs
-                    </Link>
-                </div>
-                <div className="nav:flex gap-4 mt-1 ">
-                    <div className={`width-auto hidden nav:block w-full`}>
-                        <ul className="flex nav:flex-row flex-col nav:gap-3 gap-1">
-                            {memoizedData.map((section) => (
-                                <li
-                                    key={section.name}
-                                    className=" cursor-pointer "
-                                >
-                                    <Link
-                                        to={section.id}
-                                        activeClass={'text-white bg-blue-500'}
-                                        spy={true}
-                                        smooth={true}
-                                        offset={-70}
-                                        className={
-                                            'hover:text-white px-4 py-2 text-black hover:bg-blue-500 dark:text-white text-[15px] rounded-md'
-                                        }
-                                    >
-                                        {section.name}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div className="flex items-center nav:gap-2 gap-1">
-                        <div
-                            className={`dark text-[11%] nav:text-[12%] dark:border dark:border-white border border-black relative h-[16em] w-[30em] rounded-[16em] cursor-pointer bg-[#423966] ${
-                                theme === 'light' ? 'day' : ''
-                            }`}
-                            onClick={toggleDarkMode}
+            <nav className="bg-white dark:bg-gray-700 sticky z-50 w-full h-[70px] flex max-screen:justify-center top-0 nav:px-16 px-5 shadow-lg">
+                <div className="w-full max-screen:max-w-maxDesktop h-full flex flex-row justify-between items-center ">
+                    <div>
+                        <Link
+                            to="/"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            className={'dark:text-white cursor-pointer'}
                         >
-                            <div
-                                className={`moon absolute block rounded-[50%] top-[3em] left-[3em] w-[10em] h-[10em] bg-[#423966] ${
-                                    theme === 'light' ? 'sun' : ''
-                                }`}
-                            ></div>
+                            CrlJhnMngs
+                        </Link>
+                    </div>
+                    <div className="nav:flex gap-4 mt-1 ">
+                        <div className={`width-auto hidden nav:block w-full`}>
+                            <ul className="flex nav:flex-row flex-col nav:gap-3 gap-1">
+                                {memoizedData.map((section) => (
+                                    <li
+                                        key={section.name}
+                                        className=" cursor-pointer "
+                                    >
+                                        <Link
+                                            to={section.id}
+                                            activeClass={
+                                                'text-white bg-blue-500'
+                                            }
+                                            spy={true}
+                                            smooth={true}
+                                            offset={-70}
+                                            className={
+                                                'hover:text-white px-4 py-2 text-black hover:bg-blue-500 dark:text-white text-[15px] rounded-md'
+                                            }
+                                        >
+                                            {section.name}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
-                        <div className="flex nav:hidden dark:text-white">
-                            <Hamburger
-                                toggled={isOpen}
-                                toggle={setOpen}
-                                duration={0.9}
-                                size={22}
-                            />
+                        <div className="flex items-center nav:gap-2 gap-1">
+                            <div
+                                className={`dark text-[11%] nav:text-[12%] dark:border dark:border-white border border-black relative h-[16em] w-[30em] rounded-[16em] cursor-pointer bg-[#423966] ${
+                                    theme === 'light' ? 'day' : ''
+                                }`}
+                                onClick={toggleDarkMode}
+                            >
+                                <div
+                                    className={`moon absolute block rounded-[50%] top-[3em] left-[3em] w-[10em] h-[10em] bg-[#423966] ${
+                                        theme === 'light' ? 'sun' : ''
+                                    }`}
+                                ></div>
+                            </div>
+                            <div className="flex nav:hidden dark:text-white">
+                                <Hamburger
+                                    toggled={isOpen}
+                                    toggle={setOpen}
+                                    duration={0.9}
+                                    size={22}
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
