@@ -27,16 +27,16 @@ export default function About() {
             className="commonMaxHeight:h-auto desktopMaxHeight:h-maxDesktop h-auto about:h-screen w-screen bg-white dark:bg-gray-900 flex max-screen:justify-center"
             id="about"
         >
-            <div className="h-full w-full max-screen:max-w-maxDesktop">
-                <div className="sm:h-[13%] h-auto flex justify-center items-end pt-10  home:pt-5">
+            <div className="h-full w-full max-screen:max-w-maxDesktop flex flex-col">
+                <div className="sm:h-[13%] h-auto flex justify-center items-end pt-10 home:pt-5">
                     <Popup
                         delay={0.6}
-                        className="text-black font-semibold text-3xl sm:text-4xl dark:text-white"
+                        className="text-black font-semibold text-3xl sm:text-4xl dark:text-white sm:pb-14 md:pb-0"
                     >
                         About Me
                     </Popup>
                 </div>
-                <div className="sm:h-[70%] h-auto flex flex-col about:flex-row px-7 justify-center items-center">
+                <div className="sm:h-[75%] h-auto flex flex-col about:flex-row px-7 justify-center items-center">
                     <SlideLeft
                         className="min-w-1/2 flex items-start justify-center -mt-5 about:-mt-5"
                         delay={0.5}

@@ -43,7 +43,7 @@ export default function Projects() {
 
     return (
         <section
-            className="h-auto sm:h-screen desktopMaxHeight:h-maxDesktop projectMaxHeight:h-auto projectsCustomBP:h-auto bg-gray-100 dark:bg-black flex max-screen:justify-center"
+            className="h-auto sm:h-auto desktopMaxHeight:h-maxDesktop projectMaxHeight:h-screen projectsCustomBP:h-auto bg-gray-100 dark:bg-black flex max-screen:justify-center"
             id="projects"
         >
             <div className="w-full max-screen:max-w-maxDesktop">

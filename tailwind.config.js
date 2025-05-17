@@ -12,7 +12,7 @@ module.exports = {
                 'project-xl': '1400px',
                 'max-screen': '1920px',
                 contactMinHeight: { raw: '(max-height: 844px)' },
-                projectMaxHeight: { raw: '(max-height: 700px)' },
+                projectMaxHeight: { raw: '(min-height: 760px)' },
                 projectsCustomBP: {
                     raw: '(max-height: 701px) and (min-width:1400px)',
                 },
