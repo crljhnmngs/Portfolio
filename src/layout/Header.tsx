@@ -4,6 +4,7 @@ import { useThemeSwitcher } from '../hook/useThemeSwitcher';
 import { Link } from 'react-scroll';
 import { motion, AnimatePresence } from 'framer-motion';
 import { sections } from '../const';
+import { SettingsToggle } from '../components/SettingsButton';
 
 export default function Header() {
     const [isOpen, setOpen] = useState<boolean>(false);
@@ -41,8 +42,8 @@ export default function Header() {
                         </Link>
                     </div>
                     <div className="nav:flex gap-4 mt-1 ">
-                        <div className={`width-auto hidden nav:block w-full`}>
-                            <ul className="flex nav:flex-row flex-col nav:gap-3 gap-1">
+                        <div className={`width-auto hidden nav:flex w-full`}>
+                            <ul className="flex nav:flex-row flex-col items-center nav:gap-3 gap-1">
                                 {memoizedData.map((section) => (
                                     <li
                                         key={section.name}
@@ -67,7 +68,7 @@ export default function Header() {
                             </ul>
                         </div>
                         <div className="flex items-center nav:gap-2 gap-1">
-                            <div
+                            {/* <div
                                 className={`dark text-[11%] nav:text-[12%] dark:border dark:border-white border border-black relative h-[16em] w-[30em] rounded-[16em] cursor-pointer bg-[#423966] ${
                                     theme === 'light' ? 'day' : ''
                                 }`}
@@ -78,6 +79,9 @@ export default function Header() {
                                         theme === 'light' ? 'sun' : ''
                                     }`}
                                 ></div>
+                            </div> */}
+                            <div>
+                                <SettingsToggle />
                             </div>
                             <div className="flex nav:hidden dark:text-white">
                                 <Hamburger

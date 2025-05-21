@@ -24,7 +24,7 @@ export default function About() {
     }
     return (
         <section
-            className="commonMaxHeight:h-auto desktopMaxHeight:h-maxDesktop h-auto about:h-screen w-screen bg-white dark:bg-gray-900 flex max-screen:justify-center"
+            className="aboutMaxHeight:h-auto desktopMaxHeight:h-maxDesktop h-auto about:h-screen w-screen bg-white dark:bg-gray-900 flex max-screen:justify-center"
             id="about"
         >
             <div className="h-full w-full max-screen:max-w-maxDesktop flex flex-col">
@@ -53,7 +53,7 @@ export default function About() {
                         </div>
                     </SlideLeft>
                     <SlideRight
-                        className="w-full sm:w-[80%] home:w-1/2 h-auto about:h-full pt-0 flex items-center"
+                        className="w-full sm:w-[80%] home:w-1/2 h-auto about:h-full pt-0 flex items-center aboutMaxHeight:pt-10"
                         delay={0.5}
                     >
                         <p className="text-black text-base dark:text-white text-justify pb-6 leading-relaxed">

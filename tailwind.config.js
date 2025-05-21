@@ -17,11 +17,12 @@ module.exports = {
                     raw: '(max-height: 701px) and (min-width:1400px)',
                 },
                 commonMaxHeight: { raw: '(max-height: 500px)' },
-                skillsMaxHeight: { raw: '(max-height: 700px)' },
-                skillsCustomBP: {
-                    raw: '(min-height: 1081px) and (min-width: 1106px)',
+                skillsMaxHeight: {
+                    raw: '(min-height: 1081px) and (min-width: 1051px)',
                 },
+                skillsMd: { raw: '(max-height: 879px)' },
                 desktopMaxHeight: { raw: '(min-height: 1080px)' },
+                aboutMaxHeight: { raw: '(max-height: 700px)' },
             },
             animation: {
                 delay: 'delay 0.8s infinite ease-in-out',

@@ -10,11 +10,11 @@ export default function Skills() {
 
     return (
         <section
-            className="h-auto skillsMaxHeight:h-auto skill:h-auto skill:pt-10 skillsCustomBP:h-maxDesktop skillsMaxHeight:pt-5 bg-gray-100 dark:bg-black sm:px-6 lg:px-8 px-2 mx-auto flex items-center flex-col"
+            className="h-auto skillsMd:h-auto xl:h-screen skillsMaxHeight:h-maxDesktop bg-gray-100 dark:bg-black flex items-center flex-col"
             id="skills"
         >
             <div className="h-full w-full max-screen:max-w-maxDesktop flex items-center flex-col h-auto ">
-                <div className="sm:h-[13%] h-auto flex justify-center items-end pt-10 home:pt-0">
+                <div className="sm:h-[13%] h-auto flex justify-center items-end pt-10">
                     <Popup
                         delay={0.5}
                         className="text-black font-semibold text-3xl sm:text-4xl dark:text-white"
