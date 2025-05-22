@@ -4,27 +4,14 @@ import { useThemeSwitcher } from '../hook/useThemeSwitcher';
 import { Link } from 'react-scroll';
 import { motion, AnimatePresence } from 'framer-motion';
 import { sections } from '../const';
-import { SettingsToggle } from '../components/SettingsButton';
+import { SettingsToggle } from '../components/SettingsToggle';
 
 export default function Header() {
     const [isOpen, setOpen] = useState<boolean>(false);
-    const [theme, setTheme] = useThemeSwitcher();
 
     const memoizedData = useMemo(() => {
         return sections;
     }, []);
-
-    const toggleDarkMode = () => {
-        try {
-            if (theme === 'light') {
-                setTheme('dark');
-            } else {
-                setTheme('light');
-            }
-        } catch (error) {
-            console.log('Error switching theme');
-        }
-    };
 
     return (
         <React.Fragment>
@@ -68,18 +55,6 @@ export default function Header() {
                             </ul>
                         </div>
                         <div className="flex items-center nav:gap-2 gap-1">
-                            {/* <div
-                                className={`dark text-[11%] nav:text-[12%] dark:border dark:border-white border border-black relative h-[16em] w-[30em] rounded-[16em] cursor-pointer bg-[#423966] ${
-                                    theme === 'light' ? 'day' : ''
-                                }`}
-                                onClick={toggleDarkMode}
-                            >
-                                <div
-                                    className={`moon absolute block rounded-[50%] top-[3em] left-[3em] w-[10em] h-[10em] bg-[#423966] ${
-                                        theme === 'light' ? 'sun' : ''
-                                    }`}
-                                ></div>
-                            </div> */}
                             <div>
                                 <SettingsToggle />
                             </div>
