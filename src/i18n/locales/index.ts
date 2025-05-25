@@ -6,5 +6,6 @@ import FR from './fr.json';
 import ZH from './zh.json';
 import JA from './ja.json';
 import PT from './pt.json';
+import AR from './ar.json';
 
-export { EN, CEB, FIL, ES, FR, ZH, JA, PT };
+export { EN, CEB, FIL, ES, FR, ZH, JA, PT, AR };

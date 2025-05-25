@@ -5,17 +5,22 @@ import { experiences } from '../const';
 import { useTranslation } from 'react-i18next';
 
 export const Experiences = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const memoizedData = useMemo(() => {
         return experiences;
     }, []);
 
     return (
-        <div>
+        <>
             <ol className="relative border-l border-gray-300 dark:border-gray-600">
                 {memoizedData.map((e, i) => (
                     <li key={i} className="mb-10 ml-6">
-                        <div className="bg-gray-800 px-4 py-3 rounded-lg">
+                        <div
+                            className={`bg-gray-800 px-4 py-3 rounded-lg ${
+                                i18n.language === 'ar' &&
+                                'text-right fontOnly-arabic'
+                            }`}
+                        >
                             <span className="flex absolute -left-3.5 justify-center items-center w-7 h-7 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900 -mt-1">
                                 <img
                                     src={e.logo}
@@ -23,7 +28,7 @@ export const Experiences = () => {
                                     className="w-full h-full rounded-full"
                                 />
                             </span>
-                            <h3 className="flex items-center text-lg font-semibold text-white">
+                            <h3 className="text-lg font-semibold text-white">
                                 {t(e.title)}
                             </h3>
                             <p className="block mb-3 text-sm font-normal leading-none text-gray-400">
@@ -42,7 +47,11 @@ export const Experiences = () => {
                                 {e.link}
                             </a>
 
-                            <div className="mt-4 flex flex-wrap">
+                            <div
+                                className={`mt-4 flex flex-wrap ${
+                                    i18n.language === 'ar' && 'justify-end'
+                                }`}
+                            >
                                 {e.tech.map((tech) => (
                                     <div
                                         key={tech}
@@ -53,7 +62,11 @@ export const Experiences = () => {
                                 ))}
                             </div>
 
-                            <div className="flex items-center space-x-2 mt-2 text-sm text-gray-400">
+                            <div
+                                className={`flex items-center space-x-2 mt-2 text-sm text-gray-400 ${
+                                    i18n.language === 'ar' && 'justify-end'
+                                }`}
+                            >
                                 <IoCalendarNumberOutline size={16} />
                                 <time>{t(e.date)}</time>
                             </div>
@@ -62,11 +75,22 @@ export const Experiences = () => {
                         {e.subItems && (
                             <ol className="mt-4 space-y-10 relative border-l border-gray-300 dark:border-gray-600">
                                 {e.subItems.map((subItem, idx) => (
-                                    <li key={idx} className="p-1 ml-6">
+                                    <li
+                                        key={idx}
+                                        className={`p-1 ml-6 ${
+                                            i18n.language === 'ar' &&
+                                            'text-right fontOnly-arabic'
+                                        }`}
+                                    >
                                         <span className="flex absolute -left-3.5 justify-center items-center w-7 h-7 bg-blue-200 rounded-full dark:bg-gray-700 dark:text-white text-black -mt-1">
                                             <PiBriefcaseMetal />
                                         </span>
-                                        <h4 className="flex items-center font-semibold text-md text-gray-900 dark:text-white">
+                                        <h4
+                                            className={`flex items-center font-semibold text-md text-gray-900 dark:text-white ${
+                                                i18n.language === 'ar' &&
+                                                'justify-end'
+                                            }`}
+                                        >
                                             {t(subItem.position)}
                                         </h4>
                                         <time className="block mb-3 text-sm font-normal leading-none text-gray-700 dark:text-gray-400">
@@ -78,7 +102,13 @@ export const Experiences = () => {
                                                 <p className="mb-4 text-base font-normal text-gray-700 dark:text-gray-400">
                                                     {t(project.description)}
                                                 </p>
-                                                <div className="-mt-2 flex flex-wrap">
+                                                <div
+                                                    className={`-mt-2 flex flex-wrap ${
+                                                        i18n.language ===
+                                                            'ar' &&
+                                                        'justify-end'
+                                                    }`}
+                                                >
                                                     {project.tech.map(
                                                         (tech) => (
                                                             <div
@@ -93,7 +123,12 @@ export const Experiences = () => {
                                             </div>
                                         ))}
 
-                                        <div className="flex items-center space-x-2 mt-2 text-sm text-gray-700 dark:text-gray-400">
+                                        <div
+                                            className={`flex items-center space-x-2 mt-2 text-sm text-gray-700 dark:text-gray-400 ${
+                                                i18n.language === 'ar' &&
+                                                'justify-end'
+                                            }`}
+                                        >
                                             <IoCalendarNumberOutline
                                                 size={16}
                                             />
@@ -106,6 +141,6 @@ export const Experiences = () => {
                     </li>
                 ))}
             </ol>
-        </div>
+        </>
     );
 };

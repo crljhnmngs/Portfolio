@@ -8,7 +8,7 @@ export default function Skills() {
     const memoizedData = useMemo(() => {
         return skills;
     }, []);
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     return (
         <section
@@ -16,7 +16,11 @@ export default function Skills() {
             id="skills"
         >
             <div className="h-full w-full max-screen:max-w-maxDesktop flex items-center flex-col h-auto ">
-                <div className="sm:h-[13%] h-auto flex justify-center items-end pt-10">
+                <div
+                    className={`sm:h-[13%] h-auto flex justify-center items-end pt-10 ${
+                        i18n.language === 'ar' && 'font-arabic'
+                    }`}
+                >
                     <Popup
                         delay={0.5}
                         className="text-black font-semibold text-3xl sm:text-4xl dark:text-white"

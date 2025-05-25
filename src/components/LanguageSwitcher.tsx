@@ -10,6 +10,7 @@ const languages = [
     { code: 'zh', flag: '/flags/cn.webp' },
     { code: 'ja', flag: '/flags/jp.webp' },
     { code: 'pt', flag: '/flags/pt.webp' },
+    { code: 'ar', flag: '/flags/ar.webp' },
 ];
 
 export const LanguageSwitcher = () => {
@@ -67,7 +68,11 @@ export const LanguageSwitcher = () => {
             {isOpen && (
                 <div className="absolute right-0 mt-2 w-48 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50 dark:bg-gray-800">
                     <div className="py-1">
-                        <div className="px-4 py-2 text-sm text-gray-700 dark:text-gray-300 font-semibold border-b border-gray-200 dark:border-gray-700">
+                        <div
+                            className={`px-4 py-2 text-sm ${
+                                i18n.language === 'ar' && 'text-right'
+                            } text-gray-700 dark:text-gray-300 font-semibold border-b border-gray-200 dark:border-gray-700`}
+                        >
                             {t('translation.select')}
                         </div>
                         {languages.map((lang) => {

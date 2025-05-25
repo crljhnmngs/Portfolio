@@ -12,7 +12,7 @@ type SettingsToggleProps = {
 
 export const SettingsToggle = ({ language }: SettingsToggleProps) => {
     const [theme, setTheme] = useThemeSwitcher();
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const isOpen = useUIStore((state) => state.isSettingsOpen);
     const toggleSettings = useUIStore((state) => state.toggleSettings);
 
@@ -84,7 +84,11 @@ export const SettingsToggle = ({ language }: SettingsToggleProps) => {
                                 ></div>
                             </div>
                         </div>
-                        <div className="w-full">
+                        <div
+                            className={`w-full ${
+                                i18n.language === 'ar' && 'font-arabic'
+                            }`}
+                        >
                             <h1 className="text-black dark:text-white text-base">
                                 {t('translation.select')}
                             </h1>

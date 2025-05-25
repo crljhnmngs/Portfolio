@@ -102,7 +102,9 @@ export default function Header() {
                                         : i18n.language === 'pt'
                                         ? 'navPt:gap-3'
                                         : 'nav:gap-3'
-                                } gap-1`}
+                                } gap-1 ${
+                                    i18n.language === 'ar' && 'font-arabic'
+                                }`}
                             >
                                 {memoizedData.map((section) => (
                                     <li
@@ -115,7 +117,7 @@ export default function Header() {
                                             spy={true}
                                             smooth={true}
                                             offset={-70}
-                                            className="hover:text-white px-4 py-2 text-black hover:bg-blue-500 dark:text-white text-[15px] rounded-md"
+                                            className={`hover:text-white px-4 py-2 text-black hover:bg-blue-500 dark:text-white text-[15px] rounded-md`}
                                         >
                                             {t(section.nameKey)}
                                         </Link>
@@ -187,7 +189,9 @@ export default function Header() {
                                 : i18n.language === 'pt'
                                 ? 'navPt:hidden'
                                 : 'nav:hidden'
-                        } dark:bg-gray-700 p-2 z-50 fixed top-[70px] mt-2 rounded-lg shadow-lg right-2 block w-40 h-auto`}
+                        } dark:bg-gray-700 p-2 z-50 fixed top-[70px] mt-2 rounded-lg shadow-lg right-2 block w-40 h-auto ${
+                            i18n.language === 'ar' && 'font-arabic'
+                        }`}
                     >
                         <ul className="flex flex-col gap-2 text-md font-medium">
                             {sections.map((section) => (

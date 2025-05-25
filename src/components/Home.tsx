@@ -9,7 +9,7 @@ import { toast } from 'react-toastify';
 import { useTranslation } from 'react-i18next';
 
 export default function Home() {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     const memoizedData = useMemo(() => {
         return socials;
@@ -33,7 +33,9 @@ export default function Home() {
 
     return (
         <section
-            className="commonMaxHeight:h-auto desktopMaxHeight:h-maxDesktop h-screen sm:h-auto home:h-screen bg-bg-light dark:bg-bg-dark bg-cover bg-green-200 flex max-screen:justify-center"
+            className={`commonMaxHeight:h-auto desktopMaxHeight:h-maxDesktop h-screen sm:h-auto home:h-screen bg-bg-light dark:bg-bg-dark bg-cover bg-green-200 flex max-screen:justify-center ${
+                i18n.language === 'ar' && 'font-arabic'
+            }`}
             id="/"
         >
             <div className="max-screen:max-w-maxDesktop flex sm:items-center items-center justify-center sm:gap-0 home:gap-2 sm:flex-col home:flex-row w-full h-full">
@@ -86,7 +88,9 @@ export default function Home() {
                     <div className="mt-8 flex w-full justify-start sm:justify-center home:justify-start">
                         <button
                             type="button"
-                            className=" home:w-[80%] w-[50%] max-w-56 h-[60px] text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-8 py-3 me-2 focus:outline-none"
+                            className={`home:w-[80%] w-[50%] max-w-56 h-[60px] text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-8 py-3 me-2 focus:outline-none ${
+                                i18n.language === 'ar' && 'text-right'
+                            }`}
                             onClick={handleDownload}
                         >
                             {t('hero.resume')}

@@ -11,7 +11,7 @@ import { Trans } from 'react-i18next';
 
 export default function Contact() {
     const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     const memoizedData = useMemo(() => {
         return socials;
@@ -59,7 +59,9 @@ export default function Contact() {
 
     return (
         <section
-            className="h-auto contactMinHeight:h-auto lg:h-[92.8vh] bg-white dark:bg-gray-900 relative pb-10"
+            className={`h-auto contactMinHeight:h-auto lg:h-[92.8vh] bg-white dark:bg-gray-900 relative pb-10 ${
+                i18n.language === 'ar' && 'font-arabic'
+            }`}
             id="contact"
         >
             <div className="h-20 flex justify-center items-end ">

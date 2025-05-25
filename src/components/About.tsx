@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 
 export default function About() {
     const age = moment().diff(import.meta.env.VITE_DATEOFBIRTH, 'years');
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const yearsOfExperience = Number(
         moment()
             .diff(import.meta.env.VITE_YEARSOFEXPERIENCE, 'years', true)
@@ -17,7 +17,9 @@ export default function About() {
 
     return (
         <section
-            className="aboutMaxHeight:h-auto desktopMaxHeight:h-maxDesktop h-auto about:h-screen w-screen bg-white dark:bg-gray-900 flex max-screen:justify-center"
+            className={`aboutMaxHeight:h-auto desktopMaxHeight:h-maxDesktop h-auto about:h-screen w-screen bg-white dark:bg-gray-900 flex max-screen:justify-center ${
+                i18n.language === 'ar' && 'font-arabic'
+            }`}
             id="about"
             aria-labelledby="about-heading"
         >

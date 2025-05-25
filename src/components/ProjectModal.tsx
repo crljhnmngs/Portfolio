@@ -12,11 +12,13 @@ export const ProjectModal = ({
     onClose: () => void;
 }) => {
     if (!isOpen || !project) return null;
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     return (
         <div
-            className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
+            className={`fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50  ${
+                i18n.language === 'ar' && 'font-arabic'
+            }`}
             onClick={onClose}
         >
             <div
@@ -52,7 +54,7 @@ export const ProjectModal = ({
                     </ul>
                 </div>
 
-                <div className="mt-4 flex gap-4">
+                <div className={`mt-4 flex gap-4`}>
                     {project.links?.github && (
                         <a
                             href={project.links.github}

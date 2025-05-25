@@ -24,7 +24,7 @@ export default function Projects() {
     const [selectedProject, setSelectedProject] = useState<Project | null>(
         null
     );
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const [isModalOpen, setIsModalOpen] = useState(false);
     const memoizedData = useMemo(() => {
         return projects;
@@ -52,7 +52,11 @@ export default function Projects() {
         >
             <div className="w-full max-screen:max-w-maxDesktop">
                 <div className="max-w-maxScreen mx-auto sm:px-6 lg:px-7 px-4 h-full max-screen:px-0">
-                    <div className="flex items-center justify-center pt-10">
+                    <div
+                        className={`flex items-center justify-center pt-10 ${
+                            i18n.language === 'ar' && 'font-arabic'
+                        }`}
+                    >
                         <Popup
                             delay={0.5}
                             className="text-black font-semibold text-3xl sm:text-3xl dark:text-white"
@@ -117,7 +121,12 @@ export default function Projects() {
                                                     {project.name}
                                                 </h1>
                                             </div>
-                                            <div className="mt-3 max-w-[100%] min-h-[4.5rem]">
+                                            <div
+                                                className={`mt-3 max-w-[100%] min-h-[4.5rem] ${
+                                                    i18n.language === 'ar' &&
+                                                    'font-arabic'
+                                                }`}
+                                            >
                                                 <p className="text-justify sm:text-base line-clamp-4 project-xl:line-clamp-5">
                                                     {t(project.about)}
                                                 </p>
@@ -132,7 +141,13 @@ export default function Projects() {
                                                         <p>{project.date}</p>
                                                     </div>
                                                     <div className="flex gap-3 pr-1 sm:pr-5">
-                                                        <div className="relative group">
+                                                        <div
+                                                            className={`relative group ${
+                                                                i18n.language ===
+                                                                    'ar' &&
+                                                                'text-right fontOnly-arabic'
+                                                            }`}
+                                                        >
                                                             <button
                                                                 onClick={() =>
                                                                     openModal(
@@ -159,7 +174,13 @@ export default function Projects() {
                                                         </div>
                                                         {project.links
                                                             ?.github && (
-                                                            <div className="relative group">
+                                                            <div
+                                                                className={`relative group ${
+                                                                    i18n.language ===
+                                                                        'ar' &&
+                                                                    'text-right fontOnly-arabic'
+                                                                }`}
+                                                            >
                                                                 <a
                                                                     href={
                                                                         project
@@ -193,7 +214,13 @@ export default function Projects() {
                                                         )}
                                                         {project.links
                                                             ?.live && (
-                                                            <div className="relative group">
+                                                            <div
+                                                                className={`relative group ${
+                                                                    i18n.language ===
+                                                                        'ar' &&
+                                                                    'text-right fontOnly-arabic'
+                                                                }`}
+                                                            >
                                                                 <a
                                                                     href={
                                                                         project
