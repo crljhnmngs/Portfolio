@@ -2,11 +2,13 @@ import React, { useMemo } from 'react';
 import { Popup } from '../animation/Popup';
 import { motion } from 'framer-motion';
 import { skills } from '../const';
+import { useTranslation } from 'react-i18next';
 
 export default function Skills() {
     const memoizedData = useMemo(() => {
         return skills;
     }, []);
+    const { t } = useTranslation();
 
     return (
         <section
@@ -19,7 +21,7 @@ export default function Skills() {
                         delay={0.5}
                         className="text-black font-semibold text-3xl sm:text-4xl dark:text-white"
                     >
-                        My Skills
+                        {t('skills.heading')}
                     </Popup>
                 </div>
                 <div className="flex flex-wrap mt-4 sm:mt-10 justify-around sm:max-w-[80%] mb-4">

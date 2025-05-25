@@ -1,0 +1,198 @@
+{
+    "nav": {
+        "home": "首页",
+        "about": "关于",
+        "skills": "技能",
+        "timeline": "时间轴",
+        "projects": "项目",
+        "contact": "联系"
+    },
+    "hero": {
+        "greeting": "你好，我是Carl",
+        "roles": ["软件工程师", "前端开发工程师", "全栈开发工程师"],
+        "description": "我是一名前端 / 全栈网页开发人员。目前我在{{company}}担任{{position}}。",
+        "resume": "简历"
+    },
+    "about": {
+        "heading": "关于我",
+        "intro": "你好！我是Carl，一名{{age}}岁的前端/全栈网页开发者，现居菲律宾宿务，拥有{{yearsOfExperience}}年的专业经验。",
+        "journey": "我从小就开始接触电脑，这段经历激发了我对计算机的热情，并随着时间不断增强。",
+        "commitment": "我高度致力于持续学习，热衷于掌握新技术并解决复杂的挑战。凭借在前端和后端开发中干净架构的坚实基础，我擅长设计和交付可扩展且易维护的解决方案。",
+        "traits": "我以适应力强、学习迅速和合作精神著称，能够在充满活力的技术环境中茁壮成长，有效领导团队，并始终确保高质量的软件交付。",
+        "hobbies": "除了编程，我还喜欢网络游戏，闲暇时沉浸于动漫和电视剧的世界。"
+    },
+    "skills": {
+        "heading": "我的技能"
+    },
+    "timeline": {
+        "heading": "时间线",
+        "experience": "工作经验",
+        "education": "教育背景"
+    },
+    "experiences": {
+        "company1": {
+            "role": "软件工程师",
+            "description": "软件工程师，任职于Alliance Software Inc，一家全球性的IT服务与解决方案公司。Alliance成立于2000年，自那时起已发展成为菲律宾最大且最受尊敬的独立软件开发外包公司之一。",
+            "date": "2022年10月 - 现在",
+            "subItems": {
+                "0": {
+                    "position": "助理技术专家 II",
+                    "setup": "现场",
+                    "projects": {
+                        "0": {
+                            "description": "被指定为新组建团队的项目负责人。"
+                        }
+                    },
+                    "date": "2025年2月 - 现在"
+                },
+                "1": {
+                    "position": "助理技术专家 I",
+                    "setup": "现场",
+                    "projects": {
+                        "0": {
+                            "description": "为我们日本客户在菲律宾的ATM开发无卡取款和现金存款的网页用户界面。用户可以通过二维码、指纹或面部识别进行取款和存款。银行：BDO"
+                        },
+                        "1": {
+                            "description": "被任命为团队的技术负责人。"
+                        }
+                    },
+                    "date": "2024年7月 - 2025年2月"
+                },
+                "2": {
+                    "position": "技术专家 II",
+                    "setup": "现场",
+                    "projects": {
+                        "0": {
+                            "description": "为我们日本客户在菲律宾的ATM开发无卡支票存款的网页用户界面。银行：BDO"
+                        }
+                    },
+                    "date": "2024年1月 - 2024年7月"
+                },
+                "3": {
+                    "position": "技术专家 I",
+                    "setup": "现场",
+                    "projects": {
+                        "0": {
+                            "description": "为我们菲律宾的一位客户开发全栈网页应用程序。"
+                        },
+                        "1": {
+                            "description": "为我们的日本客户开发了ATM演示网页服务，以展示其新的ATM应用程序给客户。"
+                        },
+                        "2": {
+                            "description": "负责为我们日本客户在菲律宾的ATM提供银行支持。我的任务包括修复遗留基础代码中的错误以及根据特定银行要求开发新功能。银行：BDO，MBTC和EWB"
+                        }
+                    },
+                    "date": "2022年10月 - 2024年1月"
+                }
+            }
+        },
+        "company2": {
+            "role": "软件质量保证（实习生）",
+            "description": "软件质量保证实习生，任职于MVP.dev。MVP.dev帮助企业主利用无代码技术，在几周内通过高接触、经过验证的流程实现他们的愿景。",
+            "date": "2022年3月 - 2022年6月"
+        }
+    },
+    "educations": {
+        "education1": {
+            "school": "宿务大学 - 拉普拉普与曼达韦校区",
+            "track": "大学",
+            "course": "信息技术理学学士",
+            "date": "2018年6月 - 2022年7月"
+        },
+        "education2": {
+            "school": "宿务大学 - 拉普拉普与曼达韦校区",
+            "track": "高中",
+            "course": "技术职业教育信息通信技术 - 计算机编程与硬件维护",
+            "date": "2016年6月 - 2018年4月"
+        }
+    },
+    "projects": {
+        "heading": "个人项目",
+        "swipe": "左右滑动",
+        "personalFullStackBoilerplate": {
+            "about": "一个可直接使用的 MERN 模板，用于构建可扩展且安全的全栈应用。预先配置以实现高效开发、无缝的 API 集成和简便的部署。"
+        },
+        "todoApp": {
+            "about": "这是一个简单的待办事项应用，使用 React、TypeScript、Firebase 及其他现代网络技术构建。该应用允许用户在本地和云端管理待办事项，重点支持身份验证和实时更新。"
+        },
+        "personalFrontendBoilerplate": {
+            "about": "非常适合从零开始创建 React 应用。"
+        },
+        "fun88": {
+            "about": "该应用是 FUN88 应用的简单克隆，侧重于游戏选择、筛选和收藏列表等功能。此应用是在一次前端编码测试中创建的。"
+        },
+        "personalPortfolio": {
+            "about": "我的个人作品网站是一个现代且响应式的网络应用，旨在以引人入胜和互动的方式展示我的专业作品和个人项目。该项目结合了多项前沿网络技术，突出展示了我在网页开发和设计方面的技能。"
+        },
+        "fakeStore": {
+            "about": "Fake Store 项目是一个实践应用，旨在练习和展示集成及使用 API 的技能。该项目模拟了一个电商平台，利用模拟 API 提供真实的购物体验，同时注重有效的 API 使用和数据处理。"
+        },
+        "dota2Heroes": {
+            "about": "Dota 2 英雄项目是一个网页应用，开发目的是探索并展示热门游戏 Dota 2 的数据。出于对游戏的热爱以及练习 API 集成的愿望，此项目提供了一个详细且互动的界面，用于浏览和了解 Dota 2 英雄。"
+        },
+        "welift": {
+            "about": "WeLift 是我们大学最后一年作为毕业设计开发的综合性网页应用。该平台旨在简化预订搬家服务的流程，特别针对需要搬家帮助的个人和家庭（又称“lipat bahay”）。WeLift 连接用户与可靠的搬家公司，优化搬运家居物品的物流。"
+        },
+        "overflow": {
+            "about": "Overflow 是一款功能丰富的笔记应用，由我的朋友作为毕业设计开发，我也有重要贡献。旨在提供高效且用户友好的个人笔记管理平台，通过直观的界面和强大的功能提升生产力。"
+        },
+        "advanceCalculator": {
+            "about": "高级计算器是一个基于网页的应用，开发目的是练习和提升我的 JavaScript 技能。该工具提供多种高级数学功能，展示我实现复杂计算并创建交互式用户界面的能力。"
+        },
+        "basicCalculator": {
+            "about": "基础计算器是一个简单的网页应用，作为我学习 JavaScript 时的初始项目。该项目作为应用 JavaScript 创建具有基本算术运算功能的计算器的基础练习。"
+        },
+        "facebookClone": {
+            "about": "Facebook 克隆是一个网页应用，旨在复制 Facebook 的设计和用户界面。该项目专注于创建一个视觉准确且互动的 Facebook 设计克隆，为练习前端开发技能和理解复杂 UI/UX 元素提供机会。"
+        },
+        "amusementParkManagementSystem": {
+            "about": "游乐园管理系统是一个 Windows Forms 应用，作为我大学二年级的毕业项目开发。该系统旨在简化和管理游乐园内的各项运营，包括售票、游乐设施管理及客户服务。它被评为优秀项目之一，展示了其有效性和影响力。"
+        },
+        "new": "新",
+        "dev": "开发",
+        "viewInfo": "查看更多信息",
+        "viewRepo": "查看仓库",
+        "viewSite": "查看网站",
+        "modal": {
+            "technologies": "技术",
+            "viewRepo": "查看代码库",
+            "viewSite": "查看实时网站"
+        }
+    },
+    "contact": {
+        "heading": "联系我",
+        "connectHeading": "与我联系",
+        "connectDescription": "如果你想了解更多关于我或我的工作，或者只是想打个招呼，请给我发消息。我很乐意收到你的来信。",
+        "form": {
+            "nameLabel": "姓名",
+            "namePlaceholder": "请输入你的姓名",
+            "emailLabel": "电子邮件",
+            "emailPlaceholder": "请输入你的电子邮件",
+            "messageLabel": "留言",
+            "messagePlaceholder": "请输入你的留言",
+            "submit": "提交"
+        },
+        "directEmail": "直接给我发邮件",
+        "scheduleLinkText": "安排一次面谈或讨论。",
+        "addressHeading": "地址",
+        "address": "宿务市<1/>菲律宾",
+        "socialsHeading": "社交媒体"
+    },
+    "footer": {
+        "madeWith": "由",
+        "by": "Carl 制作"
+    },
+    "translation": {
+        "select": "选择语言",
+        "languages": {
+            "en": "英语",
+            "ceb": "宿务语",
+            "fil": "菲律宾语",
+            "es": "西班牙语",
+            "fr": "法语",
+            "zh": "中文",
+            "ja": "日语",
+            "pt": "葡萄牙语"
+        }
+    }
+}

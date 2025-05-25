@@ -22,27 +22,27 @@ const iconStyleClass: string = 'hover:scale-[1.18] size-full';
 
 export const sections = [
     {
-        name: 'Home',
+        nameKey: 'nav.home',
         id: '/',
     },
     {
-        name: 'About',
+        nameKey: 'nav.about',
         id: 'about',
     },
     {
-        name: 'Skills',
+        nameKey: 'nav.skills',
         id: 'skills',
     },
     {
-        name: 'Timeline',
+        nameKey: 'nav.timeline',
         id: 'timeline',
     },
     {
-        name: 'Projects',
+        nameKey: 'nav.projects',
         id: 'projects',
     },
     {
-        name: 'Contact',
+        nameKey: 'nav.contact',
         id: 'contact',
     },
 ];
@@ -225,10 +225,9 @@ export const socials = [
 export const experiences = [
     {
         logo: LogoAlliance,
-        role: 'Software Engineer',
+        role: 'experiences.company1.role',
         title: 'Alliance Software Inc.',
-        description:
-            'Software Engineer at Alliance Software Inc, a global IT services and solutions company. Alliance was established in 2000 and has since grown to become one of the Philippines largest and most respected independent software development outsourcing company.',
+        description: 'experiences.company1.description',
         link: 'https://alliance.com.ph/',
         tech: [
             'React',
@@ -240,16 +239,15 @@ export const experiences = [
             'Git',
             'Waterfall',
         ],
-
-        date: 'October 2022 - Present',
+        date: 'experiences.company1.date',
         subItems: [
             {
-                position: 'Associate Technical Specialist II',
-                setup: 'On-site',
+                position: 'experiences.company1.subItems.0.position',
+                setup: 'experiences.company1.subItems.0.setup',
                 projects: [
                     {
                         description:
-                            'Have been assigned as the Project Leader for a newly created team.',
+                            'experiences.company1.subItems.0.projects.0.description',
                         tech: [
                             'C++',
                             'VBScript',
@@ -264,15 +262,15 @@ export const experiences = [
                         ],
                     },
                 ],
-                date: 'February 2025 - Present',
+                date: 'experiences.company1.subItems.0.date',
             },
             {
-                position: 'Associate Technical Specialist I',
-                setup: 'On-site',
+                position: 'experiences.company1.subItems.1.position',
+                setup: 'experiences.company1.subItems.1.setup',
                 projects: [
                     {
                         description:
-                            "Developing a web UI cardless cash withdrawal and cash deposit transactions for our Japanese client's ATMs here in the Philippines. The user can use a QR code, fingerprint, or face recognition to do cash withdrawals and deposits. Bank: BDO",
+                            'experiences.company1.subItems.1.projects.0.description',
                         tech: [
                             'C++',
                             'VBScript',
@@ -288,18 +286,19 @@ export const experiences = [
                     },
                     {
                         description:
-                            'Assigned as the Technical Leader for the team.',
+                            'experiences.company1.subItems.1.projects.1.description',
                         tech: [],
                     },
                 ],
-                date: 'July 2024 - February 2025',
+                date: 'experiences.company1.subItems.1.date',
             },
             {
-                position: 'Technical Specialist II',
-                setup: 'On-site',
+                position: 'experiences.company1.subItems.2.position',
+                setup: 'experiences.company1.subItems.2.setup',
                 projects: [
                     {
-                        description: `Developed a web UI cardless cheque deposit transaction for our Japanese client's ATMs here in the Philippines. Bank: BDO`,
+                        description:
+                            'experiences.company1.subItems.2.projects.0.description',
                         tech: [
                             'C++',
                             'VBScript',
@@ -314,15 +313,15 @@ export const experiences = [
                         ],
                     },
                 ],
-                date: 'January 2024 - July 2024',
+                date: 'experiences.company1.subItems.2.date',
             },
             {
-                position: 'Technical Specialist I',
-                setup: 'On-site',
+                position: 'experiences.company1.subItems.3.position',
+                setup: 'experiences.company1.subItems.3.setup',
                 projects: [
                     {
                         description:
-                            'Developed a full-stack web application for one of our clients in the Philippines.',
+                            'experiences.company1.subItems.3.projects.0.description',
                         tech: [
                             'React',
                             'TypeScript',
@@ -334,41 +333,41 @@ export const experiences = [
                     },
                     {
                         description:
-                            'Developed a demo ATM web service for our Japanese client to showcase their new ATM application to their clients.',
+                            'experiences.company1.subItems.3.projects.1.description',
                         tech: ['JavaScript', 'HTML', 'Bootstrap + Sass', 'C#'],
                     },
                     {
-                        description: `I was assigned to provide bank support for our Japanese client's ATMs here in the Philippines. My tasks include fixing bugs in their legacy base code and developing new functionalities based on specific bank requests. Banks: BDO, MBTC, and EWB`,
+                        description:
+                            'experiences.company1.subItems.3.projects.2.description',
                         tech: ['C++', 'VBScript', 'Git', 'SVN', 'Waterfall'],
                     },
                 ],
-                date: 'October 2022 - January 2024',
+                date: 'experiences.company1.subItems.3.date',
             },
         ],
     },
     {
         logo: LogoMVP,
         title: 'MVP.dev',
-        role: 'Software QA (Intern)',
+        role: 'experiences.company2.role',
         link: 'https://mvp.dev/',
-        description:
-            'Software QA Intern at MVP.dev, MVP.dev help business owners harness the power of no-code technology to bring their vision to life in weeks through a high-touch proven process.',
+        description: 'experiences.company2.description',
         tech: [
             'Test Plan',
             'Test Cases',
             'Integration tests',
             'Functional tests',
         ],
-        date: 'March 2022 - June 2022',
+        date: 'experiences.company2.date',
     },
 ];
 
 export const educations = [
     {
         logo: UC,
-        school: 'University Of Cebu - Lapu-Lapu and Mandaue',
-        track: 'College',
-        course: 'Bachelor of Science in Information Technology',
+        school: 'educations.education1.school',
+        track: 'educations.education1.track',
+        course: 'educations.education1.course',
         tech: [
             'C++',
             'Java',
@@ -381,22 +380,23 @@ export const educations = [
             'PHP',
             'Agile',
         ],
-        date: 'June 2018 - July 2022',
+        date: 'educations.education1.date',
     },
     {
         logo: UC,
-        school: 'University Of Cebu - Lapu-Lapu and Mandaue',
-        track: 'Senior High School',
-        course: 'TECH-VOC ICT - Computer Programming & Hardware Servicing ',
+        school: 'educations.education2.school',
+        track: 'educations.education2.track',
+        course: 'educations.education2.course',
         tech: ['Java', 'C#'],
-        date: 'June 2016 - April 2018',
+        date: 'educations.education2.date',
     },
 ];
+
 export const projects: Project[] = [
     {
         name: 'Personal FullStack Boilerplate',
         image: mern,
-        about: 'A ready-to-use MERN template for building scalable and secure full-stack applications. Pre-configured for efficient development, seamless API integration, and easy deployment.',
+        about: 'projects.personalFullStackBoilerplate.about',
         tech: [
             'React',
             'Vite',
@@ -411,7 +411,6 @@ export const projects: Project[] = [
         ],
         date: '2025',
         new: true,
-        dev: true,
         links: {
             github: 'https://github.com/crljhnmngs/fullstack-boilerplate',
         },
@@ -419,7 +418,7 @@ export const projects: Project[] = [
     {
         name: 'Todo App',
         image: todo,
-        about: 'This is a simple todo app, built using React, TypeScript, Firebase, and other modern web technologies. The app allows users to manage their todos, both locally and in the cloud, with a focus on authentication and real-time updates.',
+        about: 'projects.todoApp.about',
         tech: ['React', 'TypeScript', 'Tailwind', 'Firebase', 'Redux', 'Jest'],
         date: '2024',
         links: {
@@ -430,7 +429,7 @@ export const projects: Project[] = [
     {
         name: 'Personal Frontend Boilerplate',
         image: boilerplate,
-        about: 'Ideal for creating React apps from scratch.',
+        about: 'projects.personalFrontendBoilerplate.about',
         tech: ['React', 'Vite', 'TypeScript', 'Tailwind', 'Redux', 'Jest'],
         date: '2024',
         links: {
@@ -441,7 +440,7 @@ export const projects: Project[] = [
     {
         name: 'FUN88',
         image: fun88,
-        about: 'The app is a simple clone of the FUN88 app, focusing on features like game selection, filtering, and a favorites list. This app was created during a front-end coding test.',
+        about: 'projects.fun88.about',
         tech: ['React', 'TypeScript', 'Tailwind', 'Redux'],
         date: '2024',
         links: {
@@ -452,7 +451,7 @@ export const projects: Project[] = [
     {
         name: 'Personal Portfolio',
         image: portfolio,
-        about: 'My Portfolio Website is a modern, responsive web application designed to showcase my professional work and personal projects in an engaging and interactive manner. Built using a combination of cutting-edge web technologies, this project highlights my skills in web development and design.',
+        about: 'projects.personalPortfolio.about',
         tech: [
             'React',
             'Vite',
@@ -469,7 +468,7 @@ export const projects: Project[] = [
     {
         name: 'Fake Store',
         image: fakeStore,
-        about: 'The Fake Store project is a hands-on application developed to practice and showcase skills in integrating and working with APIs. This project simulates an e-commerce platform, leveraging a mock API to deliver a realistic shopping experience while focusing on effective API usage and data handling.',
+        about: 'projects.fakeStore.about',
         tech: ['HTML', 'SCSS', 'JavaScript', 'Responsive'],
         date: '2022',
         links: {
@@ -480,7 +479,7 @@ export const projects: Project[] = [
     {
         name: 'DOTA2 Heroes',
         image: dota2,
-        about: 'The Dota 2 Heroes Project is a web application developed to explore and showcase data from the popular game Dota 2. Created out of my passion for the game and a desire to practice API integration, this project provides a detailed and interactive interface for browsing and learning about Dota 2 heroes.',
+        about: 'projects.dota2Heroes.about',
         tech: ['HTML', 'Tailwind', 'JavaScript', 'Responsive'],
         date: '2022',
         links: {
@@ -491,7 +490,7 @@ export const projects: Project[] = [
     {
         name: 'Welift',
         image: WeLift,
-        about: 'WeLift is a comprehensive web application developed as our capstone project during my final year of college. The platform is designed to simplify the process of booking moving services, specifically tailored for individuals and families needing assistance with relocations, also known as "lipat bahay." WeLift connects users with reliable moving service providers, streamlining the logistics of moving household items.',
+        about: 'projects.welift.about',
         tech: ['PHP', 'MySQL', 'jQuery', 'JavaScript'],
         date: '2022',
         links: {
@@ -501,7 +500,7 @@ export const projects: Project[] = [
     {
         name: 'Overflow',
         image: OverFlow,
-        about: 'Overflow is a feature-rich note-taking application developed as a capstone project by my friend, with significant contributions from me. Designed to provide an efficient and user-friendly platform for managing personal notes, Overflow enhances productivity through its intuitive interface and robust functionality.',
+        about: 'projects.overflow.about',
         tech: ['PHP', 'MySQL', 'jQuery', 'JavaScript'],
         date: '2022',
         links: {
@@ -511,7 +510,7 @@ export const projects: Project[] = [
     {
         name: 'Advance Calculator',
         image: advanceCalulator,
-        about: 'The Advanced Calculator is a web-based application developed to practice and refine my JavaScript skills. This tool offers a variety of advanced mathematical functions, showcasing my ability to implement complex calculations and create an interactive user interface using JavaScript.',
+        about: 'projects.advanceCalculator.about',
         tech: ['HTML', 'CSS', 'JavaScript'],
         date: '2022',
         links: {
@@ -522,7 +521,7 @@ export const projects: Project[] = [
     {
         name: 'Basic Calculator',
         image: calulator,
-        about: 'The Basic Calculator is a simple web application developed as an initial project while I was learning JavaScript. This project serves as a foundational exercise in applying JavaScript to create a functional calculator with essential arithmetic operations.',
+        about: 'projects.basicCalculator.about',
         tech: ['HTML', 'CSS', 'JavaScript'],
         date: '2022',
         links: {
@@ -533,7 +532,7 @@ export const projects: Project[] = [
     {
         name: 'Facebook Clone(Design)',
         image: facebook,
-        about: `The Facebook Clone is a web application developed to replicate the design and user interface of Facebook. This project focuses on creating a visually accurate and interactive clone of Facebook's design, providing an opportunity to practice front-end development skills and understand complex UI/UX elements.`,
+        about: `projects.facebookClone.about`,
         tech: ['HTML', 'CSS'],
         date: '2022',
         links: {
@@ -544,7 +543,7 @@ export const projects: Project[] = [
     {
         name: ' Amusement Park Management System',
         image: Amusement,
-        about: 'The Amusement Park Management System is a Windows Forms application developed as a final project during my second year of college. This system is designed to streamline and manage various operations within an amusement park, including ticket sales, ride management, and customer services. It was selected as one of the best projects, showcasing its effectiveness and impact.',
+        about: 'projects.amusementParkManagementSystem.about',
         tech: ['C#', 'Windows Forms'],
         date: '2019',
         links: {

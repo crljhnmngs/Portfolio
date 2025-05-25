@@ -6,7 +6,12 @@ interface ImageComponentProps {
     [key: string]: any;
 }
 
-const ImageComponent: React.FC<ImageComponentProps> = ({ src, alt, loaderColor, ...props }) => {
+const ImageComponent: React.FC<ImageComponentProps> = ({
+    src,
+    alt,
+    loaderColor,
+    ...props
+}) => {
     const [isLoading, setIsLoading] = useState(true);
     const [hasError, setHasError] = useState(false);
 

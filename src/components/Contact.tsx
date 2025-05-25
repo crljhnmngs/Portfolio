@@ -6,9 +6,12 @@ import Loader from '@/assets/loading.svg?react';
 import { toast } from 'react-toastify';
 import { socials } from '../const';
 import { Footer } from '../layout/Footer';
+import { useTranslation } from 'react-i18next';
+import { Trans } from 'react-i18next';
 
 export default function Contact() {
     const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+    const { t } = useTranslation();
 
     const memoizedData = useMemo(() => {
         return socials;
@@ -64,21 +67,19 @@ export default function Contact() {
                     delay={0.5}
                     className="text-black font-semibold text-3xl sm:text-3xl dark:text-white"
                 >
-                    Contact
+                    {t('contact.heading')}
                 </Popup>
             </div>
             <div className="mt-10 max-w-maxScreen mx-auto sm:px-6 lg:px-8 px-5">
                 <div className="w-full lg:w-1/2">
                     <SlideLeft delay={0.5}>
                         <h3 className="mb-3 lg:text-3xl text-2xl font-semibold text-blue-500">
-                            Connect with me{' '}
+                            {t('contact.connectHeading')}
                         </h3>
                     </SlideLeft>
                     <SlideLeft delay={0.7}>
                         <p className="text-gray-600 dark:text-gray-300 text-md lg:text-xl">
-                            If you want to know more about me or my work, or if
-                            you would just like to say hello, send me a message.
-                            I'd love to hear from you.
+                            {t('contact.connectDescription')}
                         </p>
                     </SlideLeft>
                 </div>
@@ -87,43 +88,49 @@ export default function Contact() {
                         <form onSubmit={sendEmail}>
                             <div className="flex flex-col gap-2">
                                 <label className="text-gray-600 dark:text-gray-300 text-lg font-medium">
-                                    Name
+                                    {t('contact.form.nameLabel')}
                                 </label>
                                 <input
                                     name="name"
                                     type="text"
                                     className="bg-gray-700 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    placeholder="Enter your name"
+                                    placeholder={t(
+                                        'contact.form.namePlaceholder'
+                                    )}
                                     required
                                 />
                             </div>
                             <div className="flex flex-col gap-2 mt-8">
                                 <label className="text-gray-600 dark:text-gray-300 text-lg font-medium">
-                                    Email
+                                    {t('contact.form.emailLabel')}
                                 </label>
                                 <input
                                     name="email"
                                     type="email"
                                     className="bg-gray-700 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    placeholder="Enter your email"
+                                    placeholder={t(
+                                        'contact.form.emailPlaceholder'
+                                    )}
                                     required
                                 />
                             </div>
                             <div className="flex flex-col gap-2 mt-8">
                                 <label className="text-gray-600 dark:text-gray-300 text-lg font-medium">
-                                    Message
+                                    {t('contact.form.messageLabel')}
                                 </label>
                                 <textarea
                                     name="message"
                                     className="bg-gray-700 border border-gray-300 text-white h-28 w-full text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 resize-none"
-                                    placeholder="Enter your message"
+                                    placeholder={t(
+                                        'contact.form.messagePlaceholder'
+                                    )}
                                     required
                                 />
                             </div>
                             <div className="flex justify-between mt-2 flex-col sm:flex-row">
                                 <div className="underline text-black dark:text-white">
                                     <a href="mailto:manigoscarljohn@gmail.com">
-                                        Send me email directly
+                                        {t('contact.directEmail')}
                                     </a>
                                 </div>
                                 <button
@@ -133,7 +140,7 @@ export default function Contact() {
                                     disabled={isSubmitting}
                                 >
                                     {!isSubmitting ? (
-                                        'Submit'
+                                        t('contact.form.submit')
                                     ) : (
                                         <div className="flex justify-center h-full">
                                             <Loader className="spinner h-full" />
@@ -146,7 +153,7 @@ export default function Contact() {
                     <div className="w-full lg:w-1/2 flex flex-col mt-5 text-start lg:text-end">
                         <div className="flex flex-col">
                             <p className="text-xl sm:text-3xl font-bold text-gray-600 dark:text-gray-300">
-                                Email
+                                {t('contact.form.emailLabel')}
                             </p>
                             <p className="mt-2 font-semibold text-blue-700 dark:text-blue-500 uppercase">
                                 manigoscarljohn@gmail.com
@@ -158,21 +165,24 @@ export default function Contact() {
                                     href={import.meta.env.VITE_CALENDLYURL}
                                     target="_blank"
                                 >
-                                    Schedule an interview or discussion with me.
+                                    {t('contact.scheduleLinkText')}
                                 </a>
                             </p>
                         </div>
                         <div className="flex flex-col mt-10">
                             <p className="text-xl sm:text-3xl font-bold text-gray-600 dark:text-gray-300">
-                                Address
+                                {t('contact.addressHeading')}
                             </p>
                             <p className="mt-2 font-semibold text-blue-700 dark:text-blue-500 uppercase">
-                                Cebu City <br></br> Philippines
+                                <Trans
+                                    i18nKey="contact.address"
+                                    components={[<></>, <br />]}
+                                />
                             </p>
                         </div>
                         <div className="flex flex-col mt-11">
                             <p className="text-xl sm:text-3xl font-bold text-gray-600 dark:text-gray-300">
-                                Socials
+                                {t('contact.socialsHeading')}
                             </p>
                             <div className="flex justify-start lg:justify-end gap-3 mt-3">
                                 {memoizedData.map((social) => (

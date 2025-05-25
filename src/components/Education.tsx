@@ -1,8 +1,10 @@
 import React, { useMemo } from 'react';
 import { IoCalendarNumberOutline } from 'react-icons/io5';
 import { educations } from '../const';
+import { useTranslation } from 'react-i18next';
 
 export const Education = () => {
+    const { t } = useTranslation();
     const memoizedData = useMemo(() => {
         return educations;
     }, []);
@@ -19,13 +21,13 @@ export const Education = () => {
                             />
                         </span>
                         <h3 className="flex items-center text-lg font-semibold text-gray-900 dark:text-white">
-                            {e.school}
+                            {t(e.school)}
                         </h3>
                         <time className="block mb-3 text-sm font-normal leading-none text-gray-700 dark:text-gray-400">
-                            {e.track}
+                            {t(e.track)}
                         </time>
                         <p className="mb-4 text-base font-normal text-gray-700 dark:text-gray-400">
-                            {e.course}
+                            {t(e.course)}
                         </p>
                         <div className="-mt-2 flex flex-wrap">
                             {e.tech.map((tech) => (
@@ -39,7 +41,7 @@ export const Education = () => {
                         </div>
                         <div className="flex items-center space-x-2 mt-2 text-sm text-gray-700 dark:text-gray-400">
                             <IoCalendarNumberOutline size={16} />
-                            <time>{e.date}</time>
+                            <time>{t(e.date)}</time>
                         </div>
                     </li>
                 ))}

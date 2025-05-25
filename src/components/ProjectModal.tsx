@@ -1,5 +1,6 @@
 import { FaGithub, FaLink, FaTimes } from 'react-icons/fa';
 import { Project } from '~/types/global';
+import { useTranslation } from 'react-i18next';
 
 export const ProjectModal = ({
     project,
@@ -11,6 +12,7 @@ export const ProjectModal = ({
     onClose: () => void;
 }) => {
     if (!isOpen || !project) return null;
+    const { t } = useTranslation();
 
     return (
         <div
@@ -32,11 +34,11 @@ export const ProjectModal = ({
                     {project.name}
                 </h2>
                 <p className="mt-2 text-gray-700 dark:text-gray-300">
-                    {project.about}
+                    {t(project.about)}
                 </p>
                 <div className="mt-4">
                     <span className="font-semibold dark:text-white">
-                        Technologies:
+                        {t('projects.modal.technologies')}
                     </span>
                     <ul className="mt-1 flex flex-wrap gap-2">
                         {project.tech.map((tech: string, index: number) => (
@@ -58,7 +60,8 @@ export const ProjectModal = ({
                             rel="noreferrer"
                             className="flex items-center gap-2 text-blue-500 hover:underline"
                         >
-                            <FaGithub size={20} /> View Repository
+                            <FaGithub size={20} />{' '}
+                            {t('projects.modal.viewRepo')}
                         </a>
                     )}
                     {project.links?.live && (
@@ -68,7 +71,7 @@ export const ProjectModal = ({
                             rel="noreferrer"
                             className="flex items-center gap-2 text-green-500 hover:underline"
                         >
-                            <FaLink size={20} /> View Live Site
+                            <FaLink size={20} /> {t('projects.modal.viewSite')}
                         </a>
                     )}
                 </div>

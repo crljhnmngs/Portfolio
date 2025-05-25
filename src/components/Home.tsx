@@ -6,8 +6,11 @@ import { SlideLeft, SlideRight } from '../animation/Slide';
 import { socials } from '../const';
 import { saveAs } from 'file-saver';
 import { toast } from 'react-toastify';
+import { useTranslation } from 'react-i18next';
 
 export default function Home() {
+    const { t } = useTranslation();
+
     const memoizedData = useMemo(() => {
         return socials;
     }, []);
@@ -20,7 +23,7 @@ export default function Home() {
                 throw new Error('Network response was not ok');
             }
             const blob = await response.blob();
-            saveAs(blob, 'Manigos, Carl John Resume.pdf');
+            saveAs(blob, 'CarlJohn_Manigos_Resume.pdf');
         } catch (error) {
             toast.error('Something went wrong, please try again later', {
                 position: 'top-right',
@@ -40,16 +43,16 @@ export default function Home() {
                 >
                     <div>
                         <p className="font-bold home:text-5xl sm:text-4xl text-3xl text-black dark:text-white sm:dark:text-white">
-                            Hi, I am Carl
+                            {t('hero.greeting')}
                         </p>
                     </div>
                     <div className="mt-1">
                         <ReactTyped
-                            strings={[
-                                'Software Engineer',
-                                'Front End Developer',
-                                'Full Stack Developer',
-                            ]}
+                            strings={
+                                t('hero.roles', {
+                                    returnObjects: true,
+                                }) as string[]
+                            }
                             typeSpeed={50}
                             backSpeed={60}
                             loop
@@ -58,10 +61,10 @@ export default function Home() {
                     </div>
                     <div className="mt-6 w-full sm:w-1/2  home:w-[80%]">
                         <p className="font-light home:text-lg sm:text:base text-sm text-start sm:text-center home:text-start dark:sm:text-white dark:text-white">
-                            I am a Front-End / Full-Stack Web Developer. I am
-                            currently working at{' '}
-                            {import.meta.env.VITE_CURRENTCOMPANY}
-                            as a {import.meta.env.VITE_CURRENTPOSITION}.
+                            {t('hero.description', {
+                                company: import.meta.env.VITE_CURRENTCOMPANY,
+                                position: import.meta.env.VITE_CURRENTPOSITION,
+                            })}
                         </p>
                     </div>
                     <div className="mt-8 flex gap-4 h-11 sm:h-[3.2rem] justify-start sm:justify-center home:justify-start w-[100%] sm:dark:text-white home:dark:text-black">
@@ -86,7 +89,7 @@ export default function Home() {
                             className=" home:w-[80%] w-[50%] max-w-56 h-[60px] text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-8 py-3 me-2 focus:outline-none"
                             onClick={handleDownload}
                         >
-                            Resume
+                            {t('hero.resume')}
                         </button>
                     </div>
                 </SlideLeft>

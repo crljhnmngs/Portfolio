@@ -5,6 +5,11 @@ module.exports = {
         extend: {
             screens: {
                 nav: '880px',
+                navCeb: '1000px',
+                navFil: '1250px',
+                navEs: '1050px',
+                navJp: '920px',
+                navPt: '980px',
                 home: '1200px',
                 about: '1015px',
                 skill: '1105px',

@@ -1,0 +1,202 @@
+{
+    "nav": {
+        "home": "Panguna",
+        "about": "Mahitungod",
+        "skills": "Kahanas",
+        "timeline": "Panaw",
+        "projects": "Mga Proyekto",
+        "contact": "Kontak"
+    },
+    "hero": {
+        "greeting": "Kumusta, ako si Carl",
+        "roles": [
+            "Software Engineer",
+            "Front End Developer",
+            "Full Stack Developer"
+        ],
+        "description": "Usa ako ka Front-End / Full-Stack Web Developer. Karon nagtrabaho ko sa {{company}} isip usa ka {{position}}.",
+        "resume": "Resume"
+    },
+    "about": {
+        "heading": "Mahitungod Kanako",
+        "intro": "Kumusta! Ako si Carl, usa ka {{age}} anyos nga Front-End / Full-Stack Web Developer nga nakabase sa Cebu, Pilipinas, nga adunay {{yearsOfExperience}} ka tuig nga propesyonal nga kasinatian.",
+        "journey": "Nagsugod sa sayo ang akong panaw sa kompyuter, nga nagpukaw sa usa ka kadasig nga misamot ug kalig-on sa paglabay sa panahon.",
+        "commitment": "Dako kaayo ang akong dedikasyon sa padayong pagkat-on ug gimotibasyon ko sa pag-master sa bag-ong teknolohiya ug pagsulbad sa komplikado nga mga hagit. Uban sa lig-on nga pundasyon sa limpyo ug organisadong arkitektura sa frontend ug backend web development, maayo ko sa pagdesinyo ug paghatud og mga solusyon nga dali mapalapdan ug sayon ayuhon.",
+        "traits": "Nailhan ko sa akong pagka-adaptable, dali makat-on, ug pagkahilig sa panagkahiusa sa team. Molampos ko sa mga palibot sa teknolohiya nga kusog ang kausaban, epektibo ko nga nagapangulo sa mga team, ug kanunay nga nagpaniguro sa kalidad nga delivery sa software.",
+        "hobbies": "Gawas sa pag-code, malingaw ko sa online gaming ug ganahan sab ko motan-aw og anime ug mga TV series sa akong bakanteng oras."
+    },
+    "skills": {
+        "heading": "Ako mga Kahanas"
+    },
+    "timeline": {
+        "heading": "Panaw",
+        "experience": "Kasinatian sa Trabaho",
+        "education": "Edukasyon"
+    },
+    "experiences": {
+        "company1": {
+            "role": "Software Engineer",
+            "description": "Software Engineer sa Alliance Software Inc, usa ka global nga kompanya sa IT services ug solusyon. Ang Alliance gitukod niadtong 2000 ug sukad niadto nagtubo aron mahimong usa sa pinakadako ug respetado nga independent software development outsourcing company sa Pilipinas.",
+            "date": "Oktubre 2022 - Karon",
+            "subItems": {
+                "0": {
+                    "position": "Associate Technical Specialist II",
+                    "setup": "On-site",
+                    "projects": {
+                        "0": {
+                            "description": "Gitagana isip Project Leader alang sa bag-ong natukod nga team."
+                        }
+                    },
+                    "date": "Pebrero 2025 - Karon"
+                },
+                "1": {
+                    "position": "Associate Technical Specialist I",
+                    "setup": "On-site",
+                    "projects": {
+                        "0": {
+                            "description": "Naghimo ug web UI para sa cardless cash withdrawal ug cash deposit transactions alang sa ATM sa among kliyente nga Hapones dinhi sa Pilipinas. Ang user makagamit ug QR code, fingerprint, o face recognition sa pag-withdraw ug deposito sa kwarta. Bangko: BDO"
+                        },
+                        "1": {
+                            "description": "Gitagana isip Technical Leader sa team."
+                        }
+                    },
+                    "date": "Hulyo 2024 - Pebrero 2025"
+                },
+                "2": {
+                    "position": "Technical Specialist II",
+                    "setup": "On-site",
+                    "projects": {
+                        "0": {
+                            "description": "Nakahimo ug web UI para sa cardless cheque deposit transaction alang sa ATM sa among kliyente nga Hapones dinhi sa Pilipinas. Bangko: BDO"
+                        }
+                    },
+                    "date": "Enero 2024 - Hulyo 2024"
+                },
+                "3": {
+                    "position": "Technical Specialist I",
+                    "setup": "On-site",
+                    "projects": {
+                        "0": {
+                            "description": "Nakahimo ug full-stack web application para sa usa sa among mga kliyente sa Pilipinas."
+                        },
+                        "1": {
+                            "description": "Nakahimo ug demo ATM web service alang sa among Hapones nga kliyente aron ipakita ang ilang bag-ong ATM application sa ilang mga kliyente."
+                        },
+                        "2": {
+                            "description": "Gitagana sa paghatag suporta sa bangko para sa ATM sa among Hapones nga kliyente dinhi sa Pilipinas. Apil ang pag-ayo sa mga depekto sa legacy base code ug pag-develop ug bag-ong mga function base sa espesipikong hangyo sa bangko. Mga Bangko: BDO, MBTC, ug EWB"
+                        }
+                    },
+                    "date": "Oktubre 2022 - Enero 2024"
+                }
+            }
+        },
+        "company2": {
+            "role": "Software QA (Intern)",
+            "description": "Software QA Intern sa MVP.dev, ang MVP.dev motabang sa mga tag-iya sa negosyo sa paggamit sa no-code technology aron madala ang ilang mga pangandoy sa kinabuhi sa sulod lang sa pipila ka semana pinaagi sa usa ka high-touch proven process.",
+            "date": "Marso 2022 - Hunyo 2022"
+        }
+    },
+    "educations": {
+        "education1": {
+            "school": "University Of Cebu - Lapu-Lapu ug Mandaue",
+            "track": "Kolehiyo",
+            "course": "Bachelor of Science sa Information Technology",
+            "date": "Hunyo 2018 - Hulyo 2022"
+        },
+        "education2": {
+            "school": "University Of Cebu - Lapu-Lapu ug Mandaue",
+            "track": "Senior High School",
+            "course": "TECH-VOC ICT - Pagprograma sa Kompyuter ug Pag-ayo sa Hardware",
+            "date": "Hunyo 2016 - Abril 2018"
+        }
+    },
+    "projects": {
+        "heading": "Personal nga mga Proyekto",
+        "swipe": "Swipe paingon sa wala o tuo",
+        "personalFullStackBoilerplate": {
+            "about": "Usa ka andam gamiton nga MERN template para sa paghimo og scalable ug seguradong full-stack nga mga aplikasyon. Pre-configured na para sa episyente nga development, seamless nga API integration, ug sayon nga deployment."
+        },
+        "todoApp": {
+            "about": "Usa kini ka yano nga todo app nga gihimo gamit ang React, TypeScript, Firebase, ug uban pang modernong teknolohiya sa web. Ang app nagtugot sa mga tiggamit sa pagdumala sa ilang mga todo, lokal ug cloud-based, nga adunay focus sa authentication ug real-time nga updates."
+        },
+        "personalFrontendBoilerplate": {
+            "about": "Ideal para sa paghimo og React apps gikan sa sinugdanan."
+        },
+        "fun88": {
+            "about": "Kini nga app usa ka yano nga clone sa FUN88 app, nga nagpunting sa mga feature sama sa pagpili og dula, filtering, ug favorites list. Kini gihimo atol sa usa ka front-end coding test."
+        },
+        "personalPortfolio": {
+            "about": "Ang akong Portfolio Website usa ka modernong, responsive nga web application nga gidisenyo aron ipakita ang akong propesyonal nga trabaho ug personal nga mga proyekto sa usa ka interactive nga paagi. Gihimo gamit ang cutting-edge nga web technologies, kini nga proyekto nagpakita sa akong abilidad sa web development ug design."
+        },
+        "fakeStore": {
+            "about": "Ang Fake Store usa ka hands-on nga app nga gihimo aron praktis ug ipakita ang abilidad sa pag-integrate ug pagtrabaho gamit ang APIs. Kini nga proyekto nagsimulate og usa ka e-commerce platform gamit ang mock API, nga naghatag og realistic nga shopping experience samtang nagpunting sa epektibong paggamit sa API ug pagdumala sa data."
+        },
+        "dota2Heroes": {
+            "about": "Ang Dota 2 Heroes Project usa ka web app nga gihimo aron i-explore ug ipakita ang data gikan sa popular nga duwa nga Dota 2. Gihimo kini tungod sa akong kadasig sa maong duwa ug sa gustong magpraktis og API integration, nga naghatag og detalyado ug interactive nga interface para sa pagtan-aw ug pagkat-on sa mga bayani sa Dota 2."
+        },
+        "welift": {
+            "about": "Ang WeLift usa ka komprehensibong web application nga gihimo isip among capstone project sa among katapusang tuig sa kolehiyo. Ang plataporma gidisenyo aron pasayon ang proseso sa pag-book og moving services, ilabi na para sa mga indibidwal ug pamilya nga nanginahanglan og serbisyo sa 'lipat bahay'. Ang WeLift nagkonektar sa mga tiggamit sa kasaligan nga moving service providers aron mapaayo ang logistics sa pagbalhin og gamit sa panimalay."
+        },
+        "overflow": {
+            "about": "Ang Overflow usa ka feature-rich nga note-taking app nga gihimo isip capstone project sa akong higala, nga adunay daghang kontribusyon gikan sa ako. Gidisenyo aron maghatag og episyente ug user-friendly nga platform para sa pagdumala sa personal nga mga nota, kini nga app nagpalambo sa productivity pinaagi sa intuitive nga interface ug lig-on nga functionality."
+        },
+        "advanceCalculator": {
+            "about": "Ang Advanced Calculator usa ka web-based app nga gihimo aron praktis ug palamboon ang akong JavaScript skills. Kini nga himan naghatag og lainlaing advanced mathematical functions, nga nagpakita sa akong abilidad sa pag-implementar og komplikado nga mga kalkulasyon ug paghimo og interactive nga user interface gamit ang JavaScript."
+        },
+        "basicCalculator": {
+            "about": "Ang Basic Calculator usa ka yano nga web app nga gihimo isip unang proyekto samtang nagkat-on pa ko og JavaScript. Kini nga proyekto usa ka foundational nga ehersisyo sa paggamit sa JavaScript aron paghimo og calculator para sa basic nga mga operasyon sa matematika."
+        },
+        "facebookClone": {
+            "about": "Ang Facebook Clone usa ka web app nga gihimo aron sundon ang disenyo ug user interface sa Facebook. Kini nga proyekto nagpunting sa paghimo og visual ug interactive nga clone sa Facebook aron ma-praktis ang front-end development ug masabtan ang komplikado nga UI/UX elements."
+        },
+        "amusementParkManagementSystem": {
+            "about": "Ang Amusement Park Management System usa ka Windows Forms app nga gihimo isip final project sa akong ikaduhang tuig sa kolehiyo. Gidisenyo kini aron i-streamline ug dumalahan ang mga operasyon sa usa ka amusement park, lakip ang ticket sales, ride management, ug customer services. Napili kini nga usa sa labing maayong proyekto tungod sa pagka-epektibo niini."
+        },
+        "new": "Bag-o",
+        "dev": "Development",
+        "viewInfo": "Tan-awa ang Dugang Info",
+        "viewRepo": "Tan-awa ang Repository",
+        "viewSite": "Tan-awa ang Website",
+        "modal": {
+            "technologies": "Mga Teknolohiya",
+            "viewRepo": "Tan-awa ang Repositoryo",
+            "viewSite": "Tan-awa ang Live Site"
+        }
+    },
+    "contact": {
+        "heading": "Kontaka",
+        "connectHeading": "Konektahi ko",
+        "connectDescription": "Kung gusto ka makabalo pa ug dugang bahin nako o sa akong mga buhat, o kung gusto ra ka moingon ug hi, padalhi ko'g mensahe. Malipay ko makadungog gikan nimo.",
+        "form": {
+            "nameLabel": "Ngalan",
+            "namePlaceholder": "Ibutang ang imong ngalan",
+            "emailLabel": "Email",
+            "emailPlaceholder": "Ibutang ang imong email",
+            "messageLabel": "Mensahe",
+            "messagePlaceholder": "Ibutang ang imong mensahe",
+            "submit": "Isumite"
+        },
+        "directEmail": "Ipadala diretso ang email nako",
+        "scheduleLinkText": "Mag-iskedyul og interbyu o panag-istorya uban nako.",
+        "addressHeading": "Adres",
+        "address": "Dakbayan sa Sugbo<1/>Pilipinas",
+        "socialsHeading": "Mga Sosyal"
+    },
+    "footer": {
+        "madeWith": "Gihimo gamit ang",
+        "by": "ni Carl"
+    },
+    "translation": {
+        "select": "Pili-a ang Pinulongan",
+        "languages": {
+            "en": "Iningles",
+            "ceb": "Cebuano",
+            "fil": "Filipino",
+            "es": "Español",
+            "fr": "Français",
+            "zh": "中文",
+            "ja": "日本語",
+            "pt": "Português"
+        }
+    }
+}
