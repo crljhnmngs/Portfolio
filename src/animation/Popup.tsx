@@ -20,7 +20,7 @@ export function Popup({ children, delay, className }: PopupProps) {
     }, [isInview, controls]);
 
     return (
-        <motion.p
+        <motion.div
             ref={ref}
             variants={{
                 hidden: { opacity: 0 },
@@ -37,6 +37,6 @@ export function Popup({ children, delay, className }: PopupProps) {
             className={className}
         >
             {children}
-        </motion.p>
+        </motion.div>
     );
 }

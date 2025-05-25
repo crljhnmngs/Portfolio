@@ -1,0 +1,203 @@
+{
+    "nav": {
+        "home": "Pangunahing Pahina",
+        "about": "Tungkol",
+        "skills": "Mga Kasanayan",
+        "timeline": "Talambuhay",
+        "projects": "Mga Proyekto",
+        "contact": "Makipag-ugnayan"
+    },
+    "hero": {
+        "greeting": "Hi, ako si Carl",
+        "roles": [
+            "Software Engineer",
+            "Front End Developer",
+            "Full Stack Developer"
+        ],
+        "description": "Ako ay isang Front-End / Full-Stack Web Developer. Kasalukuyan akong nagtatrabaho sa {{company}} bilang {{position}}.",
+        "resume": "Resume"
+    },
+    "about": {
+        "heading": "Tungkol sa Akin",
+        "intro": "Kamusta! Ako si Carl, isang {{age}} taong gulang na Front-End / Full-Stack Web Developer na nakabase sa Cebu, Pilipinas, na may {{yearsOfExperience}} na taong propesyonal na karanasan.",
+        "journey": "Nagsimula ang aking paglalakbay sa mundo ng kompyuter noong bata pa ako, na nagbunsod ng isang passion na lalo pang tumibay sa paglipas ng panahon.",
+        "commitment": "Ako ay lubos na nakatuon sa patuloy na pag-aaral at pinapagana ng hangaring ma-master ang mga bagong teknolohiya at malutas ang mga kumplikadong hamon. Sa matibay na pundasyon ng malinis na arkitektura para sa parehong frontend at backend na web development, mahusay ako sa pagdidisenyo at paghahatid ng scalable at madaling panatilihing mga solusyon.",
+        "traits": "Kilala ako sa aking kakayahang umangkop, mabilis na pagkatuto, at mapagkalingang pag-iisip, umuunlad ako sa mga dinamikong kapaligirang teknolohikal, mahusay na nangunguna sa mga koponan, at palaging tinitiyak ang mataas na kalidad ng paghahatid ng software.",
+        "hobbies": "Bukod sa pagko-code, natutuwa ako sa online gaming at nalulubog sa mundo ng anime at mga TV series tuwing oras ng pahinga."
+    },
+    "skills": {
+        "heading": "Aking Mga Kasanayan"
+    },
+    "timeline": {
+        "heading": "Talambuhay",
+        "experience": "Karanasan sa Trabaho",
+        "education": "Edukasyon"
+    },
+    "experiences": {
+        "company1": {
+            "role": "Software Engineer",
+            "description": "Software Engineer sa Alliance Software Inc, isang pandaigdigang kumpanya ng IT services at solusyon. Itinatag ang Alliance noong 2000 at mula noon ay lumago upang maging isa sa pinakamalaki at pinaka-kagalang-galang na independent software development outsourcing company sa Pilipinas.",
+            "date": "Oktubre 2022 - Kasalukuyan",
+            "subItems": {
+                "0": {
+                    "position": "Associate Technical Specialist II",
+                    "setup": "On-site",
+                    "projects": {
+                        "0": {
+                            "description": "Itinalaga bilang Project Leader para sa isang bagong itinatag na team."
+                        }
+                    },
+                    "date": "Pebrero 2025 - Kasalukuyan"
+                },
+                "1": {
+                    "position": "Associate Technical Specialist I",
+                    "setup": "On-site",
+                    "projects": {
+                        "0": {
+                            "description": "Nagde-develop ng web UI para sa cardless cash withdrawal at cash deposit transactions para sa aming kliyenteng Hapones na mga ATM dito sa Pilipinas. Maaaring gumamit ang user ng QR code, fingerprint, o face recognition para mag-withdraw at magdeposito ng pera. Bangko: BDO"
+                        },
+                        "1": {
+                            "description": "Itinalaga bilang Technical Leader ng team."
+                        }
+                    },
+                    "date": "Hulyo 2024 - Pebrero 2025"
+                },
+                "2": {
+                    "position": "Technical Specialist II",
+                    "setup": "On-site",
+                    "projects": {
+                        "0": {
+                            "description": "Nag-develop ng web UI para sa cardless cheque deposit transaction para sa aming kliyenteng Hapones na mga ATM dito sa Pilipinas. Bangko: BDO"
+                        }
+                    },
+                    "date": "Enero 2024 - Hulyo 2024"
+                },
+                "3": {
+                    "position": "Technical Specialist I",
+                    "setup": "On-site",
+                    "projects": {
+                        "0": {
+                            "description": "Nag-develop ng full-stack web application para sa isa sa aming mga kliyente dito sa Pilipinas."
+                        },
+                        "1": {
+                            "description": "Nag-develop ng demo ATM web service para sa aming kliyenteng Hapones upang ipakita ang kanilang bagong ATM application sa kanilang mga kliyente."
+                        },
+                        "2": {
+                            "description": "Itinalaga akong magbigay ng suporta sa bangko para sa mga ATM ng aming kliyenteng Hapones dito sa Pilipinas. Kasama sa aking mga gawain ang pag-aayos ng bugs sa kanilang legacy base code at pag-develop ng mga bagong functionalities base sa mga partikular na kahilingan ng bangko. Mga Bangko: BDO, MBTC, at EWB"
+                        }
+                    },
+                    "date": "Oktubre 2022 - Enero 2024"
+                }
+            }
+        },
+        "company2": {
+            "role": "Software QA (Intern)",
+            "description": "Software QA Intern sa MVP.dev, tumutulong ang MVP.dev sa mga may-ari ng negosyo na gamitin ang kapangyarihan ng no-code technology upang mabuo ang kanilang vision sa loob lamang ng ilang linggo gamit ang isang mataas na kalidad na proseso.",
+            "date": "Marso 2022 - Hunyo 2022"
+        }
+    },
+    "educations": {
+        "education1": {
+            "school": "University Of Cebu - Lapu-Lapu at Mandaue",
+            "track": "Kolehiyo",
+            "course": "Bachelor of Science sa Information Technology",
+            "date": "Hunyo 2018 - Hulyo 2022"
+        },
+        "education2": {
+            "school": "University Of Cebu - Lapu-Lapu at Mandaue",
+            "track": "Senior High School",
+            "course": "TECH-VOC ICT - Computer Programming at Pag-aayos ng Hardware",
+            "date": "Hunyo 2016 - Abril 2018"
+        }
+    },
+    "projects": {
+        "heading": "Personal na mga Proyekto",
+        "swipe": "I-swipe pakaliwa o pakanan",
+        "personalFullStackBoilerplate": {
+            "about": "Isang handang-gamitin na MERN template para sa paggawa ng scalable at secure na full-stack applications. Pre-configured para sa episyenteng development, seamless na API integration, at madaling deployment."
+        },
+        "todoApp": {
+            "about": "Ito ay isang simpleng todo app na ginawa gamit ang React, TypeScript, Firebase, at iba pang modernong web technologies. Pinapayagan ng app ang mga user na pamahalaan ang kanilang mga todo, lokal man o cloud-based, na may focus sa authentication at real-time na updates."
+        },
+        "personalFrontendBoilerplate": {
+            "about": "Mainam para sa paggawa ng React apps mula sa simula."
+        },
+        "fun88": {
+            "about": "Ang app na ito ay isang simpleng clone ng FUN88 app, na nakatuon sa mga feature gaya ng pagpili ng laro, filtering, at favorites list. Ginawa ito bilang bahagi ng isang front-end coding test."
+        },
+        "personalPortfolio": {
+            "about": "Ang aking Portfolio Website ay isang modernong, responsive na web application na idinisenyo upang ipakita ang aking propesyonal na trabaho at mga personal na proyekto sa isang engaging at interactive na paraan. Ginawa gamit ang pinakabagong web technologies, ipinapakita ng proyektong ito ang aking kasanayan sa web development at design."
+        },
+        "fakeStore": {
+            "about": "Ang Fake Store ay isang hands-on na application na ginawa upang magsanay at ipakita ang kasanayan sa API integration. Ang proyekto ay nagsisimula ng isang e-commerce platform gamit ang mock API upang magbigay ng makatotohanang shopping experience habang nakatuon sa mahusay na paggamit ng API at data handling."
+        },
+        "dota2Heroes": {
+            "about": "Ang Dota 2 Heroes Project ay isang web app na ginawa upang tuklasin at ipakita ang data mula sa sikat na larong Dota 2. Bunga ng aking hilig sa laro at kagustuhang magsanay sa API integration, ang proyektong ito ay nagbibigay ng detalyado at interactive na interface para sa pag-browse at pag-aaral tungkol sa mga bayani ng Dota 2."
+        },
+        "welift": {
+            "about": "Ang WeLift ay isang komprehensibong web application na ginawa bilang aming capstone project sa huling taon ng kolehiyo. Ang platform ay idinisenyo upang gawing mas madali ang proseso ng pag-book ng moving services, lalo na para sa mga indibidwal at pamilyang nangangailangan ng serbisyo ng 'lipat bahay'. Ikinokonekta ng WeLift ang mga user sa mapagkakatiwalaang moving service providers upang mapadali ang logistics ng paglilipat ng gamit sa bahay."
+        },
+        "overflow": {
+            "about": "Ang Overflow ay isang tampok-rich na note-taking app na ginawa bilang capstone project ng aking kaibigan, na may malaking ambag din mula sa akin. Dinisenyo ito upang magbigay ng episyente at madaling gamitin na platform para sa pamamahala ng personal na mga tala, pinapahusay nito ang productivity sa pamamagitan ng intuitive na interface at matatag na functionality."
+        },
+        "advanceCalculator": {
+            "about": "Ang Advanced Calculator ay isang web-based na app na ginawa upang magsanay at pahusayin ang aking JavaScript skills. Ang tool na ito ay nag-aalok ng iba’t ibang advanced na mathematical functions, na nagpapakita ng aking kakayahang magsagawa ng kumplikadong kalkulasyon at lumikha ng interactive na user interface gamit ang JavaScript."
+        },
+        "basicCalculator": {
+            "about": "Ang Basic Calculator ay isang simpleng web app na ginawa bilang unang proyekto habang ako'y nag-aaral pa ng JavaScript. Ito ay isang pangunahing ehersisyo sa paggamit ng JavaScript upang makagawa ng calculator para sa mga basic na arithmetic operation."
+        },
+        "facebookClone": {
+            "about": "Ang Facebook Clone ay isang web app na ginawa upang gayahin ang disenyo at user interface ng Facebook. Nakatuon ang proyekto sa paggawa ng isang visually accurate at interactive na clone ng disenyo ng Facebook, upang magsanay sa front-end development at maunawaan ang masalimuot na UI/UX elements."
+        },
+        "amusementParkManagementSystem": {
+            "about": "Ang Amusement Park Management System ay isang Windows Forms app na ginawa bilang final project noong ikalawang taon ko sa kolehiyo. Dinisenyo ito upang ayusin at pamahalaan ang iba't ibang operasyon sa isang amusement park, kasama ang ticket sales, pamamahala ng rides, at customer services. Napili ito bilang isa sa mga pinakamahusay na proyekto dahil sa pagiging epektibo nito."
+        },
+        "new": "Bago",
+        "dev": "Development",
+        "viewInfo": "Tingnan ang Karagdagang Impormasyon",
+        "viewRepo": "Tingnan ang Repository",
+        "viewSite": "Tingnan ang Website",
+        "modal": {
+            "technologies": "Mga Teknolohiya",
+            "viewRepo": "Tingnan ang Repositoryo",
+            "viewSite": "Tingnan ang Live Site"
+        }
+    },
+    "contact": {
+        "heading": "Kontak",
+        "connectHeading": "Makipag-ugnayan sa akin",
+        "connectDescription": "Kung gusto mong malaman pa ang tungkol sa akin o sa aking mga gawa, o kung gusto mo lang bumati, magpadala ka ng mensahe. Ikalulugod kong marinig mula sa iyo.",
+        "form": {
+            "nameLabel": "Pangalan",
+            "namePlaceholder": "Ilagay ang iyong pangalan",
+            "emailLabel": "Email",
+            "emailPlaceholder": "Ilagay ang iyong email",
+            "messageLabel": "Mensahe",
+            "messagePlaceholder": "Ilagay ang iyong mensahe",
+            "submit": "Isumite"
+        },
+        "directEmail": "Direktang magpadala ng email sa akin",
+        "scheduleLinkText": "Mag-iskedyul ng panayam o usapan kasama ako.",
+        "addressHeading": "Address",
+        "address": "Lungsod ng Cebu<1/>Pilipinas",
+        "socialsHeading": "Mga Social"
+    },
+    "footer": {
+        "madeWith": "Ginawa gamit ang",
+        "by": "ni Carl"
+    },
+    "translation": {
+        "select": "Piliin ang Wika",
+        "languages": {
+            "en": "Ingles",
+            "ceb": "Cebuano",
+            "fil": "Filipino",
+            "es": "Español",
+            "fr": "Français",
+            "zh": "中文",
+            "ja": "日本語",
+            "pt": "Portuguese",
+            "ar": "Arabic"
+        }
+    }
+}

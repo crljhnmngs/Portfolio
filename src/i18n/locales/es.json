@@ -1,0 +1,203 @@
+{
+    "nav": {
+        "home": "Inicio",
+        "about": "Acerca de",
+        "skills": "Habilidades",
+        "timeline": "Línea de Tiempo",
+        "projects": "Proyectos",
+        "contact": "Contacto"
+    },
+    "hero": {
+        "greeting": "Hola, soy Carl",
+        "roles": [
+            "Ingeniero de Software",
+            "Desarrollador Front End",
+            "Desarrollador Full Stack"
+        ],
+        "description": "Soy un Desarrollador Web Front-End / Full-Stack. Actualmente trabajo en {{company}} como {{position}}.",
+        "resume": "Currículum"
+    },
+    "about": {
+        "heading": "Sobre mí",
+        "intro": "¡Hola! Soy Carl, un desarrollador Front-End / Full-Stack de {{age}} años, basado en Cebu, Filipinas, con {{yearsOfExperience}} años de experiencia profesional.",
+        "journey": "Mi camino con las computadoras comenzó desde temprana edad, despertando una pasión que ha crecido aún más con los años.",
+        "commitment": "Estoy altamente comprometido con el aprendizaje continuo y motivado por la pasión de dominar nuevas tecnologías y resolver desafíos complejos. Con una sólida base en arquitectura limpia tanto para el desarrollo frontend como backend, destaco en diseñar y entregar soluciones escalables y mantenibles.",
+        "traits": "Reconocido por mi adaptabilidad, rapidez de aprendizaje y mentalidad colaborativa, prospero en entornos tecnológicos dinámicos, lidero equipos de manera efectiva y garantizo constantemente la entrega de software de alta calidad.",
+        "hobbies": "Más allá de la programación, encuentro alegría en los juegos en línea y disfruto del mundo del anime y las series de televisión durante mi tiempo libre."
+    },
+    "skills": {
+        "heading": "Mis Habilidades"
+    },
+    "timeline": {
+        "heading": "Línea de Tiempo",
+        "experience": "Experiencia Laboral",
+        "education": "Educación"
+    },
+    "experiences": {
+        "company1": {
+            "role": "Ingeniero de Software",
+            "description": "Ingeniero de Software en Alliance Software Inc, una empresa global de servicios y soluciones de TI. Alliance fue establecida en 2000 y desde entonces ha crecido hasta convertirse en una de las compañías de desarrollo de software independiente más grandes y respetadas de Filipinas.",
+            "date": "Octubre 2022 - Presente",
+            "subItems": {
+                "0": {
+                    "position": "Especialista Técnico Asociado II",
+                    "setup": "Presencial",
+                    "projects": {
+                        "0": {
+                            "description": "He sido asignado como Líder de Proyecto para un equipo recién creado."
+                        }
+                    },
+                    "date": "Febrero 2025 - Presente"
+                },
+                "1": {
+                    "position": "Especialista Técnico Asociado I",
+                    "setup": "Presencial",
+                    "projects": {
+                        "0": {
+                            "description": "Desarrollo de una interfaz web para transacciones de retiro y depósito de efectivo sin tarjeta para los cajeros automáticos de nuestro cliente japonés aquí en Filipinas. El usuario puede usar un código QR, huella digital o reconocimiento facial para realizar retiros y depósitos. Banco: BDO"
+                        },
+                        "1": {
+                            "description": "Asignado como Líder Técnico del equipo."
+                        }
+                    },
+                    "date": "Julio 2024 - Febrero 2025"
+                },
+                "2": {
+                    "position": "Especialista Técnico II",
+                    "setup": "Presencial",
+                    "projects": {
+                        "0": {
+                            "description": "Desarrollé una interfaz web para la transacción de depósito de cheques sin tarjeta para los cajeros automáticos de nuestro cliente japonés aquí en Filipinas. Banco: BDO"
+                        }
+                    },
+                    "date": "Enero 2024 - Julio 2024"
+                },
+                "3": {
+                    "position": "Especialista Técnico I",
+                    "setup": "Presencial",
+                    "projects": {
+                        "0": {
+                            "description": "Desarrollé una aplicación web full-stack para uno de nuestros clientes en Filipinas."
+                        },
+                        "1": {
+                            "description": "Desarrollé un servicio web demo para cajeros automáticos para nuestro cliente japonés para mostrar su nueva aplicación de ATM a sus clientes."
+                        },
+                        "2": {
+                            "description": "Fui asignado para brindar soporte bancario a los cajeros automáticos de nuestro cliente japonés aquí en Filipinas. Mis tareas incluyen corregir errores en el código base heredado y desarrollar nuevas funcionalidades basadas en solicitudes específicas del banco. Bancos: BDO, MBTC y EWB"
+                        }
+                    },
+                    "date": "Octubre 2022 - Enero 2024"
+                }
+            }
+        },
+        "company2": {
+            "role": "QA de Software (Pasantía)",
+            "description": "Pasantía en QA de Software en MVP.dev, MVP.dev ayuda a los dueños de negocios a aprovechar el poder de la tecnología sin código para llevar su visión a la realidad en semanas a través de un proceso probado y altamente personalizado.",
+            "date": "Marzo 2022 - Junio 2022"
+        }
+    },
+    "educations": {
+        "education1": {
+            "school": "Universidad de Cebu - Lapu-Lapu y Mandaue",
+            "track": "Universidad",
+            "course": "Licenciatura en Ciencias en Tecnología de la Información",
+            "date": "Junio 2018 - Julio 2022"
+        },
+        "education2": {
+            "school": "Universidad de Cebu - Lapu-Lapu y Mandaue",
+            "track": "Educación Secundaria Superior",
+            "course": "TECH-VOC TIC - Programación de Computadoras y Servicio de Hardware",
+            "date": "Junio 2016 - Abril 2018"
+        }
+    },
+    "projects": {
+        "heading": "Proyectos Personales",
+        "swipe": "Desliza a la izquierda o derecha",
+        "personalFullStackBoilerplate": {
+            "about": "Una plantilla MERN lista para usar, para construir aplicaciones full-stack escalables y seguras. Preconfigurada para un desarrollo eficiente, integración fluida de API y fácil despliegue."
+        },
+        "todoApp": {
+            "about": "Esta es una aplicación simple de tareas, construida con React, TypeScript, Firebase y otras tecnologías web modernas. La app permite a los usuarios gestionar sus tareas, tanto localmente como en la nube, con enfoque en autenticación y actualizaciones en tiempo real."
+        },
+        "personalFrontendBoilerplate": {
+            "about": "Ideal para crear aplicaciones React desde cero."
+        },
+        "fun88": {
+            "about": "La aplicación es un clon simple de la app FUN88, enfocada en funciones como selección de juegos, filtros y lista de favoritos. Esta app fue creada durante una prueba de codificación front-end."
+        },
+        "personalPortfolio": {
+            "about": "Mi sitio web de portafolio es una aplicación web moderna y responsiva diseñada para mostrar mi trabajo profesional y proyectos personales de manera atractiva e interactiva. Construida con tecnologías web de vanguardia, este proyecto destaca mis habilidades en desarrollo y diseño web."
+        },
+        "fakeStore": {
+            "about": "El proyecto Fake Store es una aplicación práctica desarrollada para practicar y mostrar habilidades en integración y uso de APIs. Este proyecto simula una plataforma de comercio electrónico, utilizando una API falsa para ofrecer una experiencia de compra realista, enfocándose en el manejo eficaz de datos y APIs."
+        },
+        "dota2Heroes": {
+            "about": "El proyecto Dota 2 Heroes es una aplicación web desarrollada para explorar y mostrar datos del popular juego Dota 2. Creado por mi pasión por el juego y el deseo de practicar integración de APIs, este proyecto ofrece una interfaz detallada e interactiva para navegar y aprender sobre los héroes de Dota 2."
+        },
+        "welift": {
+            "about": "WeLift es una aplicación web completa desarrollada como proyecto de fin de carrera durante mi último año de universidad. La plataforma está diseñada para simplificar el proceso de reservar servicios de mudanza, especialmente para personas y familias que necesitan ayuda con traslados, también conocidos como \"lipat bahay.\" WeLift conecta usuarios con proveedores confiables de servicios de mudanza, facilitando la logística para mover objetos del hogar."
+        },
+        "overflow": {
+            "about": "Overflow es una aplicación de toma de notas con muchas funciones desarrollada como proyecto de fin de carrera por un amigo, con contribuciones significativas mías. Diseñada para ofrecer una plataforma eficiente y fácil de usar para gestionar notas personales, Overflow mejora la productividad con una interfaz intuitiva y funcionalidad robusta."
+        },
+        "advanceCalculator": {
+            "about": "La Calculadora Avanzada es una aplicación web desarrollada para practicar y mejorar mis habilidades en JavaScript. Esta herramienta ofrece una variedad de funciones matemáticas avanzadas, demostrando mi capacidad para implementar cálculos complejos y crear una interfaz interactiva con JavaScript."
+        },
+        "basicCalculator": {
+            "about": "La Calculadora Básica es una aplicación web simple desarrollada como proyecto inicial mientras aprendía JavaScript. Este proyecto sirve como ejercicio básico para aplicar JavaScript creando una calculadora funcional con operaciones aritméticas esenciales."
+        },
+        "facebookClone": {
+            "about": "El Clon de Facebook es una aplicación web desarrollada para replicar el diseño y la interfaz de usuario de Facebook. Este proyecto se centra en crear un clon visualmente exacto e interactivo del diseño de Facebook, proporcionando una oportunidad para practicar habilidades de desarrollo front-end y entender elementos complejos de UI/UX."
+        },
+        "amusementParkManagementSystem": {
+            "about": "El Sistema de Gestión de Parque de Atracciones es una aplicación Windows Forms desarrollada como proyecto final durante mi segundo año de universidad. Este sistema está diseñado para optimizar y gestionar varias operaciones dentro de un parque de atracciones, incluyendo venta de entradas, gestión de atracciones y atención al cliente. Fue seleccionado como uno de los mejores proyectos, demostrando su efectividad e impacto."
+        },
+        "new": "Nuevo",
+        "dev": "Desarrollo",
+        "viewInfo": "Ver Más Información",
+        "viewRepo": "Ver Repositorio",
+        "viewSite": "Ver Sitio",
+        "modal": {
+            "technologies": "Tecnologías",
+            "viewRepo": "Ver Repositorio",
+            "viewSite": "Ver Sitio en Vivo"
+        }
+    },
+    "contact": {
+        "heading": "Contacto",
+        "connectHeading": "Conéctate conmigo",
+        "connectDescription": "Si quieres saber más sobre mí o mi trabajo, o simplemente quieres saludar, envíame un mensaje. Me encantaría saber de ti.",
+        "form": {
+            "nameLabel": "Nombre",
+            "namePlaceholder": "Introduce tu nombre",
+            "emailLabel": "Correo electrónico",
+            "emailPlaceholder": "Introduce tu correo electrónico",
+            "messageLabel": "Mensaje",
+            "messagePlaceholder": "Escribe tu mensaje",
+            "submit": "Enviar"
+        },
+        "directEmail": "Envíame un correo directamente",
+        "scheduleLinkText": "Programa una entrevista o conversación conmigo.",
+        "addressHeading": "Dirección",
+        "address": "Ciudad de Cebú<1/>Filipinas",
+        "socialsHeading": "Redes sociales"
+    },
+    "footer": {
+        "madeWith": "Hecho con",
+        "by": "por Carl"
+    },
+    "translation": {
+        "select": "Seleccionar idioma",
+        "languages": {
+            "en": "Inglés",
+            "ceb": "Cebuano",
+            "fil": "Filipino",
+            "es": "Español",
+            "fr": "Francés",
+            "zh": "中文",
+            "ja": "日本語",
+            "pt": "Portugués",
+            "ar": "Árabe"
+        }
+    }
+}

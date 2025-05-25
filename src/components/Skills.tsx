@@ -2,24 +2,30 @@ import React, { useMemo } from 'react';
 import { Popup } from '../animation/Popup';
 import { motion } from 'framer-motion';
 import { skills } from '../const';
+import { useTranslation } from 'react-i18next';
 
 export default function Skills() {
     const memoizedData = useMemo(() => {
         return skills;
     }, []);
+    const { t, i18n } = useTranslation();
 
     return (
         <section
-            className="h-auto skillsMaxHeight:h-auto skill:h-auto skill:pt-10 skillsCustomBP:h-maxDesktop skillsMaxHeight:pt-5 bg-gray-100 dark:bg-black sm:px-6 lg:px-8 px-2 mx-auto flex items-center flex-col"
+            className="h-auto skillsMd:h-auto xl:h-screen skillsMaxHeight:h-maxDesktop bg-gray-100 dark:bg-black flex items-center flex-col"
             id="skills"
         >
             <div className="h-full w-full max-screen:max-w-maxDesktop flex items-center flex-col h-auto ">
-                <div className="sm:h-[13%] h-auto flex justify-center items-end pt-10 home:pt-0">
+                <div
+                    className={`sm:h-[13%] h-auto flex justify-center items-end pt-10 ${
+                        i18n.language === 'ar' && 'font-arabic'
+                    }`}
+                >
                     <Popup
                         delay={0.5}
                         className="text-black font-semibold text-3xl sm:text-4xl dark:text-white"
                     >
-                        My Skills
+                        {t('skills.heading')}
                     </Popup>
                 </div>
                 <div className="flex flex-wrap mt-4 sm:mt-10 justify-around sm:max-w-[80%] mb-4">

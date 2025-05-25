@@ -4,6 +4,8 @@ import { FaGithub, FaEye } from 'react-icons/fa';
 import { FaLink } from 'react-icons/fa6';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperCore } from 'swiper';
+import { Tooltip } from 'react-tooltip';
+import 'react-tooltip/dist/react-tooltip.css';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -16,11 +18,13 @@ import ImageWithFallback from '../utils/ImageWithFallback';
 import { TechList } from './TechList';
 import { ProjectModal } from './ProjectModal';
 import { Project } from '~/types/global';
+import { useTranslation } from 'react-i18next';
 
 export default function Projects() {
     const [selectedProject, setSelectedProject] = useState<Project | null>(
         null
     );
+    const { t, i18n } = useTranslation();
     const [isModalOpen, setIsModalOpen] = useState(false);
     const memoizedData = useMemo(() => {
         return projects;
@@ -48,15 +52,19 @@ export default function Projects() {
         >
             <div className="w-full max-screen:max-w-maxDesktop">
                 <div className="max-w-maxScreen mx-auto sm:px-6 lg:px-7 px-4 h-full max-screen:px-0">
-                    <div className="flex items-center justify-center pt-10">
+                    <div
+                        className={`flex items-center justify-center pt-10 ${
+                            i18n.language === 'ar' && 'font-arabic'
+                        }`}
+                    >
                         <Popup
                             delay={0.5}
                             className="text-black font-semibold text-3xl sm:text-3xl dark:text-white"
                         >
-                            Personal Projects
+                            {t('projects.heading')}
                         </Popup>
                     </div>
-                    <div className="sm:py-10 py-5 w-full h-full">
+                    <div className="sm:py-10 py-5 w-full h-[83%]">
                         <Swiper
                             onSwiper={(swiper) => (swiperRef.current = swiper)}
                             effect={'coverflow'}
@@ -99,13 +107,13 @@ export default function Projects() {
                                             <div className="mt-5 text-xl w-full project-xl:text-2xl font-semibold flex flex-col -gap-1">
                                                 <div className="flex gap-1">
                                                     {project.new && (
-                                                        <span className="text-[12px] leading-3 text-white text-center bg-red-500 dark:bg-red-600 px-1 py-1 rounded-md w-9">
-                                                            New
+                                                        <span className="text-[12px] leading-3 text-white text-center bg-red-500 dark:bg-red-600 px-1 py-1 rounded-md w-auto">
+                                                            {t('projects.new')}
                                                         </span>
                                                     )}
                                                     {project.dev && (
-                                                        <span className="text-[12px] leading-3 text-white text-center bg-green-500 dark:bg-green-600 px-1 py-1 rounded-md w-24">
-                                                            Development
+                                                        <span className="text-[12px] leading-3 text-white text-center bg-green-500 dark:bg-green-600 px-1 py-1 rounded-md w-auto">
+                                                            {t('projects.dev')}
                                                         </span>
                                                     )}
                                                 </div>
@@ -113,9 +121,14 @@ export default function Projects() {
                                                     {project.name}
                                                 </h1>
                                             </div>
-                                            <div className="mt-3 max-w-[100%] min-h-[4.5rem]">
+                                            <div
+                                                className={`mt-3 max-w-[100%] min-h-[4.5rem] ${
+                                                    i18n.language === 'ar' &&
+                                                    'font-arabic'
+                                                }`}
+                                            >
                                                 <p className="text-justify sm:text-base line-clamp-4 project-xl:line-clamp-5">
-                                                    {project.about}
+                                                    {t(project.about)}
                                                 </p>
                                             </div>
 
@@ -128,30 +141,46 @@ export default function Projects() {
                                                         <p>{project.date}</p>
                                                     </div>
                                                     <div className="flex gap-3 pr-1 sm:pr-5">
-                                                        <div className="relative group">
-                                                            <a
+                                                        <div
+                                                            className={`relative group ${
+                                                                i18n.language ===
+                                                                    'ar' &&
+                                                                'text-right fontOnly-arabic'
+                                                            }`}
+                                                        >
+                                                            <button
                                                                 onClick={() =>
                                                                     openModal(
                                                                         project
                                                                     )
                                                                 }
-                                                                target="_blank"
-                                                                rel="noreferrer"
-                                                                className="opt-10 group-hover:opacity-100"
+                                                                data-tooltip-id={`tooltip-${project.name}`}
+                                                                data-tooltip-content={t(
+                                                                    'projects.viewInfo'
+                                                                )}
+                                                                className="group-hover:opacity-100"
                                                             >
                                                                 <FaEye className="size-7 opacity-60 cursor-pointer group-hover:opacity-100" />
-                                                            </a>
-                                                            <div className="absolute -bottom-4 right-2 left-0 pl-2 flex-col items-center hidden mb-[3.2rem] group-hover:flex">
-                                                                <div className="w-3 h-3 -mb-10 rotate-45 bg-black dark:bg-white"></div>
-                                                                <span className="p-3 text-xs text-center leading-none text-white dark:text-black whitespace-no-wrap bg-black dark:bg-white shadow-lg w-32 rounded-md">
-                                                                    View More
-                                                                    Info
-                                                                </span>
-                                                            </div>
+                                                            </button>
+
+                                                            <Tooltip
+                                                                id={`tooltip-${project.name}`}
+                                                                place="top"
+                                                                delayShow={0}
+                                                                delayHide={0}
+                                                                offset={5}
+                                                                className="!text-xs text-center !rounded-md !py-2 !px-3 !bg-black dark:!bg-white !text-white dark:!text-black shadow-lg max-w-[130px] !whitespace-normal !opacity-100"
+                                                            />
                                                         </div>
                                                         {project.links
                                                             ?.github && (
-                                                            <div className="relative group">
+                                                            <div
+                                                                className={`relative group ${
+                                                                    i18n.language ===
+                                                                        'ar' &&
+                                                                    'text-right fontOnly-arabic'
+                                                                }`}
+                                                            >
                                                                 <a
                                                                     href={
                                                                         project
@@ -160,22 +189,38 @@ export default function Projects() {
                                                                     }
                                                                     target="_blank"
                                                                     rel="noreferrer"
+                                                                    data-tooltip-id={`tooltip-github-${project.name}`}
+                                                                    data-tooltip-content={t(
+                                                                        'projects.viewRepo'
+                                                                    )}
                                                                     className="opt-10 group-hover:opacity-100"
                                                                 >
                                                                     <FaGithub className="size-7 opacity-60 cursor-pointer group-hover:opacity-100" />
                                                                 </a>
-                                                                <div className="absolute -bottom-4 right-2 left-0 pl-2 flex-col items-center hidden mb-[3.2rem] group-hover:flex">
-                                                                    <div className="w-3 h-3 -mb-10 rotate-45 bg-black dark:bg-white"></div>
-                                                                    <span className="p-3 text-xs text-center leading-none text-white dark:text-black whitespace-no-wrap bg-black dark:bg-white shadow-lg w-32 rounded-md">
-                                                                        View
-                                                                        Repository
-                                                                    </span>
-                                                                </div>
+
+                                                                <Tooltip
+                                                                    id={`tooltip-github-${project.name}`}
+                                                                    place="top"
+                                                                    delayShow={
+                                                                        0
+                                                                    }
+                                                                    delayHide={
+                                                                        0
+                                                                    }
+                                                                    offset={5}
+                                                                    className="!text-xs text-center !rounded-md !py-2 !px-3 !bg-black dark:!bg-white !text-white dark:!text-black shadow-lg max-w-[130px] !whitespace-normal !opacity-100"
+                                                                />
                                                             </div>
                                                         )}
                                                         {project.links
                                                             ?.live && (
-                                                            <div className="relative group">
+                                                            <div
+                                                                className={`relative group ${
+                                                                    i18n.language ===
+                                                                        'ar' &&
+                                                                    'text-right fontOnly-arabic'
+                                                                }`}
+                                                            >
                                                                 <a
                                                                     href={
                                                                         project
@@ -184,16 +229,27 @@ export default function Projects() {
                                                                     }
                                                                     target="_blank"
                                                                     rel="noreferrer"
+                                                                    data-tooltip-id={`tooltip-live-${project.name}`}
+                                                                    data-tooltip-content={t(
+                                                                        'projects.viewSite'
+                                                                    )}
+                                                                    className="group-hover:opacity-100"
                                                                 >
                                                                     <FaLink className="size-7 opacity-60 cursor-pointer group-hover:opacity-100" />
                                                                 </a>
-                                                                <div className="absolute -bottom-4 right-2 left-0 pl-2 flex-col items-center hidden mb-[3rem] group-hover:flex ">
-                                                                    <div className="w-3 h-3 -mb-10 rotate-45 bg-black dark:bg-white"></div>
-                                                                    <span className=" p-3 text-xs text-center leading-none text-white dark:text-black whitespace-no-wrap bg-black dark:bg-white shadow-lg w-24 rounded-md">
-                                                                        View
-                                                                        Site
-                                                                    </span>
-                                                                </div>
+
+                                                                <Tooltip
+                                                                    id={`tooltip-live-${project.name}`}
+                                                                    place="top"
+                                                                    delayShow={
+                                                                        0
+                                                                    }
+                                                                    delayHide={
+                                                                        0
+                                                                    }
+                                                                    offset={5}
+                                                                    className="!text-xs text-center !rounded-md !py-2 !px-3 !bg-black dark:!bg-white !text-white dark:!text-black shadow-lg max-w-[130px] !whitespace-normal !opacity-100"
+                                                                />
                                                             </div>
                                                         )}
                                                     </div>
@@ -207,7 +263,7 @@ export default function Projects() {
                     </div>
                     <div className="w-full flex items-center justify-center pb-5 sm:hidden">
                         <p className="text-sm text-black dark:text-white">
-                            Swipe Left or Right
+                            {t('projects.swipe')}
                         </p>
                     </div>
                 </div>
