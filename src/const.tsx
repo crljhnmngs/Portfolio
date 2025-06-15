@@ -49,7 +49,7 @@ export const sections = [
 
 export const skills = [
     {
-        name: 'React',
+        name: 'React.js',
         link: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg',
     },
     {
@@ -230,7 +230,7 @@ export const experiences = [
         description: 'experiences.company1.description',
         link: 'https://alliance.com.ph/',
         tech: [
-            'React',
+            'React.js',
             'TypeScript',
             'ASP.net Core',
             'C++',
@@ -249,6 +249,7 @@ export const experiences = [
                         description:
                             'experiences.company1.subItems.0.projects.0.description',
                         tech: [
+                            'React.js',
                             'C++',
                             'VBScript',
                             'JavaScript',
@@ -272,6 +273,7 @@ export const experiences = [
                         description:
                             'experiences.company1.subItems.1.projects.0.description',
                         tech: [
+                            'React.js',
                             'C++',
                             'VBScript',
                             'JavaScript',
@@ -300,6 +302,7 @@ export const experiences = [
                         description:
                             'experiences.company1.subItems.2.projects.0.description',
                         tech: [
+                            'React.js',
                             'C++',
                             'VBScript',
                             'JavaScript',
@@ -323,7 +326,7 @@ export const experiences = [
                         description:
                             'experiences.company1.subItems.3.projects.0.description',
                         tech: [
-                            'React',
+                            'React.js',
                             'TypeScript',
                             'MobX',
                             'Material UI',
@@ -339,7 +342,15 @@ export const experiences = [
                     {
                         description:
                             'experiences.company1.subItems.3.projects.2.description',
-                        tech: ['C++', 'VBScript', 'Git', 'SVN', 'Waterfall'],
+                        tech: [
+                            'React.js',
+                            'JavaScript',
+                            'C++',
+                            'VBScript',
+                            'Git',
+                            'SVN',
+                            'Waterfall',
+                        ],
                     },
                 ],
                 date: 'experiences.company1.subItems.3.date',
@@ -398,7 +409,7 @@ export const projects: Project[] = [
         image: mern,
         about: 'projects.personalFullStackBoilerplate.about',
         tech: [
-            'React',
+            'React.js',
             'Vite',
             'TypeScript',
             'Tailwind',
@@ -419,33 +430,39 @@ export const projects: Project[] = [
         name: 'Todo App',
         image: todo,
         about: 'projects.todoApp.about',
-        tech: ['React', 'TypeScript', 'Tailwind', 'Firebase', 'Redux', 'Jest'],
+        tech: [
+            'React.js',
+            'TypeScript',
+            'Tailwind',
+            'Firebase',
+            'Redux',
+            'Jest',
+        ],
         date: '2024',
         links: {
             github: 'https://github.com/crljhnmngs/todo-app',
-            live: 'https://todo-app-tau-one-76.vercel.app/',
+            live: 'https://crljhnmngs-todo-app.netlify.app',
         },
     },
     {
         name: 'Personal Frontend Boilerplate',
         image: boilerplate,
         about: 'projects.personalFrontendBoilerplate.about',
-        tech: ['React', 'Vite', 'TypeScript', 'Tailwind', 'Redux', 'Jest'],
+        tech: ['React.js', 'Vite', 'TypeScript', 'Tailwind', 'Redux', 'Jest'],
         date: '2024',
         links: {
             github: 'https://github.com/crljhnmngs/react-redux-boilerplate',
-            live: 'https://react-redux-boilerplate-phi.vercel.app/',
+            live: 'https://react-redux-boilerplate-crl.netlify.app',
         },
     },
     {
         name: 'FUN88',
         image: fun88,
         about: 'projects.fun88.about',
-        tech: ['React', 'TypeScript', 'Tailwind', 'Redux'],
+        tech: ['React.js', 'TypeScript', 'Tailwind', 'Redux'],
         date: '2024',
         links: {
             github: 'https://github.com/crljhnmngs/FUN88',
-            live: 'https://fun-88.vercel.app/',
         },
     },
     {
@@ -453,7 +470,7 @@ export const projects: Project[] = [
         image: portfolio,
         about: 'projects.personalPortfolio.about',
         tech: [
-            'React',
+            'React.js',
             'Vite',
             'TypeScript',
             'Tailwind',
@@ -473,7 +490,7 @@ export const projects: Project[] = [
         date: '2022',
         links: {
             github: 'https://github.com/crljhnmngs/Fake-Store',
-            live: 'https://fake-store-blond.vercel.app/',
+            live: 'https://crljhnmngs-fake-store.netlify.app',
         },
     },
     {
@@ -515,7 +532,7 @@ export const projects: Project[] = [
         date: '2022',
         links: {
             github: 'https://github.com/crljhnmngs/Advance-Calculator',
-            live: 'https://advance-calculator-three.vercel.app/',
+            live: 'https://crljhnmngs-advance-calculator.netlify.app',
         },
     },
     {
@@ -526,7 +543,7 @@ export const projects: Project[] = [
         date: '2022',
         links: {
             github: 'https://github.com/crljhnmngs/Calculator',
-            live: 'https://calculator-kohl-xi-82.vercel.app/',
+            live: 'https://crljhnmngs-basic-calculator.netlify.app',
         },
     },
     {
@@ -537,7 +554,6 @@ export const projects: Project[] = [
         date: '2022',
         links: {
             github: 'https://github.com/crljhnmngs/Facebook-Clone',
-            live: 'https://facebook-clone-chi-orcin.vercel.app/',
         },
     },
     {
