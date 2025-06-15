@@ -14,7 +14,6 @@ export default function App() {
     return (
         <Suspense fallback={<Preloader />}>
             <div className="font-poppins">
-                <Preloader></Preloader>
                 <Header></Header>
                 <div className="overflow-hidden ">
                     <Home></Home>
